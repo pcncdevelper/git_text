@@ -1,0 +1,32 @@
+<div data-role="view" id="complaintsView"  data-layout="main-layout">
+    <h4>Complaints View</h4>
+
+    <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+            <li>
+                <label>
+                    E-mail
+                    <input type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Email address" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    Phone Number
+                    <input type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Phone/Cell" />
+                </label>
+            </li>
+
+            <label>
+                <h4>Your Complaint </h4>
+                <textarea style="background:gray; width:99%; height:115px "></textarea>
+            </label>
+
+        </ul>
+
+        <div class="buttonArea">
+            <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Send" />
+
+        </div>
+    </form>
+
+</div>

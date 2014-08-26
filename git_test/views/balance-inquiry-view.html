@@ -1,0 +1,85 @@
+<div data-role="layout" data-id="balance-inquiry-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+                  <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+            <!--<a data-role="backbutton" data-align="left">Back</a>
+             <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+                </div>-->
+        </div>
+
+        <!--Footer-->
+        
+    </div>
+
+
+
+<div 
+    data-model="app.accountsService.viewModel" 
+     data-role="view" 
+     id="bi-view"
+     data-before-show="beforeViewShow"
+     data-layout="balance-inquiry-layout"
+    >
+    
+    
+    
+    
+    
+    <div class="bi-container">
+
+        
+        <div id="bi-upper-div" overflow-y: auto;>
+
+            <div id="account-details-container" >
+                <div data-bind="source:selectedAccount" data-template="accountList-template"></div>
+            </div>
+           
+        </div>
+        <div id="bi-lower-div">
+            <div id="scrollview-container" >
+                <div id="accounts-scrollview"
+                     data-role="scrollview" 
+                     data-bind="source: accountsData" 
+                     data-template="scrollview-template"
+                     data-page="0"
+                     data-content-height="5em"
+                     data-change="app.accountsService.viewModel.pageChange">
+                </div>
+
+            </div>
+
+        </div>
+       <div class="buttonArea">
+                    <input type="submit" id="request-full-statement" data-bind="click:requestFullStatement" data-role="button"  class="login-button" value="Request Full Statement" />
+                   
+       </div>
+
+    </div>
+
+    <script type="text/x-kendo-template" id="accountList-template" >
+       
+        <ul data-role="listview" data-style="inset" >
+        <li>#:type#</li>
+        <li>#:accountNumber#</li>
+        <li style="font-size: 15px">#:IBAN_BBAN#</li>
+        <li>Available Balance : <span></span>#:availableBalance#&nbsp#:currency#</li>
+        <li>Current Balance &nbsp &nbsp  :<span> </span>#:currentBalance#&nbsp#:currency#</li>
+        </ul>
+    </script>
+
+    <script id="scrollview-template" type="text/x-kendo-template"><div data-role="page" data-accountNo="#= accountNumber #" class="photo" >
+        <p>#= type #</p>
+        <p>#= accountNumber #</p>
+        </div>
+    </script>
+
+</div>
+<script type="text/javascript">
+    beforeViewShow = function(e) {
+        console.log('beforeShow');
+    };        
+</script>
+    </div>

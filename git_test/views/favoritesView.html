@@ -1,0 +1,283 @@
+<div data-role="view" id="favoritesView"  data-layout="level-one-layout">
+    <div id="full">
+
+        <div class="page-name">My Favorites</div>
+        <table cellspacing="0" cellpadding="0">
+
+            <tr>
+                <td   >
+                    <a  href="views/eTopUpPayJawwal.html" data-role="listview-link">
+                        <div class="favorites-upper">
+                        </div>
+                        <div class="favorites-lower">
+                            <div class="favorites-lower-text">Top Up My Jawal
+                                0599111111</div>
+
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a  href="views/eTopUpSameerView.html" data-role="listview-link">
+                        <div class="favorites-upper">
+                        </div>
+                        <div class="favorites-lower">
+                            <div class="favorites-lower-text">شحن جوال سمير</div>
+                        </div>
+                    </a>
+                </td>
+               
+                <td>
+                    <a  href="views/eTopUpPayKhalidWataniya.html" data-role="listview-link">
+                        <div class="favorites-upper">
+                        </div>
+                        <div class="favorites-lower">
+                            <div class="favorites-lower-text">Wataniya Khalid</div>
+                        </div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   <a  href="views/payKhalidView.html" data-role="listview-link">
+                        <div class="favorites-upper">
+                        </div>
+                        <div class="favorites-lower">
+                            <div class="favorites-lower-text">Pay Khalid 100 Shekel</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <a  href="views/paltelBillsView.html" data-role="listview-link">
+                        <div class="favorites-upper">
+                        </div>
+                        <div class="favorites-lower">
+                            <div class="favorites-lower-text">Pay Paltel Bills</div>
+                        </div>
+                    </a>
+                </td>
+                <td>
+                    <div class="favorites-upper">
+                    </div>
+                    <div class="favorites-lower">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="favorites-upper">
+                    </div>
+                    <div class="favorites-lower">
+                    </div>
+                </td>
+                <td>
+                    <div class="favorites-upper">
+                    </div>
+                    <div class="favorites-lower">
+                    </div>
+                </td>
+                <td>
+                    <div class="favorites-upper">
+                    </div>
+                    <div class="favorites-lower">
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!--  <table>
+        
+    <tr>
+    <td>
+    <div class="favorites-upper">
+    </div>
+    <div class="favorites-lower">
+    </div>
+    </td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    </table>
+    -->
+
+    <style>
+        
+
+        
+        
+        #favoritesView table
+        { border: none;
+          
+           border-collapse: collapse;
+            border:none;
+            position: absolute;
+            height: 100%;
+        }
+        
+        #favoritesView td
+        {
+            padding: 0;
+    border:none;
+            position: relative;
+            
+        }
+        
+        #full
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            /*  background-color:red;*/
+        
+        }
+        
+        #favoritesView   div.km-scroll-container
+        {
+            position: absolute;
+            /* background-color: pink;*/
+            height: 100%;
+            width: 100%;
+        }
+        
+        #favoritesView table
+        {
+           
+        }
+        
+        #favoritesView tr
+        {
+            background-color: #f5f5f5;
+        }
+        
+        .favorites-upper
+        {
+        
+            top: 0px;
+            position: absolute;
+            height: 70%;
+            width: 100%;
+            left: 0;
+            /* background-color: gray;*/
+            /*    background-image:ulr("../styles/images/jawal-logo.png");*/
+        
+        
+        }
+        .favorites-lower
+        {
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            height: 30%;
+            width: 100%;
+            /*  background-color:red;*/
+        }
+        
+        .favorites-lower-text
+        {
+            color: #57105c;
+            color: #d6017f;
+            display: block;
+            font-size: 0.8em;
+            -webkit-margin-before: 1em;
+            text-align: center;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            font-weight: bold;
+        }
+        
+        /*first cell */
+        tr:nth-child(1)  td:nth-child(1)  .favorites-upper
+        {
+            background-image: url(styles/images/jawal-logo2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }   
+        
+        tr:nth-child(1)  td:nth-child(1)  .favorites-lower-text
+        {
+            color: rgb(64, 88, 40);
+        }
+        
+        /*2nd cell */
+        tr:nth-child(1)  td:nth-child(2)  .favorites-upper
+        {
+            background-image: url(styles/images/jawal-logo2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }   
+        
+        tr:nth-child(1)  td:nth-child(2)  .favorites-lower-text
+        {
+            color: rgb(64, 88, 40);
+        }
+        
+        /*3rd cell */
+        tr:nth-child(1)  td:nth-child(3)  .favorites-upper
+        {
+            background-image: url(styles/images/wataniya-logo2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }   
+    
+        tr:nth-child(1)  td:nth-child(3)  .favorites-lower-text
+        {
+            color: #dc011b;
+        }
+        
+        /*4th cell */
+        tr:nth-child(2)  td:nth-child(1)  .favorites-upper
+        {
+            background-image: url(styles/images/pay-a-friend-icon.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }   
+    
+        tr:nth-child(2)  td:nth-child(1)  .favorites-lower-text
+        {
+            color: #4d4d4d;
+        }
+        /*5th cell */
+        tr:nth-child(2)  td:nth-child(2)  .favorites-upper
+        {
+            background-image: url(styles/images/paltel-icon.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }   
+    
+        tr:nth-child(2)  td:nth-child(2)  .favorites-lower-text
+        {
+            color: #0e57a5;
+        }
+        </style>
+    
+    <!-- <ul data-role="listview" data-style="inset">
+
+    <li ><a  data-icon="favorites" href="views/paltelBillsView.html" >
+           
+    Pay Paletel Bills
+                
+    
+    </a>
+    </li>
+    <li><a   data-icon="favorites" href="views/eTopUpPaymentView.html">
+
+    Jawwal Top-up 0596111111
+
+                
+   
+    </a>
+    </li>
+        
+    </ul>-->
+</div>

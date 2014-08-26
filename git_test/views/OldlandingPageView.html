@@ -1,0 +1,73 @@
+ <!-- data-title="Bank of Palestine"-->
+
+<div data-role="view" id="landing-page-view"  
+    data-layout="landing-page-layout"
+  
+    style="position:realative"
+    data-model="app.landingPageService.viewModel">
+    <div id="landing-page-image-container"  >
+        
+        
+        
+        <div id="landing-page-place-holder">dsdf</div>
+        
+        <div class="landing-page-tabstrip-container" >
+           
+            <a  data-bind="click:info">
+                <div id="left-tab">
+                    <div class="lp-tabstrip-icon-container info"></div>
+                    <div class="lp-tabstrip-icon-name"></div>
+                </div>
+            </a>
+            <div id="middle-tab"> <div class="lp-tabstrip-icon-container about-us"></div></div>
+            <div id="right-tab"> <div class="lp-tabstrip-icon-container locate-us"></div></div>
+            
+           <!-- <div data-role="tabstrip" class="landing-page-tabstrip">
+                <a  data-icon="globe" href="#index">Home</a>
+                <a  data-icon="featured" href="#featured">Featured</a>
+            </div>-->
+        </div>
+        
+    </div>
+    
+
+
+   
+</div>
+
+
+<div data-role="layout" data-id="landing-page-layout">
+
+        <!--Header-->
+        <div data-role="header" style="background-color:gray;border:none">
+            <div data-role="navbar" >
+                
+                
+                  <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1">
+                      
+                      <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer"></div>
+                  </a>
+              
+                 
+                <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+          <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+            </div>
+        </div>
+
+    
+        <!--Footer-->
+        <div data-role="footer" style="background-color:#e3e3e3; height: 40px;">
+           <ul data-role="listview">
+               <li><a data-icon="contacts" href="views/loginView.html" >Log In</a></li>
+               
+           </ul>
+           <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+               <a href="views/locationsView.html" data-icon="globe">Locations</a>
+               <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+               <a href="views/infoView.html" data-icon="info">Info</a>
+            </div>-->
+        </div>
+    </div>
+
+ 

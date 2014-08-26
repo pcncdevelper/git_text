@@ -1,0 +1,52 @@
+<div data-role="view" id="payABillView"  data-layout="goback-layout">
+<div class="page-name">approved list for Paltel</div>
+     
+   
+
+    <ul data-role="listview" data-style="inset">
+
+        <li id="paltel-li">
+            <a   href="views/partialPayment.html">My Home Phone </a>
+        </li>
+       <li id="paltel-li">
+            <a   href="views/paltelBillsView.html">My Dad's phone </a>
+        </li>
+        <li id="paltel-li">
+            <a   href="views/paltelBillsView.html">Compnay Phone </a>
+        </li>
+    </ul>
+    
+</div>
+
+<style>
+    
+   #payABillView  .km-listview-link:after {
+    visibility:hidden;
+       color:red;
+    }
+    
+    
+    #paltel-li{
+        background-image: url(styles/images/itisalat-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+    #hadara-li{
+        background-color:#eee;
+        background-image: url(styles/images/hadara-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+    #gemzo-li{
+        background-image: url(styles/images/gemzo-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+    
+</style>

@@ -1,0 +1,140 @@
+<div data-role="view" id="topUpAccountsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    <div class="page-name">e-Top UP Wataniya Mobile </div>
+    
+    
+    
+    
+    <form data-bind="events: { keyup: checkEnter }">
+
+        <h4>
+           <div class="main-text"> My Wataniya Number:  0568848453 </div>
+         
+           
+        </h4>
+        <ul data-role="listview" >
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My loans account US$<div class="act-value" >10,015.75 $</div></div> 
+            <div class="act-number"> 0450/0375056/001/1735/001 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+      </ul>
+        <h5>Minimum Top-up Value is 15 ILS</h5>
+        
+       <h5> Maximum Top-up Value is 200 ILS</h5>
+        
+        <div >
+            <table width= "100%" >
+                <tr><td class="sq">
+                   <input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="10" />
+                </td>
+                    <td class="sq"> <input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="15" /></td>
+                    <td class="sq"> <input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="20" /></td>
+                </tr>
+                <tr>
+                    
+                    <td class="sq"><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="25" /></td>
+                    <td class="sq"><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="50" /></td>
+                    <td class="sq"><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="100" /></td>
+                    
+                </tr>
+                <tr>
+                    <td class="sq"></td>
+                    <td class="sq"><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="200" /></td>
+                    <td class="sq"></td>
+                   
+                </tr>
+            </table>            
+        </div>
+        <style>
+            .sq{
+                float:left;
+                width:30%;
+                height:55px;
+               
+               
+                text-align: center; 
+                
+                
+                
+            }
+            
+            
+        </style>
+        <br>
+        <ul data-role="listview" data-style="inset" >
+           
+            <li>
+          
+                   <div class="main-text">  Amount in ILS</div>
+                    
+                  <input style="border:groove;padding-top:5px;padding-bottom:4px;" type="number" data-bind="value: password" placeholder="Amount" style="text-align:center"/>
+               
+            </li>
+            
+            
+        </ul>
+
+        <div class="buttonArea" style="margin-top:10px;">
+            <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="log-in-button" value="Top Up" />
+
+        </div>
+    </form>
+
+</div>
+                
+<style>
+    
+    #accountsView li:nth-child(odd){
+        background:#eee;
+    }
+    
+    .act-name{
+        font-size: 0.95em;
+    display: block;
+/*-webkit-margin-before: 1.33em;*/
+/*-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;*/
+-webkit-margin-end: 0px;
+font-weight: bold;
+    }
+    
+    
+    .act-value{
+      float:right;
+        margin-right:30px;
+       color:#560f5b; 
+    }
+    
+    .act-number
+    {
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+        font-size: 0.60em;
+       /* -webkit-margin-before: 2.33em;
+        -webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;*/
+        font-weight: bold;
+    }
+    
+    .act-avl{
+        float:right;
+        margin-right:30px;
+    }
+
+     #accountsView .km-listview-link:after{
+      
+        color:#d4047e!important;
+        
+     }
+    
+    div#accountView li a.km-listview-link{
+        font-size: initial!important;
+     /*  font-size: initial!important;*/
+    }
+    
+    
+</style>
+

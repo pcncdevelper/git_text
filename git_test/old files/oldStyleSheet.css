@@ -1,0 +1,12 @@
+.page-num-one
+        {
+           /* background-image: url(http://ppcdn.500px.org/64565733/32ab32af5dd9477930aff62403ef6ee17e340688/3.jpg);*/
+           background-image: url(../styles/ads/ad-01.jpg);
+            height: 32em;
+            /*background-color: red;*/
+            width: 320px;
+             background-image: url(../styles/images/lp-background.jpg);
+    /* background-repeat: no-repeat;*/
+   
+    background-size: 100% 100%;
+        }

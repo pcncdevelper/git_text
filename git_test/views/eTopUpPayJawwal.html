@@ -1,0 +1,39 @@
+<div data-role="view" id="topUpJawwalView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
+    <div class="page-name">e-Top UP Jawwal Mobile </div>
+    
+    
+    
+    
+    <form data-bind="events: { keyup: checkEnter }" >
+
+        <h4>
+           <div class="main-text"> Mobile Number</div>
+            
+           
+        </h4>
+        <div class="center-con">  <select  data-bind="source:jawwalNumbers"    >
+
+     </select></div>
+       
+        <br>
+        <br>
+        <ul data-role="listview" data-style="inset" >
+           
+            <li>
+          
+                   <div class="main-text">  Amount in ILS</div>
+                    
+                  <input type="number" data-bind="value: password" placeholder="Amount" style="text-align:center"/>
+               
+            </li>
+            
+            
+        </ul>
+
+        <div class="buttonArea">
+            <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="log-in-button" value="Top Up" />
+
+        </div>
+    </form>
+
+</div>

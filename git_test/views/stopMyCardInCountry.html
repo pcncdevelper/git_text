@@ -1,0 +1,115 @@
+<div data-role="view" id="stopMyCardView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Stop My Card in Country</div>
+    
+    
+     <div class='main-text'>Select your card</div>
+     <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:cards"  >
+
+        </select>
+    </p>
+    
+    <div class='main-text'>Select a country</div>
+     <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:countries"  >
+
+        </select>
+    </p>
+    
+     <!--<div class='main-text'>Please Specify the reason of stoppage</div>
+     <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:reasonOfStoppage"  >
+
+        </select>
+    </p>-->
+    <ul data-role="listview">
+    <li> <div class="main-text"><div style="float:left">From Date </div><input style="float: right; margin-right: 30px;" type="date" name="fromDate" placeholder="01/05/1990" data-bind="value:mydate"></div></li>
+    <li><div class="main-text"><div style="float:left">To Date</div><input style="float: right; margin-right: 30px;" type="date" name="ToDate" data-bind="value:mydate"></div></li>
+    </ul>
+    
+     <div class='main-text' style="margin-top:15px;margin-bottom:5px">Please Specify the reason of stoppage</div>
+    <div class="center-con">
+          <textarea style="width:90%; height:60px " placeholder=""></textarea>
+  
+          </div>  
+        
+    
+    
+    
+    <div class="buttonArea">
+            <input type="submit"  data-role="button"    class="log-in-button" value="Stop Card" href="#modalview-stopCard" data-rel="modalview"/>
+    </div>
+    
+    
+    
+    </div>
+
+
+
+
+<!--Modal Views Start-->
+        <div data-role="modalview" id="modalview-stopCard"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Stop Card</span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+            
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Stop Card</a></div>
+       
+               
+         </div>
+
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+       
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    
+    #modalview-stopCard{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+   
+    </style>
+    <script>
+     function closeModalViewLogin() {
+        
+        $("#modalview-stopCard").kendoMobileModalView("close");
+    }
+    </script>
+    
+
+
+

@@ -1,0 +1,146 @@
+<div 
+    data-model="app.cardsOnlyService.viewModel" 
+     data-role="view" 
+     id="bi-view"
+     data-before-show="beforeViewShow"
+     data-layout="goback-layout"
+    >
+    
+    <div class="page-name">
+      <!--  <div data-bind="source:selectedAccount.type" ></div>-->
+        Card Details
+    </div>
+    
+    
+    <ul data-role="listview">
+        <li><div class="f-left">Card Name</div><div class="f-right" data-bind="source:selectedAccount.type"></div></li>
+        <li><div class="f-left">Card Number</div><div class="f-right" data-bind="source:selectedAccount.accountNumber"></div></li>
+        <li><div class="f-left">IBAN/BBAN</div><div class="f-right" data-bind="source:selectedAccount.IBAN_BBAN"></div></li>
+        <li><div class="f-left">Available Balance</div><div class="f-right" data-bind="source:selectedAccount.availableBalance"></div></li>
+        <li><div class="f-left">Current Balance</div><div class="f-right" data-bind="source:selectedAccount.currentBalance"></div></li>
+       
+    </ul>
+    <div class="cards-view-seperator"></div>
+     <div class="buttonArea">
+                    <input type="submit" id="request-full-statement" data-bind="click:requestFullStatement" data-role="button"  class="log-in-button" value="Full Statement" />
+                    <input type="submit" id="request-full-statement" data-bind="click:requestMiniStatement" data-role="button"  class="log-in-button" value="Mini Statement" />
+                    <input type="submit" id="request-full-statement" data-bind="click:addBalanceToCard" data-role="button"  class="log-in-button" value="Add Balance" />
+                   
+       </div>
+    
+</div>
+
+<style>
+/*.cards-view-seperator{
+    width:100%;
+    height:20px;
+}
+    .f-left{
+      float:left;  
+     font-size: 0.7em;
+    }
+
+    .f-right{
+     float:right;  
+     font-weight:bold;
+       font-size: 0.7em; 
+    }
+*/.cards-view-seperator{
+    width:100%;
+    height:20px;
+}
+     #bi-view li:nth-child(odd){
+        background:#eee;
+    }
+    
+    .f-left{
+        width:30.5%;
+      float:left;  
+     font-size: 0.7em;
+    }
+
+    .f-right{
+    /* float:left;  */
+     font-weight:bold;
+       font-size: 0.7em; 
+    }
+    
+    
+</style>
+
+
+<!-- old view -->
+    
+    
+    <div data-role="layout" data-id="balance-inquiry-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+                  <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+            <!--<a data-role="backbutton" data-align="left">Back</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        
+    </div>
+
+
+
+<div 
+    data-model="app.cardsOnlyService.viewModel" 
+     data-role="view" 
+     id="bi-view"
+     data-before-show="beforeViewShow"
+     data-layout="goback-layout"
+    >
+    
+    
+    
+    
+    
+    <div class="bi-container">
+
+        
+        <div id="bi-upper-div" overflow-y: auto;>
+
+            <div id="account-details-container" >
+                <div data-bind="source:selectedAccount" data-template="accountList-template"></div>
+            </div>
+           
+        </div>
+       
+       <div class="buttonArea" >
+                    <input type="submit" id="request-full-statement" data-bind="click:requestFullStatement" data-role="button"  class="log-in-button" value="Full Statement" />
+                    <input type="submit" id="request-full-statement" data-bind="click:requestMiniStatement" data-role="button"  class="log-in-button" value="Mini Statement" />
+                    <input type="submit" id="request-full-statement" data-bind="click:addBalanceToCard" data-role="button"  class="log-in-button" value="Add Balance" />
+                   
+       </div>
+
+    </div>
+
+    <script type="text/x-kendo-template" id="accountList-template" >
+       
+        <ul data-role="listview" data-style="inset" >
+        <li>#:type#</li>
+        <li>#:accountNumber#</li>
+        <li style="font-size: 15px">#:IBAN_BBAN#</li>
+        <li>Available Balance : <span></span>#:availableBalance#&nbsp#:currency#</li>
+        <li>Current Balance &nbsp &nbsp  :<span> </span>#:currentBalance#&nbsp#:currency#</li>
+        </ul>
+    </script>
+
+    <script id="scrollview-template" type="text/x-kendo-template"><div data-role="page" data-accountNo="#= accountNumber #" class="photo" >
+        <h4>#= type #</h4>
+        
+        </div>
+    </script>
+
+</div>
+<script type="text/javascript">
+    beforeViewShow = function(e) {
+        console.log('beforeShow');
+    };        
+</script>

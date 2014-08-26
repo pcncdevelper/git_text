@@ -1,0 +1,161 @@
+<div data-role="view" id="definePayeeResponse"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+   
+    
+    <div class="page-name" > GEDCO Partial Payment</div>
+    <div class="page-name" > My Home Bill : 2433565</div>
+    
+     <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                    <li >
+                      
+                            From Account
+                               
+                       
+                    </li>
+    <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My Current account ILS<div class="act-value" >5,025.75 ILS</div></div> 
+            <div class="act-number"> 0450/0375056/099/3000/000 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+         </ul>
+    
+    <form data-bind="events: { keyup: checkEnter }">
+               
+
+                <div class="buttonArea">
+                    
+                  
+                     <input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button2" value="Get Open Invoices" />
+                </div>
+            </form>
+    
+</div>
+<div data-role="modalview" id="modalview-definePayee"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Request</span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-definePayee{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+   .log-in-button2 {
+    
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align:center;
+        font-family: inherit;
+        font-size: 16px!important;
+        font-weight: 100;
+        border: none;
+        /*background-color: #d00078;*/
+        background-color: #560f5b!important;
+        background-color: #a12764!important;
+        color: white!important;
+        width: 90%;
+        height: 45px;
+        border-radius: 7px!important;
+      
+}
+     #accountsView li:nth-child(odd){
+        background:#eee;
+    }
+    
+    .act-name{
+        font-size: 0.95em;
+    display: block;
+/*-webkit-margin-before: 1.33em;*/
+/*-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;*/
+-webkit-margin-end: 0px;
+font-weight: bold;
+    }
+    
+    
+    .act-value{
+      float:right;
+        margin-right:30px;
+       color:#560f5b; 
+    }
+    
+    .act-number
+    {
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+        font-size: 0.60em;
+       /* -webkit-margin-before: 2.33em;
+        -webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;*/
+        font-weight: bold;
+    }
+    
+    .act-avl{
+        float:right;
+        margin-right:30px;
+    }
+
+     #accountsView .km-listview-link:after{
+      
+        color:#d4047e!important;
+        
+     }
+    
+    div#accountView li a.km-listview-link{
+        font-size: initial!important;
+     /*  font-size: initial!important;*/
+    }
+    
+
+
+   
+</style>
+<script>
+     function closeModalViewLogin() {
+        
+        $("#modalview-definePayee").kendoMobileModalView("close");
+    }
+    
+
+</script>

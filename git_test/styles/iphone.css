@@ -1,0 +1,28 @@
+.page-num-two{
+   
+}
+
+
+#landing-page-view ol.km-pages li{
+    height:0.6em;
+    width:0.6em;
+}
+#landing-page-view ol.km-pages {
+
+    
+    margin-left: 9em;
+margin-top: -14em;
+position: fixed;
+}
+
+.landing-page-tabstrip-container {
+
+
+position: absolute;
+width: 100%;
+height: 88px;
+background-color: #58115d;
+opacity: 0.9;
+margin-top: 290px;
+position: relative;
+}

@@ -1,0 +1,639 @@
+<div data-role="view" id="transfersView"  data-layout="transfers-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+
+      <div class="page-name">Transfer to Others</div>
+     <ul data-role="listview" id="transfer-list" data-style="inset">
+       
+        
+         <li id="from-account-li" class="from-list-item" style="background-color:#eee" >
+            <a style="line-height: initial;"><div class="from-act">From</div>
+            <div id="balance-from-daccount-div" class="balance-from-acct">
+                Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                <span data-bind="source:fromcurrency"></span>
+            </div>
+            <div class="select-holder">
+                <select id="dtransfer-from-accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="fromAccountInOthers()"  >
+                
+                </select>
+            </div>
+             </a>
+        </li>
+         
+         <div class="seperator" style="background-color:#eee"></div>
+        
+        <li id="to-account-li" class="from-list-item" >
+            <a style="line-height: initial;">
+            <div class="from-act">To</div>
+            <div id="balance-to-account-div" class="balance-to-acct">
+                <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:currentToAccountBalance"></span>
+                <span data-bind="source:tocurrency"></span>
+            </div>
+            <div class="select-holder">
+                <select id="recipints-dd" class="from-dd" data-bind="source:TransfersRecievers" >
+
+                </select>
+            </div>
+                </a>
+        </li>
+          <div class="seperator"></div>
+         
+          <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee;">
+
+            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Amount</span>
+            <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" >
+        </li>
+        
+        <!--<li class="from-list-item"  >
+            <div class="from-act" >
+                Amount
+            </div>
+				 <div class="select-holder">
+                    <input  id="money-exchange-input2" type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here"   />
+                </div>
+        </li>-->
+         
+         <div class="seperator" style="background-color:#eee"></div>
+        
+        <!-- <li class="from-list-item" >
+            <div class="from-act">Description</div>
+            <div class="select-holder">
+                 <input   type="text" autocorrect="off" autocapitalize="off"  placeholder="Describe here"  />
+            </div>
+        </li>-->
+         
+         
+         
+         <li class="from-list-item"  >
+           
+                       <div style="width:100%"> Description </div>
+                       <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="Describe here"  />
+                    
+
+              
+                    
+                
+                        <!-- <textarea style="width:99%; height:25px;text-align:left; " placeholder="describe this transaction here"></textarea>-->
+                       
+                 
+                        
+            
+
+        </li>
+        <div class="seperator"></div>
+         
+         <div style="width:100%;height:58px;"> </div>
+         <div class="buttonArea">
+
+            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Proceed" />
+
+            <!--<input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalvisew-login"  class="log-in-button" value="Transfer" />-->
+
+            <!--   <input type="submit"  id="login" data-role="button"  href="views/defineTransferRecipient.html"  class="log-in-button" value="add a Transfer Recipient" /> -->
+        </div>
+        
+     </ul>
+    
+  </div>  
+
+
+
+
+<style>
+    #trans-info-table{
+        
+    }
+    
+    .from-list-item{
+        margin-top:5px;
+    }
+    
+    
+    
+    #from-account-li{
+        border-width:0px;
+        border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+        /*background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;*/
+        background-size: auto 100%!important;
+    }
+    #to-account-li{
+        border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+        /*background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;*/
+        background-size: auto 100%!important;
+    }
+    
+    
+    #balance-from-account-div{
+        visibility:hidden;
+        color:black;
+    }
+    #balance-to-account-div{
+        visibility:hidden;
+        color:black;
+        font-weight:100;
+    }
+    
+    #rate-holder{
+       visibility:hidden; 
+    }
+    
+    #money-exchange-input2{
+       font-size: 0.90em;
+       color:#560f5b;
+      /* background: lightgray;*/
+       width: 64%;
+       right: 0;
+       border-radius:5px;
+    }
+   
+    .seperator
+    {
+        height: 7px;
+        width: 100%;
+    }
+    
+    .balance-from-acct{
+        font-weight: 100;
+        margin-top: 4px;
+        visibility: visible;
+        
+        display: block;
+        font-size: 0.67em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+     /*   font-weight: bold;*/
+    }
+    
+    .balance-to-acct{
+        display: block;
+         font-weight: 100;
+        font-size: 0.67em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    
+    .rate-acct{
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+       -webkit-margin-before: 2.33em;
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    
+    
+    
+    .from-act
+    {
+        display: block;
+        font-size: 1.2em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;*/
+    }
+    
+    .from-dd
+    { 
+        left: 81px;
+        font-weight:100;
+        color: #d7007f;
+        color:gray;
+        right: 01px!important;
+        bottom: 1px; 
+        top: 0!important;
+        font-size: 1.0em!important;
+        height: 135%!important;
+        width: 73%!important;
+        /*background: aqua!important;
+        */
+        /*border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+        background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;
+        background-size: auto 100%!important;*/
+    }
+   
+    #transfer-list li
+    {
+      /*  width:93%!important;*/
+        width:100%!important;
+       /* border-width: 2px!important;*/
+        /* background: pink!important;*/
+       /* width: 93%!important;*/
+        margin-left: auto!important;
+        margin-right: auto!important;
+        border-image: -webkit-linear-gradient(left, rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0.5) 1em, rgba(180, 180, 180, 0.5) 100%) 1 stretch; ;
+    }
+    
+    
+    
+    
+    
+</style>
+    
+<script>
+    function fromAccountInOthers(){
+        
+        console.log("run my function");
+        that=app.dropDownService.viewModel;
+        console.log("Change");
+        fromC= that.fromcuurency;
+        toC=that.tocuurency;
+      /*  console.log("from "+fromC+"to "+toC);*/
+        
+        var myselect = document.getElementById("dtransfer-from-accounts-list-drop-down");
+ 
+        console.log(myselect.options[myselect.selectedIndex].index);
+        
+        _index=myselect.options[myselect.selectedIndex].index;
+        switch (_index) {
+            case(0):{
+              
+             document.getElementById("balance-from-daccount-div").style.visibility="hidden";
+            that.setFromCurrency("");
+            }
+            break;
+            case(1): {
+                    that.setCurrentAccountBalance(10015.75);
+                    that.setFromCurrency("USD");
+                document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(2): {
+                    that.setCurrentAccountBalance(1700.00);
+                    that.setFromCurrency("USD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(3): {
+                    that.setCurrentAccountBalance(20.082);
+                that.setFromCurrency("JOD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(4): {
+                    that.setCurrentAccountBalance(5015.75);
+                that.setFromCurrency("ILS");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(5): {
+                    that.setCurrentAccountBalance(100);
+                that.setFromCurrency("USD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+        }
+        console.log("From "+that.fromcurrency+"To "+that.tocurrency);
+        
+        if(that.fromcuurency==="USD" && that.tocurrency==="USD"){
+           alert();
+                that.setRate(2);
+            
+            
+        }
+         x=that.fromcurrency;
+        y=that.tocurrency;
+       
+        
+        
+        
+        switch (x) {
+            case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+            
+            case("USD"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):
+                          {  that.setRate(1);
+                        document.getElementById("rate-holder").style.visibility="hidden";}
+                            break;
+                        case("ILS"):{
+                            that.setRate(3.5);
+                            document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("JOD"):{
+                            that.setRate(0.7);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                    }
+                }
+                break;
+            case("JOD"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):{
+                            that.setRate(1.41);
+                        document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("ILS"):{
+                            that.setRate(4.91);
+                             document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("JOD"):{
+                            that.setRate(1);
+                             document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                    }
+                }
+                break; 
+            
+            case("ILS"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):
+                           {that.setRate(0.28);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                        case("ILS"):
+                            {that.setRate(4.91);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                        case("JOD"):
+                        {
+                            that.setRate(0.20);
+                         document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                    }
+                }
+                break;
+        }
+        
+       that.transferAmountChanged();
+        
+    }  
+    
+</script>
+
+
+<div data-role="layout" data-id="transfers-layout">
+
+    <!--Header-->
+    <div data-role="header" style="background-color:gray;border:none">
+        <div data-role="navbar" style="height:35px">
+
+            <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+            <a  id="favorite-button" data-role="button" class="km-button" data-icon="favorites" data-align="right" style="background-color:;color:#c1c1c1" data-click="app.transferCodeService.viewModel.checkTransfersCanFavorite"></a>
+
+            <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer" ></div>
+            <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+            <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+        </div>
+    </div>
+
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="trans-a-e" href="views/transfersView.html">Money Exchange</a>
+            <a data-icon="trans-d-e" href="views/dAccountTransferView.html">Transfer To others </a>
+            <a data-icon="periodic-e" href="views/automaticPaymentsView.html">Periodic Payments</a>
+
+        </div>
+    </footer>
+
+</div>
+
+    
+    
+    <!-- old view -->
+    <div data-role="view" id="transfersView"  data-layout="transfers-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Transfer to Others</div>
+
+    <div class='main-text'>Transfer From</div>
+    <p>
+
+        <select id="dtransfer-from-accounts-list-drop-down" data-bind="source:accounts" onchange="app.dropDownService.viewModel.fromAccountManger()"  >
+
+        </select>
+
+        <div class='main-text' style="color:#7b227e">
+            Available Balance :&nbsp<span style="color:black" data-bind="source:currentFromAccountBalance"></span>
+            <span data-bind="source:fromcurrency"></span>
+        </div>
+
+    </p>
+
+    <div class='main-text'>Transfer To</div>
+    <p>
+
+        <select id="dtransfer-to-accosunts-list-drop-down" data-bind="source:TransfersRecievers"  >
+
+        </select>
+    </p>
+
+    <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+            <li>
+                <label>
+                    <div class='main-text'> Amount</div>
+                    <input id="dAccount-amount" type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+                </label>
+            </li>
+            <li >
+                <label>
+                    <div class='main-text'> Description</div>
+
+                </label>
+
+            </li>
+        </ul>
+        <div class="center-con">
+            <textarea style="width:90%; height:60px " placeholder="describe this transaction here"></textarea>
+
+        </div>
+        <div class="buttonArea">
+
+            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Proceed" />
+
+            <!--<input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalvisew-login"  class="log-in-button" value="Transfer" />-->
+
+            <!--   <input type="submit"  id="login" data-role="button"  href="views/defineTransferRecipient.html"  class="log-in-button" value="add a Transfer Recipient" /> -->
+        </div>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+<!-- <li>  <a data-role="button" data-rel="modalview" href="#modalview-login" id="modalview-open-button">Login</a></li> -->
+
+<!--
+ <!--Modal Views Start--><!--
+        <div data-role="modalview" id="modalview-login" style="width: 100%; height:300px" >
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Transfer</span>
+                    <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h3>Are you Sure you want to complete this Transfer ?</h3>
+            
+          <div class="confirmation-button"> <a style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div class="confirmation-button">  <a style="width:100%" data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+        </div>
+    -->
+   -->
+
+<!--Modal Views Start-->
+        <div data-role="modalview" id="modalview-login"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Transfer</span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h4>Enter the "Transfer Code" number <span style="color: #560f5b; " data-bind="source:num"></span></h4>
+            
+            <input type="number" data-bind="value:enteredNumber" class="modalview-input-area">
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Transaction</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+<!-- <li>  <a data-role="button" data-rel="modalview" href="#modalview-login" id="modalview-open-button">Login</a></li> -->
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+       
+       background:#560f5b;
+        
+    }
+    #modalview-login{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    .modalview-input-area
+    {
+        
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+    
+        .input-amount
+    {
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+        background: rgb(80, 10, 80)!important;
+        color: rgb(255, 255, 255)!important;
+    }
+</style>
+
+--><script>
+    function closeModalViewLogin() {
+        $("#modalview-login").kendoMobileModalView("close");
+    }
+</script>
+
+<!-- Modal Views Start -->
+
+<!--Modal Views Start-->
+        <div data-role="modalview" id="modalview-add-to-favorites" >
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Add to Favorites</span>
+                    <a data-click="app.transferCodeService.viewModel.closeFavortiesModal"  data-icon="trash" data-role="button" data-align="right" ></a>
+                </div>
+            </div>
+          <h4 style="color:#560f5b">Please Name this operation<span style="color: #560f5b; " data-bind="source:num"></span> </h4>
+             <h4 > <input id="modal-favorite-name" style="font-size: 1.2em;" data-type="text" ></h4>
+            
+         
+            
+          <div > <a data-click="app.transferCodeService.viewModel.closeFavortiesModal" 
+              style="width:70%"  class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Add to Favorites</a></div>
+        
+               
+        </div>
+
+<div data-role="modalview" id="modalview-favorites-fail" >
+
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Add to favorites</span>
+            <a data-click="app.transferCodeService.viewModel.closeFavortiesFailModal"  data-icon="trash" data-role="button" data-align="right" ></a>
+        </div>
+    </div>
+    <h4 style="color:#560f5b">
+        Please make sure you filled the required fileds <span style="color: #560f5b; " data-bind="source:num"></span>
+    </h4>
+
+    <div >
+        <a style="width:70%"    data-click="app.transferCodeService.viewModel.closeFavortiesFailModal" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >OK</a>
+    </div>
+
+</div>
+
+<style>
+    #modalview-add-to-favorites{
+        width: 300px; 
+        height:250px;
+        border-radius:5px;
+       
+    }
+    
+    
+    #modalview-favorites-fail{
+        width: 300px; 
+        height:200px;
+        border-radius:5px;
+       
+    }
+</style>
+
+!-- Transfer layout Start-->
+     <div data-role="layout" data-id="transfer-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+                    <a  id="favorite-button" data-role="button" class="km-button" data-icon="favorites" data-align="right" style="background-color:;color:#c1c1c1" data-click="app.transferCodeService.viewModel.checkDiffTransfersCanFavorite"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer" ></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+    </div>
+
+<style>
+    #favorite-button
+    {
+        
+     background-repeat:no-repeat;
+    background-image: url(styles/images/add-to-favorites.png);
+background-size: 100%;
+       /* background-color: pink;
+        font-size: 1.4em;
+        border-color: red;
+        color: #c1c1c1;*/
+    }
+</style>
+
+      

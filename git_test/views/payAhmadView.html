@@ -1,0 +1,109 @@
+<div data-role="view" id="payAFriendView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
+    <div class="page-name">Pay Ahmad Salama</div>
+    
+    <!--<div class='main-text'>Transfer From</div>-->
+    <!--<p>
+
+        <select id="accounts-list-drop-down" data-bind="source:accounts"  >
+
+        </select>
+    </p>
+-->
+    <div class='main-text'>Amount In Israeli Shekel</div>
+    <p>
+
+        
+      <!-- <select id="accounts-list-drop-down" data-bind="source:currencies"  >
+
+        </select>-->
+    </p>
+
+    <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+            <li>
+                <label>
+                   <div class='main-text-black'> Amount</div>
+                   <input style="border:groove;padding:5px" id="amount-to-exchange"  type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" onchange="transferAmountChanged()"  />
+                </label>
+            </li> 
+            
+             <label>
+                   <div class='main-text' style="padding-top:5px;padding-bottom:5px;"> Description</div>
+                    
+                </label>
+
+        </ul>
+        <div class="center-con">
+          <textarea style="width:90%; height:60px " placeholder="describe this transaction here"></textarea>
+  
+          </div>  
+
+        <div class="buttonArea">
+            <input type="submit" data-rel="actionsheet" id="login" data-role="button"  href="#modalview-payFriend"  class="log-in-button" value="Pay" />
+        </div>
+    </form>
+
+   
+    </div>
+
+
+
+<div data-role="modalview" id="modalview-payFriend"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Pay </span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Payment</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-payFriend{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+
+   
+</style>
+<script>
+     function closeModalViewLogin() {
+        
+        $("#modalview-payFriend").kendoMobileModalView("close");
+    }
+    
+
+</script>

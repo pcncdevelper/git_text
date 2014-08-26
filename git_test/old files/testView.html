@@ -1,0 +1,50 @@
+
+    <div id="testView"
+        data-role="view"
+        data-title="testView"
+        data-model="app.testService.viewModel">
+
+        <div class="weather">
+            <p class="weather-title">Test Model</p>
+
+            <div class="separator">
+                <div class="dark"></div>
+                <div class="light"></div>
+            </div>
+
+            <ul class="forecast-list"
+                data-role="listview"
+                data-bind="source: testDataSource"
+                data-template="test-list-template">
+            </ul>
+        </div>
+        
+        <div data-role="scrollview"  data-template="scrollview-template" id="scrollview"  data-bind="source: testDataSource">
+            
+        </div>
+
+
+    
+
+        
+        
+        
+    </div>
+
+    <!--Weather forecast template-->
+    <script type="text/x-kendo-tmpl" id="test-list-template">
+        <div>
+           ${type}
+        </div>
+    </script>
+
+
+ <script id="scrollview-template" type="text/x-kendo-template" >
+       
+      <div>${type} <br> </div> 
+     
+     
+ </script>
+    
+ 
+       

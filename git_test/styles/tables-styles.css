@@ -1,0 +1,154 @@
+#favoritesView table { 
+     
+  width: 100%;
+  border-collapse:separate; 
+  table-layout: fixed;
+    
+}
+/* Zebra striping */
+ #mini-Statement-multi-View tr:nth-of-type(odd) { 
+  
+   
+      background: #eee;
+     
+     /* background: #757575;*/
+   
+}
+
+#mini-Statement-multi-View th:nth-of-type(1) { 
+      color:white;
+      background: #63106c;
+      background: gray;
+}
+#mini-Statement-multi-View th:nth-of-type(2) { 
+    color:white;
+      background: #63106c;
+     background: gray;
+}
+#mini-Statement-multi-View th:nth-of-type(3) {
+    color:white;
+      background:#63106c;
+     background: gray;
+}
+
+
+#mini-Statement-multi-View tr:nth-of-type(even){
+   
+     background:white;
+    /* background:#63106c;*/
+    
+}
+
+#mini-Statement-multi-View th  { 
+  /*background: #333; */
+  background: none; 
+     }
+
+#mini-Statement-multi-View .km-android th { 
+  /*background: #333; */
+  /*background: #ccc; */
+     
+  color: white; 
+  font-weight: bold; 
+}
+#mini-Statement-multi-View th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+     color:black;
+     
+}
+
+#mini-Statement-multi-View td{
+     padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+     color:black;
+    font-weight:bold;
+}
+
+#mini-Statement-multi-View td{
+   /* word-wrap:break-word*/
+}
+
+#miniStatement td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+}
+
+/*  fulll statement view styles*/
+
+#fullStatementView tr:nth-of-type(odd) { 
+  
+   
+      background: #eee;
+     
+     /* background: #757575;*/
+   
+}
+
+#fullStatementView th:nth-of-type(1) { 
+      color:white;
+      background: #63106c;
+      background: gray;
+}
+#fullStatementView th:nth-of-type(2) { 
+    color:white;
+      background: #63106c;
+     background: gray;
+}
+#fullStatementView th:nth-of-type(3) {
+    color:white;
+      background:#63106c;
+     background: gray;
+}
+
+
+#fullStatementView tr:nth-of-type(even){
+   
+     background:white;
+    /* background:#63106c;*/
+    
+}
+
+#fullStatementView th  { 
+  /*background: #333; */
+  background: none; 
+     }
+
+#fullStatementView .km-android th { 
+  /*background: #333; */
+  /*background: #ccc; */
+     
+  color: white; 
+  font-weight: bold; 
+}
+#fullStatementView th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+     color:black;
+     
+}
+
+#fullStatementView td{
+     padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+     color:black;
+    font-weight:bold;
+}
+
+#fullStatementView td{
+   /* word-wrap:break-word*/
+}
+
+#miniStatement td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+}
+
+
+

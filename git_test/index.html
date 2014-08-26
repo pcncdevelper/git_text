@@ -1,16 +1,694 @@
+
+<!-- <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" /> -->
+
 <!DOCTYPE html>
 <html>
 <head>
+    
+    
     <title></title>
     <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-
+   
+   <!-- <link href="kendo/styles/kendo.mobile.all.css" rel="stylesheet" />-->
+    <link href="kendo/styles/kendo.mobile.all.css" rel="stylesheet" />
+    <link href="styles/main.css" rel="stylesheet" />
+ <!--   <link href="styles/theme1.css" rel="stylesheet" />-->
+   <!-- <link href="styles/theme2.css" rel="stylesheet" />-->
+    
+    <link href="styles/testStyles.css" rel="stylesheet" />
+    <link href="styles/added-styles.css" rel="stylesheet" />
+    <link href="styles/tables-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen and (min-width: 400px) and (max-width: 900px)" href="styles/tablet-styles.css" />
+    <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="styles/iphone.css" />
+ <link rel="stylesheet" type="text/css" media="screen and (min-width: 100px) and (max-width: 200px)" href="styles/phablet-styles.css" />
     <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
+  <!--  <script src="kendo/js/jquery.min.js"></script>  -->
+    <script src="kendo/js/jquery-1.11.0.js"></script>
+   
+    
+    <!-- recently changed -->
+    <script src="kendo/js/kendo.all.min.js"></script>
+    <!--<script src="kendo/js/kendo.mobile.js"></script>-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+    <link rel="stylesheet" media="all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait)" href="styles/ipad.css" />
+   
+    <script src="scripts/numeral.min.js"></script>
+    <script src="viewModels/weather.js"></script>
+     
+    <script src="viewModels/accountsViewModel.js"></script>
+    <script src="viewModels/accountsOnlyViewModel.js"></script>
+    <script src="viewModels/cardsOnlyViewModel.js"></script>
+    <script src="viewModels/dropDownViewModel.js"></script>
+    <script src="viewModels/landingPageViewModel.js"></script>
+    <script src="viewModels/transferCodeViewModel.js"></script>
+    
+    <script src="viewModels/singleAccountViewModel.js"></script>
+    <script src="viewModels/testViewModel.js"></script>
+  
+    
+    <script src="viewModels/miniStatementViewModel.js"></script>
+  
+     <script src="viewModels/activationViewModel.js"></script>
+     <script src="viewModels/FSRequestViewModel.js"></script>
+     
+    <script src="viewModels/loginViewModel.js"></script>
+    <script src="scripts/activationCheck.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/scripts.js"></script>
+     <script src="scripts/location.js"></script>
+    
     
 </head>
 <body>
+ 
+
+    
+    
+    <!--Landing page Start-->
+     <!-- data-title="Bank of Palestine"-->
+
+        <div data-role="view" id="landing-page-view"  
+             data-layout="landing-page-layout"
+  
+             style="position:realative"
+             data-model="app.landingPageService.viewModel">
+            <div id="landing-page-image-container"  >
+
+                <div id="landing-page-place-holder">
+                    <div id="scrollView" data-role="scrollview" data-page="1">
+                        <div  data-role="page" class="page-num-one">
+
+                           
+
+                        </div>
+                        <div data-role="page" class="page-num-two">
+
+                            
+
+                        </div>
+                        <div data-role="page" class="page-num-three"></div>
+
+                    </div>
+                </div>
+
+                <div class="landing-page-tabstrip-container" >
+                    <a  data-bind="click:info" >
+                        <div id="left-tab" >
+                            <div class="lp-tabstrip-icon-container info"></div>
+                            <div class="lp-tabstrip-icon-name"></div>
+                        </div>
+                    </a>
+                    <a  data-bind="click:aboutUs">
+                    <div id="middle-tab">
+                        <div class="lp-tabstrip-icon-container about-us"></div>
+                    </div>
+                    </a>
+                    <a  data-bind="click:locations">
+                    <div id="right-tab">
+                        <div class="lp-tabstrip-icon-container locate-us"></div>
+                    </div>
+                     </a>
+
+                    <!-- <div data-role="tabstrip" class="landing-page-tabstrip">
+                    <a  data-icon="globe" href="#index">Home</a>
+                    <a  data-icon="featured" href="#featured">Featured</a>
+                    </div>-->
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div data-role="layout" data-id="landing-page-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#landing-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#landing-drawer"></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div data-role="footer" style="background-color:#e3e3e3; height: 40px;">
+                <ul data-role="listview">
+                    <li>
+                        <a data-icon="contacts" href="views/loginView.html" >Log In</a>
+                    </li>
+
+                </ul>
+                <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+                <a href="views/locationsView.html" data-icon="globe">Locations</a>
+                <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+                <a href="views/infoView.html" data-icon="info">Info</a>
+                </div>-->
+            </div>
+
+        </div>
+
+        
+    
+   
+    <!-- Landing Page End-->
+    
+    
+    <!--<div data-role="view"
+        id="new-view"
+        >
+        <div id="new-upper-div"><input></div>
+        <div id="new-lower-div"></div>
+        
+    </div>
+    -->
+    
+    <!-- test area start -->
+  <!-- <script type="text/x-kendo-template" id="accountList-template" >
+        <p>#:type#</p>
+        <p>account Number #:accountNumber#</p>
+        <p>#:IBAN_BBAN#</p>
+        <p>#:availableBalance#</p>
+        <p>#:currentBalance#</p>
+    </script>
+
+    <script id="scrollview-template" type="text/x-kendo-template"><div data-role="page" data-accountNo="#= accountNumber #" class="photo" >
+        <p>#= type #</p>
+        <p>#= accountNumber #</p>
+    </div>
+    </script>
+    
+    
+    
+   <div data-model="app.accountsService.viewModel" 
+       data-role="view" 
+         id="test-view"
+        data-before-show="beforeViewShow"
+         data-layout="main-layout">
+        <div class="v-container">
+            
+        <div id="upper-div">
+            
+            
+            <div id="account-details-container" >
+            <div data-bind="source:selectedAccount" data-template="accountList-template"></div>
+        </div>
+    
+            <div id="upper-inner-div"></div></div>
+        <div id="lower-div">
+            <div id="scrollview-container" >
+            <div id="accounts-scrollview"
+                 data-role="scrollview" 
+                 data-bind="source: accountsData" 
+                 data-template="scrollview-template"
+                 data-page="0"
+                 data-content-height="5em"
+                 data-change="app.accountsService.viewModel.pageChange">
+            </div>
+
+        </div>
+            
+        </div>
+            
+        </div>
+  
+        
+    
+        
+    </div>
+    <script type="text/javascript">
+        beforeViewShow = function(e){
+            console.log('beforeShow');
+          
+        };
+     
+        
+    </script>-->
+  <!-- test area start -->  
+   
+    
+    
+    
+    
+    
+    
+    <!--Home-->
+    <div id="tabstrip-home"
+        data-role="view"
+        data-title="Home">
+
+        <div class="view-content">
+            <h1>Welcome!</h1>
+            <a id="skin-change" data-role="button" data-click="app.changeSkin">Flat</a>
+            <p>
+                Telerik AppBuilder&trade; enables you to build cross-platform device applications regardless of your
+                    development platform by combining the convenience of a local development toolset with the
+                    power and flexibility of the cloud.
+            </p>
+            <div class="img"></div>
+        </div>
+    </div>
+    
+    
+    <!--Location
+    <div id="tabstrip-location"
+        data-role="view"
+        data-title="Location"
+        data-init="app.locationService.initLocation"
+        data-show="app.locationService.show"
+        data-hide="app.locationService.hide"
+        data-model="app.locationService.viewModel"
+        data-stretch="true">
+
+        <div id="no-map" data-bind="invisible: isGoogleMapsInitialized">
+            Location requires internet connection to display the map.
+        </div>
+        <div id="map-search-wrap" data-bind="visible: isGoogleMapsInitialized">
+            <button id="map-navigate-home" data-bind="click: onNavigateHome"></button>
+            <form onsubmit="return false;">
+                <input id="map-address" type="search" data-bind="value: address" placeholder="Address" />
+                <input id="map-search" type="submit" value="" data-bind="click: onSearchAddress" />
+            </form>
+        </div>
+        <div id="map-canvas" data-bind="visible: isGoogleMapsInitialized"></div>
+
+    </div>-->
+
+    <!--Weather-->
+    <div id="tabstrip-weather"
+        data-role="view"
+        data-title="Weather"
+        data-model="app.weatherService.viewModel">
+
+        <div class="weather">
+            <p class="weather-title">20-Day Forecast</p>
+
+            <div class="separator">
+                <div class="dark"></div>
+                <div class="light"></div>
+            </div>
+
+            <ul class="forecast-list"
+                data-role="listview"
+                data-bind="source: weatherDataSource"
+                data-template="weather-forecast-template">
+            </ul>
+        </div>
+    </div>
+
+    
+    
+    
+    
+       
+    
+    
+    
+    
+    
+    
+    
+    <!--Weather forecast template-->
+    <script type="text/x-kendo-tmpl" id="weather-forecast-template">
+        <div>
+            <div class="position-left">
+                <span class="weather-info date">${day}</span>
+            </div>
+            <div class="position-right">
+                <span class="weather-info temperature high">${highTemperature}<sup>&deg;</sup></span>
+                <span class="weather-info temperature low">${lowTemperature}<sup>&deg;</sup></span>
+            </div>
+            <div class="position-center">
+                <span class="weather-icon ${image}"></span>
+            </div>
+        </div>
+    </script>
+
+    <!--Layout-->
+    <div data-role="layout" data-id="main-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+                  <a data-role="backbutton"  data-align="left"></a>
+          <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+           <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+               <a href="views/locationsView.html" data-icon="globe">Locations</a>
+               <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+               <a href="views/infoView.html" data-icon="info">Info</a>
+            </div>-->
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    <!--Drawer Start-->
+    <!--data-views="['drawer-home', 'drawer-starred', 'drawer-deleted', 'drawer-spam', 'drawer-drafts', 'drawer-sent', '/kendo-ui/mobile/m/drawer/index.html']"-->
+        <div data-role="drawer" id="my-drawer" style="width: 270px" data-model="app.loginService.viewModel"
+            data-views="['views/accountsView.html','views/accountsBIView.html','views/cardsBIView.html',
+            'views/cardsView.html','views/transfersView.html','views/paymentsView.html',
+            'views/eTopUpView.html','views/chequesView.html','views/infoView.html',
+            'views/locationsView.html','views/favoritesView.html','views/dashBoardView.html',
+            'views/dAccountTransferView.html','views/moreServicesView.html','views/settingsView.html'
+            ,'views/payAFriendView.html','views/requestsView.html','views/loyaltyPointsView.html','views/automaticPaymentsView.html', 'views/personalMoneyMgmt.html', 'views/donationView.html' ,'views/CardsMenuView.html']">
+            <ul data-role="listview" data-type="group">
+                <li>
+                    <!--<div class="drawer-group-name"><h3>Home</h3></div>-->
+                    <div class="drawer-group-name"><h3>Welcome <span data-bind="source:fname"></span>!</h3></div>
+                    
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="home-e" href="views/dashBoardView.html">Home</a>
+                        </li>
+                       
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="account-e" href="views/accountsView.html">Accounts</a>
+                        </li>
+                        
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="cards-e" href="views/CardsMenuView.html">Cards</a>
+                        </li> 
+                        
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="check-e" href="views/chequesView.html">Check Services</a>
+                        </li>
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="transfer-e" href="views/transfersView.html">Transfers</a>
+                        </li>
+                        
+                   
+                    
+                    
+                  <!--  <div class="drawer-group-name"><h3>Favorites</h3></div>
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="favorites" href="views/favoritesView.html">View Favorites</a>
+                        </li>
+                       
+                        
+                    </ul>
+                    -->
+                   <!-- <div class="drawer-group-name"><h3>Balances</h3></div>
+                    
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="bookmarks" href="views/accountsView.html">Accounts</a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="organize" href="views/cardsView.html">Cards</a>
+                        </li>
+                        
+                    </ul>-->
+                    
+                   <!-- <div class="drawer-group-name"><h3>Transfers</h3></div>
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="fastforward" href="views/transfersView.html">Currency Exchange <br>&nbsp &nbsp&nbsp &nbsp(My accounts)</a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="fastforward" href="views/dAccountTransferView.html">Transfer to others</a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="fastforward" href="views/automaticPaymentsView.html">Automatic Payments</a>
+                        </li>
+                    </ul>
+                    -->
+                    <!--<div class="drawer-group-name"><h3>Payments</h3></div>-->
+                    
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="bill-e" href="views/paymentsView.html">Payments/ Topup</a>
+                        </li>  <li>
+                            <a class="drawer-sub-menu"  data-icon="favorites" href="views/loyaltyPointsView.html">Loyalty Points</a>
+                        </li>
+                       
+                       
+                        
+                        
+                    </ul>
+                  <!--  
+                    <div class="drawer-group-name"><h3>Requests</h3></div>
+                    <ul>
+                        
+                       
+                        
+                    </ul>
+
+                    <div class="drawer-group-name"><h3>E-top Up</h3></div>
+                    <ul>
+                      
+                    </ul>-->
+                    
+                    
+                    <div class="drawer-group-name"><h3>Services & Requests</h3></div>
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="more-e" href="views/moreServicesView.html">More services</a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="request-e" href="views/requestsView.html">Requests from Bank</a>
+                        </li>
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="mgmt-e" href="views/personalMoneyMgmt.html">Personal Money Management</a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="donation-e" href="views/donationView.html">Donation</a>
+                        </li>
+                        <!--<li>
+                            <a class="drawer-sub-menu"  data-icon="compose" href="views/chequesView.html">Cheques</a>
+                        </li>
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="info" href="views/infoView.html">Info</a>
+                        </li>
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="globe" href="views/locationsView.html">Location</a>
+                        </li>-->
+                        
+                    </ul>
+                    <div class="drawer-group-name"><h3>Settings</h3></div>
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="settings-e" href="views/settingsView.html">Edit Settings</a>
+                        </li>    
+                    </ul>
+                    
+                    <div class="drawer-group-name"><h3>Log out</h3></div>
+                    <ul>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="exit-e" href="#landing-page-view">Logout</a>
+                        </li>
+                    </ul>
+                    
+                </li>
+
+            </ul>
+        </div>
+    <!--Drawer End-->
+    <!-- landing Page drawer Start -->
+    <div data-role="drawer" id="landing-drawer" style="width: 270px"
+            data-views="['landing-page-view','views/drawer-infoView.html','views/drawer-locationsView.html','views/drawer-aboutUsView.html']"
+            
+            >
+            <ul data-role="listview" data-type="group">
+                <li>
+                    
+                    
+                    <div class="drawer-group-name"><h3>Services</h3></div>
+                    <ul>
+                        
+                        
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="home" href="#landing-page-view">Home</a>
+                        </li>
+                        
+                        
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="info" href="views/drawer-infoView.html">Info</a>
+                        </li>
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="globe" href="views/drawer-locationsView.html">Locate Us</a>
+                            
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="toprated" href="views/drawer-aboutUsView.html">About Us</a> 
+                        </li>
+                    </ul>
+                    
+                    <div class="drawer-group-name"><h3>Your Account</h3></div>
+                    <ul>
+                        
+                         <li>
+                            <a class="drawer-sub-menu"  data-icon="contacts" href="views/loginView.html">Log in </a>
+                        </li>
+                        <li>
+                            <a class="drawer-sub-menu"  data-icon="more" href="views/loginView.html">More services</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+
+            </ul>
+        </div>
+    
+    
+    
+    <!-- landing Page drawer End -->
+    
+    
+    
+    
+    
+    
+    
     
 </body>
+    
+    <script> 
+  function onDeviceReady() {
+      
+      
+      alert("device Ready");
+        function onSuccess(contacts) {
+            alert('Found ' + contacts.length + ' contacts.');
+        };
+
+        function onError(contactError) {
+            alert('onError!');
+        };
+
+        // find all contacts with 'Bob' in any name field
+        var options = new ContactFindOptions();
+        options.filter = "Bob";
+        options.multiple = true;
+        var fields = ["displayName", "name"];
+        navigator.contacts.find(fields, onSuccess, onError, options);
+  
+  }
+</script>
+    
+    <!-- back to main layout Start -->
+    <div data-role="layout" data-id="back-to-main-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar" style="height:35px">
+               <!-- <span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                  <a style="width: 0em" id="log-in-backbutton-header"  href="#landing-page-view" data-role="button" data-icon="back"  data-align="left"> 
+                     
+                      <div style="margin-left: 18px;" data-role="button" id="header-logo-container"  href="#landing-page-view"></div>
+                      
+                  </a>
+               
+          <!-- data-role="backbutton" <a data-role="backbutton" data-align="right">Back</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+           <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+               <a href="views/locationsView.html" data-icon="globe">Locations</a>
+               <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+               <a href="views/infoView.html" data-icon="info">Info</a>
+            </div>-->
+        </div>
+    </div>.
+    
+    <!-- back to main layout End -->
+    
+    
+    <!-- level-one-layout Start-->
+     <div data-role="layout" data-id="level-one-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer"></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+    </div>
+    
+    
+    <!-- level-one-layout End-->
+    
+    <!-- login -layout start -->
+    <div data-role="layout" data-id="login-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar" style="height:35px">
+               <!-- <span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                  <a style="width: 0em" id="log-in-backbutton-header"  href="#landing-page-view" data-role="button" data-icon="back"  data-align="left"></a>
+                <div style="margin-left: 18px;" data-role="button" id="header-logo-container"  href="#landing-page-view"></div>
+          <!-- data-role="backbutton" <a data-role="backbutton" data-align="right">Back</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+           <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+               <a href="views/locationsView.html" data-icon="globe">Locations</a>
+               <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+               <a href="views/infoView.html" data-icon="info">Info</a>
+            </div>-->
+        </div>
+    </div>.
+
+    <!-- login -layout end -->
+    
+    
+     <!-- goback -layout start -->
+    <div data-role="layout" data-id="goback-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar" style="height:35px">
+               <!-- <span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                  <a  id="log-in-backbutton-header"   data-role="backbutton"   data-align="left">
+                      
+                  </a>
+                <div style="margin-left: 18px;"  id="header-logo-container"  ></div>
+                      
+                
+          <!-- data-role="backbutton" <a data-role="backbutton" data-align="right">Back</a>-->
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+           <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+               <a href="views/locationsView.html" data-icon="globe">Locations</a>
+               <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+               <a href="views/infoView.html" data-icon="info">Info</a>
+            </div>-->
+        </div>
+    </div>.
+
+    <!-- login -layout end -->
+    
+    
+    
+    
+    
 </html>

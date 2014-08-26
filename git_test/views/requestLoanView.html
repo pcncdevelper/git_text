@@ -1,0 +1,106 @@
+<div data-role="view" id="requestLoanView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
+    <div class="page-name">Request a Loan View</div>
+    
+    
+     <div class='main-text'>Loan Type</div>
+     <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:loansTypes"  >
+
+        </select>
+    </p>
+    
+   <p>
+                <div class='main-text'> Amount</div>
+               
+       <h3><input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+           </h3>
+    </p>
+    
+    
+     <div class='main-text'>Currency</div>
+    <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:currencies"  >
+
+        </select>
+    </p>
+    
+    <div class="buttonArea">
+            <input type="submit"  data-role="button" data-rel="modalview" href="#modalview-requestLoan"   class="log-in-button" value="Request a Loan" />
+    </div>
+    
+    
+    
+    </div>
+
+<div data-role="modalview" id="modalview-requestLoan"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Request Loan </span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-requestLoan{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+
+   
+</style>
+<script>
+     function closeModalViewLogin() {
+        
+        $("#modalview-requestLoan").kendoMobileModalView("close");
+    }
+    
+
+</script>
+
+
+
+<style>
+#requestLoanView h3 input{
+    height: 30px;
+}
+    
+    
+    
+</style>

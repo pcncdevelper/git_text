@@ -1,0 +1,134 @@
+<div data-role="view" id="transfersView"  data-layout="level-one-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Transfers View</div>
+
+    <div class='main-text'>Transfer From</div>
+    <p>
+
+        <select id="accounts-list-drop-down" data-bind="source:accounts"  >
+
+        </select>
+    </p>
+
+    <div class='main-text'>Transfer To</div>
+    <p>
+
+       <select id="accounts-list-drop-down" data-bind="source:accounts"  >
+
+        </select>
+    </p>
+
+    <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+            <li>
+                <label>
+                   <div class='main-text'> Amount</div>
+                    <input class="input-amount" type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+                </label>
+            </li>
+            
+
+            <li >
+                <label>
+                   <div class='main-text'> Description</div>
+                    
+                </label>
+               
+            </li>
+        </ul>
+        <div class="center-con">
+          <textarea style="width:90%; height:60px " placeholder="describe this transaction here"></textarea>
+  
+          </div>  
+         
+        
+        
+        
+        <div class="buttonArea">
+            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Transfer" />
+        </div>
+    </form>
+
+</div>
+
+
+<!--Modal Views Start-->
+        <div data-role="modalview" id="modalview-login"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Transfer</span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h4>Enter the "Transfer Code" number <span style="color: #560f5b; " data-bind="source:num"></span></h4>
+            
+            
+            <input data-type="number" data-bind="value:enteredNumber" class="modalview-input-area">
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+            
+
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Transaction</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+   
+<!-- <li>  <a data-role="button" data-rel="modalview" href="#modalview-login" id="modalview-open-button">Login</a></li> -->
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+       
+       background:#560f5b;
+     
+        
+    }
+    #modalview-login{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    .modalview-input-area{
+        
+       text-align: center;
+font-size: larger;
+margin-bottom: 10px;
+height: 45px;
+width: 112px;
+        
+        
+    }
+    
+    
+    
+        .input-amount
+    {
+        border-top-left-radius: 5px!important;
+        border-bottom-left-radius: 5px!important;
+        background: rgb(80, 10, 80)!important;
+        color: rgb(255, 255, 255)!important;
+    }
+</style>
+
+ 
+
+<style>
+    
+   
+</style>
+
+
+<script>
+    function closeModalViewLogin() {
+        $("#modalview-login").kendoMobileModalView("close");
+    }
+</script>
+
+
+
+        <!--Modal Views End-->

@@ -1,0 +1,54 @@
+<div data-role="view" id="paymentHistoryView"  data-layout="goback-layout">
+<div class="page-name">Payment History</div>
+
+    
+    <ul data-role="listview" data-style="inset">
+
+        <li id="paltel-li">
+            <a  href="views/paltelPayedBillsView.html">Paltel</a>
+        </li>
+        <li id="hadara-li">
+            <a   href="views/paltelPayedBillsView.html">Hadara</a>
+        </li>
+        <li id="gemzo-li">
+            <a   href="views/paltelPayedBillsView.html">Gemzo</a>
+        </li>
+    </ul>
+    
+    
+</div>
+<style>
+  
+    
+   #paymentHistoryView  .km-listview-link:after {
+    visibility:hidden;
+       color:red;
+    }
+    
+    
+    #paltel-li{
+        background-image: url(styles/images/itisalat-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+    #hadara-li{
+        background-color:#eee;
+        background-image: url(styles/images/hadara-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+    #gemzo-li{
+        background-image: url(styles/images/gemzo-icon.png);
+background-repeat: no-repeat;
+background-size: 40% 90%;
+    background-position:right;
+    }
+    
+</style>
+
+
+

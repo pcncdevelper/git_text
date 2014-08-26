@@ -1,0 +1,273 @@
+<div data-role="view" id="cardsView"  data-layout="cards-layout">
+     <div class="page-name">My cards</div>
+    <ul data-role="listview">
+
+        <li >
+           <a href="views/cardsBIView.html">
+                <div class="card-name">My MasterCard US$<div class="card-value" >10025.75 $</div></div> 
+            <div class="card-number">2343567676890 <span class="card-avl">Available</span></div> 
+           </a>    
+        </li>
+         <li >
+           <a href="views/cardsBIView.html">
+                <div class="card-name">My Easy Life ILS<div class="card-value" >2688.00 ILS</div></div> 
+            <div class="card-number">2345678912 <span class="card-avl">Available</span></div> 
+           </a>    
+        </li>
+        <li >
+           <a href="views/cardsBIView.html">
+                <div class="card-name">Mastercard Gold USD<div class="card-value" >4890.00 $</div></div> 
+            <div class="card-number">2345678912 &nbsp&nbsp <span class="card-avl">Available</span></div> 
+           </a>    
+        </li>
+        
+      
+    
+        
+        
+        
+        
+        
+        
+        
+    </ul>
+    
+</div>
+
+
+<div data-role="layout" data-id="cards-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer"></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+    
+    
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="account-e" href="views/accountsView.html">Accounts </a>
+            <a data-icon="organize" href="views/cardsView.html">Cards </a>
+           
+        </div>
+    </footer>
+    
+    
+    </div>
+
+
+<style>
+    #cardsView li:nth-child(odd){
+        background:#eee;
+    }
+    
+    .card-name{
+        font-size: 0.95em;
+    display: block;
+/*-webkit-margin-before: 1.33em;*/
+/*-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;*/
+-webkit-margin-end: 0px;
+font-weight: bold;
+    }
+    
+    
+    .card-value{
+      float:right;
+        margin-right:30px;
+       color:#560f5b; 
+    }
+    
+    .card-number
+    {
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+        font-size: 0.60em;
+       /* -webkit-margin-before: 2.33em;
+        -webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;*/
+        font-weight: bold;
+    }
+    
+    .card-avl{
+        float:right;
+        margin-right:30px;
+    }
+
+     #cardsView .km-listview-link:after{
+      
+        color:#d4047e!important;
+        
+     }
+    
+    div#cardsView li a.km-listview-link{
+        font-size: initial!important;
+     /*  font-size: initial!important;*/
+    }
+    
+    
+</style>
+
+
+
+<!---------------------------------------------- old view -->
+
+
+
+<div data-role="view" id="cardsView"  data-layout="cards-layout">
+      <div class="page-name">Cards View</div>
+    
+    <div class="center-con"><input data-role="button"  value="Extra Services" href="views/cardsExtraServicesView.html" ></div>
+    <ul data-role="listview">
+     
+         <li  >
+            <a href="views/cardsBIView.html" >
+                <div id="new-account-style"  >
+
+                    <div class="account-upper-div" >
+                       <!-- <span class="main-account-name"> Overdraft Master Card USD</span>-->
+                        <span class="main-account-name"> My Credit Card  (MasterCard) US$</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder" >10025.75 $ </span>
+                    </div>
+                   
+                </div>
+           </a>
+        </li>
+        <!--<div data-role="button" data-icon="play"></div>-->
+        
+         <li >
+           <a href="views/cardsBIView.html" >
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <!--<span class="main-account-name">Mastercard Credit Gold USD</span>-->
+                        <span class="main-account-name">Mastercard Credit Gold USD</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">4890.00 $</span>
+                    </div>
+                </div>
+               </a>
+           
+        </li>
+        
+         <li >
+            <a href="views/cardsBIView.html" >
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                      <!--  <span class="main-account-name"> Easy Life NIS</span>-->
+                        <span class="main-account-name">My Easy Life ILS</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">2688.00 ILS</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+<div data-role="view" id="cardsView"  data-layout="level-one-layout">
+    <h1>Cards View</h1>
+    <ul data-role="listview">
+         <li>
+             <a href="views/cardsBIView.html" >
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name">overdraft master card USD</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">10025.75 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+             <a href="views/cardsBIView.html" >
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name">Overdue Normal Loans USD</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">5015.75 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="views/cardsBIView.html" >
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name"> Mastercard Credit Gold</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">2050.00 JD</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+       
+<!--
+        <li >
+            <a href="views/cardsBIView.html" >
+                <div class="account-container">
+                    <div class="account-name">
+                        <span class="text-container">overdraft master card USD</span>
+                    </div>
+                    <div id="Available-balance">
+                        <span class="text-container"><br>Available Balance : 10025.75 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="views/cardsBIView.html">
+                <div class="account-container">
+                    <div class="account-name">
+                        <span class="text-container">Overdue Normal Loans USD</span>
+                    </div>
+                    <div id="Available-balance">
+                        <span class="text-container"><br>Available Balance : 5015.75 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="views/cardsBIView.html">
+                <div class="account-container">
+                    <div class="account-name">
+                        <span class="text-container">Mastercard Credit Gold</span>
+                    </div>
+                    <div id="Available-balance">
+                        <span class="text-container"><br>Available Balance : 2050.00 JD</span>
+                    </div>
+                </div>
+            </a>
+        </li>-->
+    </ul>
+</div>

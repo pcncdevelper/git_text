@@ -1,0 +1,119 @@
+.km-ios7 .km-view .km-content {
+    background-color: rgb(229, 229, 229);
+}
+.km-ios7 .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button {
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-text {
+    color: rgb(153, 153, 153);
+}
+.km-ios7 .km-view .km-content .km-list > li .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-ios7 .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-android .km-content {
+    color: rgb(0, 0, 0);
+}
+.km-android th {
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(204, 204, 204);
+    background-size: initial;
+    color: white;
+    font-weight: bold;
+}
+.km-android .km-list .album-set a {
+    background-color: rgb(39, 118, 146);
+}
+.km-android .km-view .km-content {
+    background-color: rgb(229, 229, 229);
+}
+.km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text {
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-android .km-view .km-content .km-list .km-state-active .km-listview-link {
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li {
+    color: rgb(76, 76, 76);
+    border-top-color: rgb(76, 76, 76);
+    border-right-color: rgb(76, 76, 76);
+    border-bottom-color: rgb(76, 76, 76);
+    border-left-color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+}
+.km-android .km-view .km-tabstrip .km-button {
+    background-color: rgb(0, 0, 0);
+}
+.km-android .km-view .km-tabstrip .km-button .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-android .km-view .km-tabstrip .km-button .km-text {
+    color: rgb(153, 153, 153);
+}
+.km-android .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-blackberry .km-view .km-content {
+    background-color: rgb(229, 229, 229);
+}
+.km-blackberry .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+}
+.km-blackberry .km-view .km-tabstrip .km-button {
+    background-color: rgb(0, 0, 0);
+}
+.km-blackberry .km-view .km-tabstrip .km-button .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-blackberry .km-view .km-tabstrip .km-button .km-text {
+    color: rgb(153, 153, 153);
+}
+.km-blackberry .km-view .km-content .km-list > li .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-blackberry .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-wp .km-view .km-content {
+    background-color: rgb(229, 229, 229);
+}
+.km-wp .km-view .km-tabstrip .km-button.km-state-active {
+    background-color: rgb(0, 0, 0);
+}
+.km-wp .km-view .km-tabstrip .km-button {
+    background-color: rgb(0, 0, 0);
+}
+.km-wp .km-view .km-tabstrip .km-button .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-wp .km-view .km-tabstrip .km-button .km-text {
+    color: rgb(153, 153, 153);
+}
+.km-wp .km-view .km-content .km-list > li .km-icon {
+    color: rgb(101, 12, 107);
+}
+.km-wp .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon {
+    color: rgb(101, 12, 107);
+}

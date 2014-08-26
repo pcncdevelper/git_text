@@ -1,0 +1,270 @@
+.km-android .km-content {
+color: #000;
+}
+
+#grid tr{
+    
+    border-bottom-color:gray !important;   
+    border-left-color:gray !important;   
+    border-right-color:gray !important;   
+       
+    
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/x
+ table { 
+  width: 100%; 
+  border-collapse:separate; 
+  table-layout: fixed;
+    
+}
+/* Zebra striping */
+ tr:nth-of-type(odd) { 
+  /*background: #2e5c69; */
+  /*   background: #00b3db;*/
+     background: white;
+    background: #2e5c69;
+}
+
+tr{
+     /*background:#666;*/
+}
+
+th  { 
+  /*background: #333; */
+  background: none; 
+     }
+
+ .km-android th { 
+  /*background: #333; */
+  background: #ccc; 
+     
+  color: white; 
+  font-weight: bold; 
+}
+ td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+     color:#42454a;
+}
+
+td{
+    word-wrap:break-word
+}
+
+#miniStatement td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: center; 
+}
+
+
+
+
+
+
+
+
+
+/*#balanceInquiryView .photo
+{
+    margin: 0;
+    display: inline-block;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}*/
+
+/*.km-wp #balanceInquiryView .photo
+{
+    height: 15em;
+}
+*/
+
+    
+.km-flat #scrollview-container
+{
+    background: transparent;
+    border-width: 0;
+    box-shadow: none;
+}
+
+.km-ios #scrollview-container
+{
+    background: url(../../content/shared/images/patterns/pattern1.png);
+    box-shadow: 0 0 2px rgba(255, 255, 255, .5), inset 0 0 7px #000;
+}
+
+#scrollview-home .km-ios .km-content
+{
+    background: #bbb;
+}
+.km-android .km-list .album-set a
+{
+    background-color: #277692;
+}
+.km-ios .km-list .album-set a
+{
+    background-color: #bbb;
+}
+.km-ios #scrollview-home .km-navbar
+{
+    background: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0, rgba(255, 255, 255, .5)), color-stop(.06, rgba(255, 255, 255, .45)), color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, rgba(255, 255, 255, .15)), color-stop(1, rgba(100, 100, 100, 0))), url(../../content/shared/images/patterns/pattern5.png);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, .5), rgba(255, 255, 255, .45) 6%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .15) 50%, rgba(100, 100, 100, 0)), url(../../content/shared/images/patterns/pattern5.png);
+}
+.km-ios #scrollview-home .km-navbar .km-button
+{
+    background-color: #000;
+}
+.km-ios #scrollview-home .km-content
+{
+    background: url(../../content/shared/images/patterns/pattern6.png);
+    box-shadow: inset 0 0 30px #000;
+}
+
+.km-ios #scrollview-container .km-pages .km-current-page
+{
+    background-color: #ff009c;
+}
+.km-ios #scrollview-container .km-pages
+{
+    padding-top: 18px;
+}
+.km-ios #scrollview-home .km-view-title
+{
+    color: #fff;
+    text-shadow: 0 -1px rgba(0, 0, 0, .5);
+}
+
+/**** SCROLL VIEW END*****/
+.km-ios7 .km-view .km-content
+{
+    background-color: rgb(229, 229, 229); /*rgb(229, 229, 229);*/
+}
+.km-ios7 .km-view .km-tabstrip .km-button.km-state-active
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-icon
+{
+    color: rgb(153, 153, 153);
+}
+.km-ios7 .km-view .km-tabstrip .km-button .km-text
+{
+    color: rgb(153, 153, 153);
+}
+.km-ios7 .km-view .km-content .km-list > li .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-ios7 .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content
+{
+    background-color: rgb(229, 229, 229);
+}
+.km-android .km-view .km-content .km-listgroupinset .km-group-title .km-text
+{
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list .km-state-active .km-listview-link
+{
+    color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-content .km-list > li
+{
+    color: rgb(76, 76, 76);
+    border-top-color: rgb(76, 76, 76);
+    border-right-color: rgb(76, 76, 76);
+    border-bottom-color: rgb(76, 76, 76);
+    border-left-color: rgb(76, 76, 76);
+}
+.km-android .km-view .km-tabstrip .km-button.km-state-active
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-android .km-view .km-tabstrip .km-button
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-android .km-view .km-tabstrip .km-button .km-icon
+{
+    color: rgb(153, 153, 153);
+}
+.km-android .km-view .km-tabstrip .km-button .km-text
+{
+    color: rgb(153, 153, 153);
+}
+.km-android .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-blackberry .km-view .km-content
+{
+    background-color: rgb(229, 229, 229);
+}
+.km-blackberry .km-view .km-tabstrip .km-button.km-state-active
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-blackberry .km-view .km-tabstrip .km-button
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-blackberry .km-view .km-tabstrip .km-button .km-icon
+{
+    color: rgb(153, 153, 153);
+}
+.km-blackberry .km-view .km-tabstrip .km-button .km-text
+{
+    color: rgb(153, 153, 153);
+}
+.km-blackberry .km-view .km-content .km-list > li .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-blackberry .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-wp .km-view .km-content
+{
+    background-color: rgb(229, 229, 229);
+}
+.km-wp .km-view .km-tabstrip .km-button.km-state-active
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-wp .km-view .km-tabstrip .km-button
+{
+    background-color: rgb(0, 0, 0);
+}
+.km-wp .km-view .km-tabstrip .km-button .km-icon
+{
+    color: rgb(153, 153, 153);
+}
+.km-wp .km-view .km-tabstrip .km-button .km-text
+{
+    color: rgb(153, 153, 153);
+}
+.km-wp .km-view .km-content .km-list > li .km-icon
+{
+    color: rgb(76, 76, 76);
+}
+.km-wp .km-view .km-content .km-list .km-state-active .km-listview-link .km-icon
+{
+    color: rgb(76, 76, 76);
+}

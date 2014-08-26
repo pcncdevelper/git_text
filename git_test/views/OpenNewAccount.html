@@ -1,0 +1,104 @@
+<div data-role="view" id="OpenNewaccount"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
+<div class="page-name">Open New Sub account</div>
+    <p>
+        <div class="main-text">Link to account:</div> 
+       
+        <div class="center-con"><select id="accounts-list-drop-down" data-bind="source:usdAccounts"  >
+
+        </select></div>
+        
+        <br>
+       
+        
+        
+        <div class="main-text" style="color:gray">Notes</div>
+         <div class="center-con">
+          <textarea style="width:90%; height:60px " placeholder="additional notes"></textarea>
+  
+          </div>   
+          <form data-bind="events: { keyup: checkEnter }">
+        <div class="buttonArea">
+            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestPos"  class="log-in-button" value="Submit" />
+        </div>
+    </form>
+        </p>
+    
+  
+</div>
+<div data-role="modalview" id="modalview-requestPos"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Request POS </span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-requestPos{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+
+   
+</style>
+<script>
+    
+    function ConnectionTypeChanged() {
+        that = app.dropDownService.viewModel;
+        var myselect = document.getElementById("connetion-type");
+        _index = myselect.options[myselect.selectedIndex].index;
+        switch (_index) {
+            case(0):
+                that.setpCharge("5 $");
+                break;
+            case(1):
+                that.setpCharge("5 $");
+                break;
+            case(2):
+                that.setpCharge("8 $");
+                break;
+        }
+    }
+    
+     function closeModalViewLogin() {
+        
+        $("#modalview-requestPos").kendoMobileModalView("close");
+    }
+    
+
+</script>

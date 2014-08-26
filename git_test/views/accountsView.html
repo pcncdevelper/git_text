@@ -1,0 +1,421 @@
+<div data-role="view" id="accountsView"  data-layout="accounts-layout">
+    <div class="page-name">My accounts</div>
+    
+    
+    <ul data-role="listview">
+
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My Current Account US$<div class="act-value" >1,875.48 $</div></div> 
+            <div class="act-number"> 0450/0375056/001/3000/000 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My loans account US$<div class="act-value" >10,015.75 $</div></div> 
+            <div class="act-number"> 0450/0375056/001/1735/001 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My Current account JOD<div class="act-value" >20.09 JOD</div></div> 
+            <div class="act-number"> 0450/0375056/029/3000/005 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My Current account ILS<div class="act-value" >5,025.75 ILS</div></div> 
+            <div class="act-number"> 0450/0375056/099/3000/000 <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+        <li >
+           <a href="views/accountsBIView.html">
+                <div class="act-name">My Current Account US$<div class="act-value" >1,875.48 $</div></div> 
+            <div class="act-number"> xx0375056xx <span class="act-avl">Available</span></div> 
+           </a>    
+        </li>
+     
+    </ul>
+
+</div>
+
+
+<style>
+    
+    #accountsView li:nth-child(odd){
+        background:#eee;
+    }
+    
+    .act-name{
+        font-size: 0.95em;
+    display: block;
+/*-webkit-margin-before: 1.33em;*/
+/*-webkit-margin-after: 1.33em;
+-webkit-margin-start: 0px;*/
+-webkit-margin-end: 0px;
+font-weight: bold;
+    }
+    
+    
+    .act-value{
+      float:right;
+        margin-right:30px;
+       color:#560f5b; 
+    }
+    
+    .act-number
+    {
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+        font-size: 0.60em;
+       /* -webkit-margin-before: 2.33em;
+        -webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;*/
+        font-weight: bold;
+    }
+    
+    .act-avl{
+        float:right;
+        margin-right:30px;
+    }
+
+     #accountsView .km-listview-link:after{
+      
+        color:#d4047e!important;
+        
+     }
+    
+    div#accountView li a.km-listview-link{
+        font-size: initial!important;
+     /*  font-size: initial!important;*/
+    }
+    
+    
+</style>
+
+
+<div data-role="layout" data-id="accounts-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#my-drawer"></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+    
+    
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="account-e" href="views/accountsView.html">Accounts </a>
+            <a data-icon="organize" href="views/cardsView.html">Cards </a>
+           
+        </div>
+    </footer>
+    
+    
+    </div>
+
+
+
+
+    <div data-role="view" id="accountsView"  data-layout="level-one-layout">
+    <h3>My accounts</h3>
+    
+    
+    <ul data-role="listview">
+
+        <li>
+            <a href="views/accountsBIView.html">
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                       <!-- <span class="main-account-name"> Current Account Residence USD</span>-->
+                        <span class="main-account-name"> My Current Account US$</span>
+                       
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">1875.48 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="views/accountsBIView.html">
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                       <!-- <span class="main-account-name"> Overdue Normal Loans USD</span>-->
+                        <span class="main-account-name">My loans account US$</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">10015.75 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="views/accountsBIView.html">
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name">My Current Account US$</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">1875.48 $</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="views/accountsBIView.html">
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name">My Current account JOD</span>
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">20.082 JOD</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="views/accountsBIView.html">
+
+                <div id="new-account-style">
+
+                    <div class="account-upper-div">
+                        <span class="main-account-name">My Current account ILS</span>
+                       <!-- <span class="main-account-name"> Current Account Residence ILS</span>-->
+                    </div>
+                    <div class="account-lower-div">
+                        <span class="available-balance-text-holder">Available Balance</span>
+                        <span class="available-balance-holder">5015.75 ILS</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li >
+    <a  href="views/accountsBIView.html" >
+        <div class="account-container">
+            <div class="account-name">
+                <span class="text-container">Current Account USD</span>
+            </div>
+            <div id="Available-balance">
+                <span class="text-container"><br>Available Balance : 1500.00 $</span>
+            </div>
+        </div>
+    </a>
+</li>
+
+<li>
+    <a href="views/accountsBIView.html">
+        <div class="account-container">
+            <div class="account-name">
+                <span class="text-container">Cash Card USD</span>
+            </div>
+            <div id="Available-balance">
+                <!--<span class="text-container"> <tr><td>Available Balance</td><td>120.00 $</td></tr></span>-->
+                <span class="text-container"><br>Available Balance : 120.00 $</span>
+            </div>
+        </div>
+    </a>
+</li>
+
+<li>
+    <a href="accountsBIView.html">
+        <div class="account-container">
+            <div class="account-name">
+                <span class="text-container">Dinnar Account</span>
+            </div>
+            <div id="Available-balance">
+                <span class="text-container"><br>Available Balance : 2050.00 JD</span>
+            </div>
+        </div>
+    </a>
+</li>
+
+<li>
+    <div id="new-account-style">
+        <div id="in-account-right">
+            <div class="balance-holder">
+                <h5>1875.48 $</h5>
+            </div>
+
+        </div>
+        <div id="in-account-left">
+            <h5>Current Account Residence USD</h5>
+            <div class="balance-holder"></div>
+            <h6 style="color:#9b9b9b;">Available Balance</h6>
+        </div>
+
+    </div>
+
+</li>
+
+<li>
+    <div id="new-account-style">
+        <div id="in-account-right">
+
+            <h5>
+                <br>
+            </h5>
+            <h5>1875.48 $</h5>
+        </div>
+        <div id="in-account-left">
+            <h5>Current Account Residence USD</h5>
+            <h6 style="color:#9b9b9b;">Available Balance</h6>
+        </div>
+
+    </div>
+
+</li>
+
+<li>
+    <div id="new-account-style">
+        <div id="in-account-right">
+            <h5>
+                <br>
+            </h5>
+            <h5>20.082 JOD</h5>
+        </div>
+        <div id="in-account-left">
+            <h5>Saving Account Residence JOD</h5>
+            <h6 style="color:#9b9b9b;">Available Balance</h6>
+        </div>
+
+    </div>
+
+</li>
+
+<li>
+    <div id="new-account-style">
+        <div id="in-account-right">
+            <h5>
+                <br>
+            </h5>
+            <h5>12025.75 $</h5>
+        </div>
+        <div id="in-account-left">
+            <h5>Overdraft Master card </h5>
+            <h6 style="color:#9b9b9b;">Available Balance</h6>
+        </div>
+
+    </div>
+
+</li>
+
+<li>
+    <div id="new-account-style">
+        <div id="in-account-right">
+            <h5>
+                <br>
+            </h5>
+            <h5>5025.75 ILS</h5>
+        </div>
+        <div id="in-account-left">
+            <h5>Current Account Residence ILS</h5>
+            <h6 style="color:#9b9b9b;">Available Balance</h6>
+        </div>
+
+    </div>
+
+</li>
+
+<style>
+            
+    .balance-holder
+    {
+        position: absolute;
+        margin-top: 50%;
+        width: 100%;
+        height: 35%;
+        background-color: red;
+    }
+            
+    #in-account-right
+    {
+        position: relative;
+        text-align: center;
+        background-color: yellow;
+        width: 35%;
+        height: 100%;
+        float: right;
+    }
+    
+    #in-account-left
+    {
+        background-color: blue;
+        width: 65%;
+        height: 100%;
+        float: left;
+        color: #d94591;
+    }
+    
+    #new-account-style
+    {
+        border-radius: 4px;
+        margin-top: 10px;
+        background-color: white;
+        height: 100px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px;
+        border-color: rgb(179, 179, 179);
+        border-style: double;
+    } 
+</style>

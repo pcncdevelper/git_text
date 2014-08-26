@@ -1,0 +1,94 @@
+<div data-role="view" id="payPartial"  data-layout="goback-layout">
+    <div class="page-name" > GEDCO Partial Payment</div>
+    <div class="page-name" > My Home Bill : 2433565</div>
+    
+    <script>
+        function showBills() {
+    document.getElementById("list-con2").style.display="block";
+} 
+
+
+        
+    </script>
+    
+    <div class="center-con"></div>
+    <div id="list-con2" style= >
+    
+    
+        
+        <ul  data-role="listview" data-style="inset" class="bills-list">
+
+            
+            <li>Total Value : <span>1050 NIS</span></li>
+            <li>Min payments :<span> 300 NIS</span></li>
+            
+            <li>Amount to pay : <input ></li>
+            <li><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="Proceed to Pay" /></div> </li>
+              </ul>
+</div>    
+</div>
+
+
+<div data-role="modalview" id="modalview2" style="width: 90%; height:400px">
+            <div data-role="header">
+                <div data-role="navbar">
+                      <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+                    <span>Payment Confirmation</span>
+                   
+                </div>
+            </div>
+          <h4>Are you sure you want to pay this Bill ?</h4>
+    
+            <br>
+            
+      
+       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >No</a></div>
+
+</div>
+
+
+
+
+
+<style>
+    .bills-list ul {
+   
+  border-radius: 25px;
+   font-weight: bold;
+    margin-bottom:10px;
+    color:black;  
+    
+}
+
+    .bill-detail
+    {
+        display: block;
+        font-size: 0.83em;
+        
+        font-weight: bold;
+    }
+   
+    
+    .detail-name{
+       color: rgb(54, 23, 35);
+        
+    }
+    
+    #request-bills-button
+    {
+        height: 38px;
+        color: rgb(67, 0, 77);
+        border-color: gray;
+        background-image: url(styles/images/quote-icon.png);
+        background-size: 21% 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+</style>
+
+<script>
+    function closeModalViewLogin() {
+        $("#modalview2").kendoMobileModalView("close");
+    }
+</script>

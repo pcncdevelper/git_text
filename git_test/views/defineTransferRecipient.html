@@ -1,0 +1,103 @@
+<div data-role="view" id="define-transfersView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
+    <div class="page-name">Define New Recipient Account</div>
+    
+     <div class="main-text">Account Number</div>
+    <div style="text-align:center">
+            <input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Account Number" />
+    </div>
+    
+    
+    <div class="main-text">Belongs To</div>
+    <div style="text-align:center">
+            <input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Account Owner" />
+    </div>
+       
+    <div class="main-text">Branch</div>
+    <div style="text-align:center">
+     <select  id="accounts-list-drop-down" data-bind="source:locationCities"  >
+
+        </select>
+    </div>
+    
+    <br>
+    <div class="main-text">Nickname</div>
+    <div style="text-align:center">
+            <input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Nickname" />
+    </div>
+    
+    <div style="text-align:center">
+        <input class="log-in-button" data-role="button"  value="Request addition" href="#modalview-define-recipient" data-rel="modalview"  />
+    </div>
+
+    
+    
+    </div>
+
+
+
+<!-- Modal View -->
+<!--Modal Views Start-->
+<div data-role="modalview" id="modalview-define-recipient"  data-model="app.transferCodeService.viewModel">
+
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Request Addition</span>
+            <a data-click="closeModalViewDefine"  data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <h2>
+        Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span>
+        <input type="number" data-bind="value:enteredNumber" class="modalview-input-area">
+    </h2>
+
+    <div >
+        <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Transaction</a>
+    </div>
+</div>
+
+<!-- Modal View End -->
+
+
+<style>
+    
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+       
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-define-recipient{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+    
+</style>
+<script>
+     function closeModalViewDefine() {
+        
+        $("#modalview-define-recipient").kendoMobileModalView("close");
+    }
+    
+    
+</script>
+
+

@@ -1,0 +1,90 @@
+
+<div data-role="view" id="topUpSameerView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" >
+    
+    <div style="text-align:right;" >
+    
+    <div class="page-name" style="margin-right:15px"> اضافة رصيد جوال</div>
+    
+    
+    
+    
+    <form data-bind="events: { keyup: checkEnter }" >
+
+        <h4>
+           <div class="main-text"> رقم الجوال</div>
+            
+           
+        </h4>
+        <div class="center-con">  0599223355</div>
+       
+        <br>
+        <br>
+      <p>
+          
+                   <div class="main-text" style="margin-right:15px"> القيمة بالشيقل  </div>
+                    
+                 
+         </p>
+        <p>
+            
+             <input style="height: 31px; text-align: center;" type="number" data-bind="value: password" placeholder="القيمة" style="text-align:center"/>
+        </p>
+
+        <div class="buttonArea">
+            <input  type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="log-in-button" value="اضافة الرصيد" />
+
+        </div>
+    </form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- 
+<div data-role="view" id="topUpSameerView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
+    <div class="page-name">e-Top UP Jawwal Mobile </div>
+    
+    
+    
+    
+    <form data-bind="events: { keyup: checkEnter }" >
+
+        <h4>
+           <div class="main-text"> Mobile Number</div>
+            
+           
+        </h4>
+        <div class="center-con">  0599223355</div>
+       
+        <br>
+        <br>
+        <ul data-role="listview" data-style="inset" >
+           
+            <li>
+          
+                   <div class="main-text">  Amount in ILS</div>
+                    
+                  <input type="number" data-bind="value: password" placeholder="Amount" style="text-align:center"/>
+               
+            </li>
+            
+            
+        </ul>
+
+        <div class="buttonArea">
+            <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="log-in-button" value="Top Up" />
+
+        </div>
+    </form>
+
+</div>
+
+
+
+-->

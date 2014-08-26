@@ -1,0 +1,106 @@
+<div data-role="view" id="definePaltelPaymentView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    
+    <div class="page-name" style="text-align: center;  "> Add a Friend Payee</div>
+    <div style="text-align: center; text-decoration: Bold ;" > Pay a Friend </div>
+    <br>
+    
+    <form data-bind="events: { keyup: checkEnter }">
+                <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                    <li>
+                        <label class="main-text" style="margin-left:0px"> 
+                            Friend Number
+                                <input type="text" data-icon="search" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Phone Number" />
+                        </label>
+                    </li>
+                    <li>
+                        <label class="main-text" style="margin-left:0px">
+                            NickName
+                                <input type="text" data-bind="value: password" placeholder="Nick Name"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="main-text" style="margin-left:0px">
+                            Currency
+                               <input type="text" data-bind="value: password" placeholder="NIS"/>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="main-text" style="margin-left:0px">
+                          From account 
+                            
+                                <div class="select-holder">
+                <select id="dtransfer-from-accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="fromAccountInOthers()"  >
+                
+                </select>
+            </div>
+                        </label>
+                    </li>
+                </ul>
+
+                <div class="buttonArea">
+                    
+                    <input type="submit" id="clear" data-role="button"  href="views/definePayeeResponse.html" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="Request " />
+                </div>
+            </form>
+    
+</div>
+<div data-role="modalview" id="modalview-definePayee"  data-model="app.transferCodeService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Request</span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+           
+          <!--  <div data-bind="source:accounts"></div>-->
+            
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+-->
+               
+                </div>
+
+
+<style>
+     div.km-modalview-wrapper{
+    text-align: center; 
+        border-radius:5px;
+      
+       background:#1fa3cf;
+         background:#560f5b;;
+    }
+    #modalview-definePayee{
+       
+        background-color:#560f5b!important;
+       vertical-align: middle;
+       width: 95%;
+        height:220px ;
+      }
+    
+    .modalview-input-area
+    {
+        border-radius: 6px;
+        border-color: #560f5b;
+        border-width: 4px;
+        
+        margin-top: 13px;
+        text-align: center;
+        font-size: larger;
+        margin-bottom: 10px;
+        height: 45px;
+        width: 112px;
+    }
+
+   
+</style>
+<script>
+     function closeModalViewLogin() {
+        
+        $("#modalview-definePayee").kendoMobileModalView("close");
+    }
+    
+
+</script>

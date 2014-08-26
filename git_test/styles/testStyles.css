@@ -1,0 +1,23 @@
+#new-view .km-scroll-container{
+    height: 100%;
+    width:100%;
+    position:absolute;
+}
+
+.km-android div.km-view {
+    -webkit-box-direction: normal!important;
+}
+
+
+#new-upper-div{
+    background-color:red;
+    height:65%;
+    
+}
+
+#new-lower-div{
+    background-color:yellow;
+    height:35%;
+}
+
+

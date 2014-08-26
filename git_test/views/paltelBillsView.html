@@ -1,0 +1,276 @@
+<div data-role="view" id="paltelBillsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+<div class="page-name">Pay - My Home Phone: 022967757</div>
+
+    
+ 
+    
+   
+    
+<div class="page-name">  2 upaid bills </div>
+        
+        <ul  data-role="listview" data-style="inset" class="bills-list">
+			<li id="from-account-li" class="from-list-item" style="background-color:#eee" >
+            <a style="line-height: initial;"><div class="from-act">From</div>
+            <div id="balance-from-daccount-div" class="balance-from-acct">
+                <br/>
+                Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                <span data-bind="source:fromcurrency"></span>
+            </div>
+            <div class="select-holder">
+                <select id="dtransfer-from-accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="fromAccountInOthers()"  >
+                
+                </select>
+            </div>
+             </a>
+        </li>
+            <li style="background-color:rgb(206, 193, 193);">
+                <a  data-rel="modalview" href="#modalview2">
+
+                    <div class="bill-detail"><span class="detail-name"> Due Date :</span> 01/03/2014 </div>
+                    <div class="bill-detail"><span class="detail-name"> Reference #:</span> mb-123456<span style="float:right;margin-right:20px;color:gray">Click to pay</span></div> 
+                    <div class="bill-detail"><span class="detail-name"> Amount :</span> 195.50 ILS</div>
+                  
+                   
+
+                </a>
+            </li>
+            <li style="background-color:#eee">
+                <a data-rel="modalview" href="#modalview2">
+                    <div class="bill-detail"><span class="detail-name"> Billing  :</span> 01/04/2014</div>
+                    <div class="bill-detail"><span class="detail-name"> Due Date :</span> 01/04/2014</div>
+                    <div class="bill-detail"><span class="detail-name"> Reference #:</span>mb-123457<span style="float:right;margin-right:20px;color:gray">Click to pay</span></div>
+                    <div class="bill-detail"><span class="detail-name"> Amount :</span>190.00 ILS</div>
+                </a>
+            </li>
+         
+
+        </ul>
+     
+</div>    
+</div>
+
+
+<div data-role="modalview" id="modalview2" style="width: 90%; height:400px">
+            <div data-role="header">
+                <div data-role="navbar">
+                      <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+                    <span>Payment Confirmation</span>
+                   
+                </div>
+            </div>
+          <h4>Are you sure you want to pay this Bill ?</h4>
+    
+            <br>
+            
+      
+       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >No</a></div>
+
+</div>
+
+
+
+
+
+<style>
+    .bills-list ul {
+   
+  border-radius: 25px;
+   font-weight: bold;
+    margin-bottom:10px;
+    color:black;  
+    
+}
+
+    .bill-detail
+    {
+        display: block;
+        font-size: 0.83em;
+        
+        font-weight: bold;
+    }
+   
+    
+    .detail-name{
+       color: rgb(54, 23, 35);
+        
+    }
+    
+    #request-bills-button
+    {
+        height: 38px;
+        color: rgb(67, 0, 77);
+        border-color: gray;
+        background-image: url(styles/images/quote-icon.png);
+        background-size: 21% 100%;
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+    .from-act
+    {
+        display: block;
+        font-size: 1.2em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;*/
+    }
+    .balance-from-acct{
+        font-weight: 100;
+        margin-top: 4px;
+        visibility: visible;
+        
+        display: block;
+        font-size: 0.67em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+     /*   font-weight: bold;*/
+    }
+    
+</style>
+
+<script>
+    function closeModalViewLogin() {
+        $("#modalview2").kendoMobileModalView("close");
+    }
+</script>
+                        <script>
+    function fromAccountInOthers(){
+        
+        console.log("run my function");
+        that=app.dropDownService.viewModel;
+        console.log("Change");
+        fromC= that.fromcuurency;
+        toC=that.tocuurency;
+      /*  console.log("from "+fromC+"to "+toC);*/
+        
+        var myselect = document.getElementById("dtransfer-from-accounts-list-drop-down");
+ 
+        console.log(myselect.options[myselect.selectedIndex].index);
+        
+        _index=myselect.options[myselect.selectedIndex].index;
+        switch (_index) {
+            case(0):{
+              
+             document.getElementById("balance-from-daccount-div").style.visibility="hidden";
+            that.setFromCurrency("");
+            }
+            break;
+            case(1): {
+                    that.setCurrentAccountBalance(10015.75);
+                    that.setFromCurrency("USD");
+                document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(2): {
+                    that.setCurrentAccountBalance(1700.00);
+                    that.setFromCurrency("USD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(3): {
+                    that.setCurrentAccountBalance(20.082);
+                that.setFromCurrency("JOD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(4): {
+                    that.setCurrentAccountBalance(5015.75);
+                that.setFromCurrency("ILS");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+            case(5): {
+                    that.setCurrentAccountBalance(100);
+                that.setFromCurrency("USD");
+                  document.getElementById("balance-from-daccount-div").style.visibility="visible";
+                }
+                break;
+        }
+        console.log("From "+that.fromcurrency+"To "+that.tocurrency);
+        
+        if(that.fromcuurency==="USD" && that.tocurrency==="USD"){
+           alert();
+                that.setRate(2);
+            
+            
+        }
+         x=that.fromcurrency;
+        y=that.tocurrency;
+       
+        
+        
+        
+        switch (x) {
+            case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+            
+            case("USD"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):
+                          {  that.setRate(1);
+                        document.getElementById("rate-holder").style.visibility="hidden";}
+                            break;
+                        case("ILS"):{
+                            that.setRate(3.5);
+                            document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("JOD"):{
+                            that.setRate(0.7);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                    }
+                }
+                break;
+            case("JOD"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):{
+                            that.setRate(1.41);
+                        document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("ILS"):{
+                            that.setRate(4.91);
+                             document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                        case("JOD"):{
+                            that.setRate(1);
+                             document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                    }
+                }
+                break; 
+            
+            case("ILS"): {
+                    switch (y) {
+                         case(""):{document.getElementById("rate-holder").style.visibility="hidden";}break;
+                        case("USD"):
+                           {that.setRate(0.28);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                        case("ILS"):
+                            {that.setRate(4.91);
+                         document.getElementById("rate-holder").style.visibility="visible";}
+                            break;
+                        case("JOD"):
+                        {
+                            that.setRate(0.20);
+                         document.getElementById("rate-holder").style.visibility="visible";
+                        }
+                            break;
+                    }
+                }
+                break;
+        }
+        
+       that.transferAmountChanged();
+        
+    }  
+    
+</script>

@@ -1,0 +1,85 @@
+<div data-role="view" id="payKhalidView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Pay Khalid Salama</div>
+    
+    <!--<div class='main-text'>Transfer From</div>-->
+    <!--<p>
+
+        <select id="accounts-list-drop-down" data-bind="source:accounts"  >
+
+        </select>
+    </p>
+-->
+    <div class='main-text'>Amount In Israeli Shekel</div>
+    <p>
+
+        
+      <!-- <select id="accounts-list-drop-down" data-bind="source:currencies"  >
+
+        </select>-->
+    </p>
+
+    <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+            <li>
+                <label>
+                   <div class='main-text'> Amount : 100 </div>
+                    <!--<input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />-->
+                </label>
+            </li>
+
+        </ul>
+        
+
+        <div class="buttonArea">
+            <input type="submit" data-rel="actionsheet" id="login" data-role="button"  href="#pay-ahmad-actionsheet"  class="log-in-button" value="Pay" />
+        </div>
+    </form>
+
+    
+     <ul style="background-color: rgb(151, 151, 151);" data-role="actionsheet" id="pay-ahmad-actionsheet" data-open="onOpen" data-popup='{"direction": "left"}'>
+        <li class="km-actionsheet-title">Monday Meeting:</li>
+         
+        <li  ><div class="main-text">Please Enter your Transaction password</div></li>
+         
+        <li style="text-align: center!important; margin-top:20px;"> 
+            <input class="log-in-text-area" type="password" autocorrect="off" autocapitalize="off"  placeholder="Transaction password" /></li>
+        <li style="color:#d4027f">
+            <a data-role="button"   href="views/payAhmadView.html"  data-action="closeActionsheet" style="font-weight:bold">Complete Transaction
+                
+            </a>
+            
+        </li>
+         
+    </ul>
+    
+    <script>
+    
+    
+     function onOpen(e) {
+        this.element.find(".km-actionsheet-title").text(e.target.next().text());
+    }
+        function closeActionsheet() {
+  $("#pay-ahmad-actionsheet").data("kendoMobileActionSheet").close();
+}
+
+</script>
+    
+   
+    </div>
+
+<div data-role="modalview" id="transfer-completed-modal" style="width: 100%; height:300px">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Transfer</span>
+                    <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h3>Are you Sure you want to complete this Transfer ?</h3>
+            
+
+            
+          <div class="confirmation-button"> <a style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div class="confirmation-button">  <a style="width:100%" data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+        </div>
+
+

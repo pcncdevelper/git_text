@@ -1,0 +1,206 @@
+<div data-role="view" id="dashBoardView"  data-layout="level-one-layout" data-model="app.loginService.viewModel"  data-after-show="afterShow">
+   <div class="center-con">
+    <div id="dashboard-logo-container" ></div>
+    </div>
+    
+    <!--<div class="page-name">Dash Board View </div>-->
+    <div class="main-text">
+        Welcome 
+        <span data-bind="source:fname"></span>
+        <span data-bind="source:lname"></span>&nbsp to the Bank of Palestine Mobile Banking app
+    </div>
+    <h6>
+        Your last login was yesterday 9:36 am
+    </h6>
+    <br>
+ <h6>
+        Last Predifiend Payments 
+    </h6>
+   
+    <div id="dashboard-welcome"> </div>
+    
+    
+    <div id="dashbaord-icon-container">
+        <div id="dashbaord-icon-container1" href="views/messagesInboxView.html" data-role="button">
+           
+            
+        </div>
+        <div id="dashbaord-icon-container2"  href="views/notificationView.html" data-role="button">
+
+            
+        </div>
+        
+        <div id="dashbaord-icon-container3" >
+			My Home phone bill 
+        </div>
+        <div id="dashbaord-icon-container4"  >
+My Wataniya Topup
+           
+        </div>
+    </div>
+</div>
+
+<style>
+    
+    #dashboard-icon-container{
+        width:60%;
+        height:50px;
+        background:pink;
+    }
+    
+    #dashboard-logo-container{
+            background-image: url(styles/images/bop_logo_small.png);
+        background-size:100%;
+        background-repeat:no-repeat;
+        height:50px;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto;
+       margin-bottom:0px;   
+       margin-top:30px;   
+    }
+    
+   .km-ios7 .km-badge{
+     font-size:1.2em 
+    }
+    
+    #icon-seperator{
+      
+    }
+    
+    #dashbaord-icon-container{
+        height:400px;
+        
+    }
+    
+    
+ #dashbaord-icon-container1 {
+     background:transparent;
+     background-image: url(styles/images/wataniya-logo2.png);
+     background-size:100% 100%;
+    /* background-color:pink;*/
+     width:49%;
+     height:100px;
+     float:left;
+ }
+    #dashbaord-icon-container2 {
+         background:transparent;
+        background-image: url(styles/images/paltel-icon.png);
+       /* background-image: url(styles/images/dashboard-notification.png);*/
+     background-size:100% 100%;
+        
+   
+     width:49%;
+     height:100px;
+        float:right;
+ }
+    #dashbaord-icon-container3 {
+       background:transparent;
+        /* background-image: url(styles/images/dashboard-invoice.png);*/
+       text-align: center;
+     background-size:100% 100%;
+         
+     width:38%;
+     height:100px;
+     float:right;
+ }
+    #dashbaord-icon-container4 {
+         background:transparent;
+       
+       /* background-image: url(styles/images/dashboard-offers.png);*/
+     background-size:100% 100%;
+     
+     
+   text-align: center;
+     width:38%;
+     height:100px;
+      float:left;
+ }  
+    
+    
+    
+</style>
+
+<script>
+ function afterShow(){
+ 
+   icon_width=  $("#dashbaord-icon-container1").width();
+
+    $("#dashbaord-icon-container1").height(icon_width);
+     
+     icon_width=  $("#dashbaord-icon-container2").width();
+
+    $("#dashbaord-icon-container2").height(icon_width);
+     
+     icon_width=  $("#dashbaord-icon-container3").width();
+
+    $("#dashbaord-icon-container3").height(icon_width);
+     
+     icon_width=  $("#dashbaord-icon-container4").width();
+
+    $("#dashbaord-icon-container4").height(icon_width);
+   
+   }
+    
+    
+    
+   
+</script>
+
+
+
+
+<!-- old view -->
+<div data-role="view" id="dashBoardView"  data-layout="level-one-layout" model="app.loginService.viewModel">
+    <div id="dash-board-container">
+        <div id="dash-board-relative-container">
+            <div class="page-name">Dash Board View </div>
+            <div class="main-text">
+                Welcome Mr. Ali Taha to the Bank of Palestine Mobile Banking app
+            </div>
+            <h4>
+                Your last login was yesterday 9:36 am
+            </h4>
+
+            <div id="dash-board-messages-icon"  data-role="button" href="views/messagesInboxView.html">
+
+                <span class="km-badge">2</span>
+
+            </div>
+            <div id="dash-board-offers-icon"  data-role="button" href="views/messagesInboxView.html">
+
+                <span class="km-badge">3</span>
+
+            </div>
+
+            <div id="dash-board-notification-area" >
+                <div id="scrollable-div" scroller-content km-widget km-scroll-wrapper>
+                    <h4>Notification</h4>
+                    <ul data-role="listview" data-style="inset" >
+                        <li style="background: rgb(223, 189, 216); font-weight: bold;">You have 2 new Paltel Bills</li>
+                        <li style="background: rgb(223, 189, 216);font-weight: bold;">2 Transfers completed</li>
+                        <li style="background: rgb(243, 103, 103);font-weight: bold;">You have 1 overdue CallU Bill</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <style>
+        
+        #scrollable-div{
+            
+            
+        }
+        
+        #dashBoardView h4
+        {
+            /* background-color:green;*/
+        
+        }
+        </style>
+   
+</div>

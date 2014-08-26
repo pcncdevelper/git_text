@@ -1,0 +1,68 @@
+
+
+
+<!--Login-->
+<div id="login-view"
+     data-role="view"
+     data-title="Login"
+     data-layout="login-layout"
+     data-model="app.loginService.viewModel">
+
+    <div   class="view-content">
+        <div id="log-in-logoContainer"></div>
+        <br>
+
+        <h2 id="log-in-text">Please Log in </h2>
+
+        <form data-bind="events: { keyup: checkEnter }">
+
+            <div style="text-align:center">
+                <label><input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="username" /></label>
+                <label> <input class="log-in-text-area" type="password" data-bind="value: password" placeholder="password"/> </label>
+            </div>
+            <div style="text-align:center">
+                <input class="log-in-button" data-role="button" id="login" data-bind="click: onLogin, invisible: isLoggedIn" value="Login"  />
+	        </div>
+<div style="text-align:center">
+            
+                <input type="submit" id="clear" data-role="button" data-bind="click: clearStorage, invisible: isLoggedIn"  value="Clear" />
+</div>            
+
+        </form>
+    </div>
+
+</div>
+        <!--   type="submit"-->
+        <!-- <br>
+        <h3 id="connectionType"></h3>
+        <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
+        <h1 class="welcome" data-bind="visible: isLoggedIn">Welcome, <span data-bind="text: username"></span>!
+        </h1>
+        <div class="buttonArea">
+        <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
+        </div>
+
+        <form data-bind="events: { keyup: checkEnter }">
+        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+        <li>
+        <label>
+        Username
+        <input type="text" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="username" />
+        </label>
+        </li>
+        <li>
+        <label>
+        <span>Password</span>
+        <input type="password" data-bind="value: password" placeholder="password"/>
+        </label>
+        </li>
+                    
+                    
+        </ul>
+
+        <div class="buttonArea">
+        <input type="submit" id="login" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" class="login-button" value="Login" />
+        <input type="submit" id="clear" data-role="button" data-bind="click: clearStorage, invisible: isLoggedIn" class="login-button" value="Clear" />
+        </div>
+        </form>-->
+

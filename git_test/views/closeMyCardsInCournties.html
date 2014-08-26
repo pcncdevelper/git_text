@@ -1,0 +1,25 @@
+<div data-role="view" id="closeCards"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Close My Cards in Courntries View</div>
+    <div class='main-text'>Choose A Card</div>
+    <p>
+
+       <select id="accounts-list-drop-down" data-bind="source:cards"  >
+
+        </select>
+    </p>
+     <div class='main-text'>Choose a Country to Close your Card</div>
+    <p>
+
+       <select id="accounts-list-drop-down" data-bind="source:countries"  >
+
+        </select>
+    </p>
+    <form data-bind="events: { keyup: checkEnter }">
+       
+
+        <div class="buttonArea">
+           <!-- <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Transfer" />-->
+          <input type="submit" data-rel="modalview" id="login" data-role="button"  class="log-in-button" value="Close Card " />
+        </div>
+    </form>
+</div>

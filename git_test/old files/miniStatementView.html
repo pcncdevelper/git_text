@@ -1,0 +1,55 @@
+<div data-role="view" id="mini-Statement-View" data-layout="main-layout" data-model="app.transactionsService.viewModel">
+    <h1>Mini Statement View </h1>
+
+    <div id="blancesList">
+
+    </div>
+    <table >
+        <thead>
+            <tr>
+                <th style="width:25%">Trans. Date</th>
+                <th style="width:50%">Explanation</th>
+                <th style="width:">Amount</th>
+
+            </tr>
+        </thead>
+
+        <!--transActions Table html bound to transactionsData array in the miniStatementViewModel-->
+        <tbody data-bind="html:transactionsData" >
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<!-- old View -->
+<!--
+   <div data-role="view" id="miniStatement"  data-layout="main-layout">
+            <h3>Mini Statement</h3>
+            <h5><label>Date </label><label id=currentDate></label></h5>
+            <h5><label>Name : </label>Iyad Qumsieh<label ></label></h5>
+            <h5><label>Account Number :</label>0450/0375056/099/3000/000<label ></label></h5>
+            <h5><label>Account Type :</label> Current account residence private<label ></label></h5>
+            <h5><label>Currency : </label>Israeli Shekel<label ></label></h5>
+           
+            <div id="blancesList">
+                
+            </div>
+            <table >
+                <thead>
+                    <tr>
+                        <th style="width:25%">Trans. Date</th>
+                        <th style="width:50%">Explanation</th>
+                        <th style="width:">Amount</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody id="transactionsTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>-->

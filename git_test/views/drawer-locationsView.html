@@ -1,0 +1,80 @@
+<!--<div data-role="view" id="a">
+
+    <div id="b">hey</div>
+</div>
+
+<style>
+    #a{
+        
+    }
+    
+    #b{
+       position:absolute;
+   background-color:pink;
+    height:100%;
+    width:100%;
+    }
+    
+</style>
+
+<!-- ---- -->
+-->
+
+
+<div data-role="view" id="locationsView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
+<div class="page-name">Location Services</div>
+    
+    <!--<h3>Location Services</h3>-->
+
+    <p>
+       Please Select target<br>
+        <select id="accounts-list-drop-down" data-bind="source:locationChoices"  >
+
+        </select>
+    </p>
+
+    <p>
+        City: <br>
+        <select id="accounts-list-drop-down" data-bind="source:locationCities" >
+
+        </select>
+    </p>
+
+    <br>
+    
+    <br><br>
+    <div class="buttonArea">
+        <input data-role="button" data-rel="modalview" id="login" class="log-in-button" href="#modalview-get-address"    value="Get Address" />
+    </div>
+    <!-- class="log-in-button"-->
+</div>
+
+
+
+
+<div data-role="modalview" id="modalview-get-address" style="width: 90%; height:400px">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>ATM Locator</span>
+                   
+                </div>
+            </div>
+          <h4>Ramallah & Albireh governorate</h4>
+    
+            <br>
+            <ul data-role="listview">
+          <li>AL manara E-branch</li>
+          <li>Tanus Building main Street</li>
+          <li>Isra Sub-Branch , farmnd building</li>
+          <li>Head Office - Ain Mesbah</li>
+                </ul>
+           
+    <br>
+    <div><a style="margin-right: auto; margin-left: auto;text-align: center;display: block;width: 50px;" data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button">OK </a></div>
+        </div>
+
+<script>
+    function closeModalViewLogin() {
+        $("#modalview-get-address").kendoMobileModalView("close");
+    }
+</script>

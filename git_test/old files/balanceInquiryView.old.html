@@ -1,0 +1,57 @@
+
+
+<div data-role="view" 
+     id="balanceInquiryView" 
+     data-layout="main-layout"
+     data-show="app.accountsService.viewModel.show"
+     data-model="app.accountsService.viewModel"
+     data-stretch="true">
+
+    
+    
+    <div  id="viewContainer">
+        <h3>Blanace Inquiry View</h3>
+        
+        
+        <div id="account-details-container" >
+            <div data-bind="source:selectedAccount" data-template="accountList-template"></div>
+        </div>
+
+        <div id="scrollview-container" >
+            <div id="accounts-scrollview"
+                 data-role="scrollview" 
+                 data-bind="source: accountsData" 
+                 data-template="scrollview-template"
+                 data-page="0"
+                 data-content-height="5em"
+                 data-change="app.accountsService.viewModel.pageChange">
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/x-kendo-template" id="accountList-template" >
+        <p>#:type#</p>
+        <p>account Number #:accountNumber#</p>
+        <p>#:IBAN_BBAN#</p>
+        <p>#:availableBalance#</p>
+        <p>#:currentBalance#</p>
+    </script>
+
+    <script id="scrollview-template" type="text/x-kendo-template"><div data-role="page" data-accountNo="#= accountNumber #" class="photo" >
+        <p>#= type #</p>
+        <p>#= accountNumber #</p>
+    </div>
+    </script>
+    
+</div>
+
+<!--<div id="scrollview-container">
+<div data-role="scrollview" data-page="1" data-template="scrollview-template" id="scrollview" data-bind="source:accountsListDataSource3">
+        
+</div>
+        
+</div>-->
+
+<!-- <div data-role="listview" data-bind="source:accountsListDataSource3" data-template="scrollview-template"></div>-->
+    

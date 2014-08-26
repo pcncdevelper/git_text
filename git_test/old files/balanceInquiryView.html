@@ -1,0 +1,60 @@
+ <!-- test area start -->
+   <script type="text/x-kendo-template" id="accountList-template" >
+        <p>#:type#</p>
+        <p>account Number #:accountNumber#</p>
+        <p>#:IBAN_BBAN#</p>
+        <p>#:availableBalance#</p>
+        <p>#:currentBalance#</p>
+    </script>
+
+    <script id="scrollview-template" type="text/x-kendo-template"><div data-role="page" data-accountNo="#= accountNumber #" class="photo" >
+        <p>#= type #</p>
+        <p>#= accountNumber #</p>
+    </div>
+    </script>
+    
+    
+    
+   <div data-model="app.accountsService.viewModel" 
+       data-role="view" 
+         id="balance-inquiry-view"
+        data-before-show="beforeViewShow"
+         data-layout="main-layout">
+        <div class="v-container">
+            
+        <div id="upper-div">
+            
+            
+            <div id="account-details-container" >
+            <div data-bind="source:selectedAccount" data-template="accountList-template"></div>
+        </div>
+            <div id="upper-inner-div"></div></div>
+        <div id="lower-div">
+            <div id="scrollview-container" >
+            <div id="accounts-scrollview"
+                 data-role="scrollview" 
+                 data-bind="source: accountsData" 
+                 data-template="scrollview-template"
+                 data-page="0"
+                 data-content-height="5em"
+                 data-change="app.accountsService.viewModel.pageChange">
+            </div>
+
+        </div>
+            
+        </div>
+            
+        </div>
+  
+        
+    
+        
+    </div>
+    <script type="text/javascript">
+        beforeViewShow = function(e){
+            console.log('beforeShow');
+          
+        };
+     
+        
+    </script>

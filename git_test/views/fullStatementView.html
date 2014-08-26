@@ -1,0 +1,35 @@
+<div data-role="view" id="fullStatementView"  data-layout="main-layout" data-model="app.transactionsService.viewModel">
+
+   
+   <div class="page-name">Full Statement </div>
+
+    <p>
+        Select Account
+        <select id="accounts-list-drop-down" data-bind="source:accountsList" onchange="app.transactionsService.viewModel.changed(value)" >
+
+        </select>
+    </p>
+    <br>
+
+    <div id="table-of-transactions" >
+
+    </div>
+    <table >
+        <thead>
+            <tr>
+                <th style="width:24%">Trans. Date</th>
+                <th style="width:50%">Explanation</th>
+                <th style="width:24%">Amount</th>
+
+            </tr>
+        </thead>
+
+        <!--transActions Table html bound to transactionsData array in the miniStatementViewModel-->
+        <tbody data-bind="html:transactionsTableHtml" >
+
+        </tbody>
+
+    </table> 
+    
+</div>
+

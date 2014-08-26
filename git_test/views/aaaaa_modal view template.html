@@ -1,0 +1,19 @@
+   <div data-role="modalview" id="modalview-login"  data-model="app.dropDownService.viewModel">
+           
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span>Transfer</span>
+                    <a data-click="closeModalViewLogin" data-role="button" data-align="right">Cancel</a>
+                </div>
+            </div>
+          <h3>Are you Sure you want to complete this Transfer ?</h3>
+            
+            <div data-bind="source:accounts"></div>
+            
+
+            
+          <div class="confirmation-button"> <a style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+          <div class="confirmation-button">  <a style="width:100%" data-click="closeModalViewLogin" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+
+               
+</div>

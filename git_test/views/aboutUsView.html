@@ -1,0 +1,133 @@
+  <div data-role="view" id="landing-page-view"  
+             data-layout="landing-page-layout"
+  
+             style="position:realative"
+             data-model="app.landingPageService.viewModel">
+            <div id="landing-page-image-container"  >
+
+                <div id="landing-page-place-holder">
+                    <div id="scrollView" data-role="scrollview" data-page="1">
+                        <div  data-role="page" class="page-num-one">
+
+                           
+
+                        </div>
+                        <div data-role="page" class="page-num-two">
+
+                            
+
+                        </div>
+                        <div data-role="page" class="page-num-three"></div>
+
+                    </div>
+                </div>
+
+                <div class="landing-page-tabstrip-container" >
+                    <a  data-bind="click:info">
+                        <div id="left-tab">
+                            <div class="lp-tabstrip-icon-container info"></div>
+                            <div class="lp-tabstrip-icon-name"></div>
+                        </div>
+                    </a>
+                    <a  data-bind="click:aboutUs">
+                    <div id="middle-tab">
+                        <div class="lp-tabstrip-icon-container about-us"></div>
+                    </div>
+                    </a>
+                    <a  date-role="button" data-bind="click:locations">
+                    <div id="right-tab"> 
+                        <div class="lp-tabstrip-icon-container locate-us"></div>
+                    </div>
+                     </a>
+
+                    <!-- <div data-role="tabstrip" class="landing-page-tabstrip">
+                    <a  data-icon="globe" href="#index">Home</a>
+                    <a  data-icon="featured" href="#featured">Featured</a>
+                    </div>-->
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div data-role="layout" data-id="landing-page-layout">
+
+            <!--Header-->
+            <div data-role="header" style="background-color:gray;border:none">
+                <div data-role="navbar" style="height:35px">
+
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#landing-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+
+                    <div data-role="button" id="header-logo-container" data-rel="drawer" href="#landing-drawer"></div>
+                    <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
+                    <!--  <a data-role="backbutton" data-align="right">Back</a>-->
+                </div>
+            </div>
+
+            <!--Footer-->
+            <div data-role="footer" style="background-color:#e3e3e3; height: 40px;">
+                <ul data-role="listview">
+                    <li>
+                        <a data-icon="contacts" href="views/loginView.html" >Log In</a>
+                    </li>
+
+                </ul>
+                <!-- <div data-role="tabstrip">
+                <a href="views/homeView.html" data-icon="home">Home</a>
+                <a href="views/locationsView.html" data-icon="globe">Locations</a>
+                <a href="views/complaintsView.html" data-icon="contacts">Complaints</a>
+                <a href="views/infoView.html" data-icon="info">Info</a>
+                </div>-->
+            </div>
+
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="view" id="aboutUsView"  data-layout="back-to-main-layout">
+<h4> About Bank Of Palestine</h4>
+<p>
+    Bank of Palestine (BoP) is the first and largest bank with a well-diversified branch network of 48 branches in Palestine, and a paid up capital of $134 million and assets of over $1.65 billion. Established in 1960, BoP has successfully expanded its presence and operations throughout the country and now has 1,200 employees serving more than 550,000 customers. BoP has around 20% market share of deposits and credit facilities in Palestine. Operating as a universal bank, BoP is engaged in retail, corporate, SME and Micro banking operations, with the largest card processing operations in Palestine. BoP is the sole agent for issuing and acquiring Visa and Master Card in Palestine with over 5,000 Point of Sale stations nationwide.
+    
+    
+</p>
+    
+</div>
+
+

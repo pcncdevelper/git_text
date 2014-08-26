@@ -1,0 +1,81 @@
+ <!--data-layout="main-layout" -->
+ <!--data-layout="back-to-main-layout"-->
+<div data-role="view" 
+     id="activation-view" 
+    
+    
+     data-layout="goback-layout"
+     data-model="app.activationService.viewModel">
+    <div id="activation-upper-div">
+
+        <h1>
+            Activation View
+        </h1>
+
+        <p>
+            Your account is not activated you will recieve an activation code shortly via sms on your registered mobile number
+        </p>
+    </div>
+
+    <div id="activation-lower-div">
+        <form >
+
+            <ul data-role="listview">
+               <!-- <li>
+                    Activation Code
+                    <input autocorrect="off" autocapitalize="off" data-bind="value: activationCode" type="number"  id="activationCode" placeholder="insert here">
+                </li>-->
+               <!-- <li>
+                    <input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: activationCode" placeholder="Activation Code" />
+                    <input autocorrect="off" autocapitalize="off" data-bind="value: activationCode" type="number" class="log-in-text-area"   placeholder="Insert Activation Code here">
+                </li>-->
+            </ul>
+
+            <div class="buttonArea">
+                
+                  <input class="log-in-text-area" type="text" autocorrect="off" autocapitalize="off" data-bind="value: activationCode" placeholder="Activation Code" />
+                <input  id="activate"  data-role="button" data-bind="click:sumbitActivationCode" class="log-in-button" value="Submit" />
+            
+                <input  id="request-sms-agian"  data-role="button" data-bind="click:requestSMS" class="log-in-button" value="Request SMS Again" />
+                
+            </div>
+
+            
+           <!-- 
+             <div id="smsbuttonArea">
+            
+        </div>-->
+        </form>
+
+       
+    </div>
+
+</div>
+
+
+
+
+<!--activation-view Layout-->
+    <div data-role="layout" data-id="activation-layout">
+
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title" id="viewTitle" >&nbsp;</span>
+           <a href="#tabstrip-login" data-align="left" id="logout" data-role="button">Exit</a>
+            </div>
+        </div>
+        <div>
+            
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+            <div data-role="tabstrip">
+             <!--  <a href="views/homeView.html" data-icon="home">Home</a>-->
+             <!--  <a href="#tabstrip-login" data-icon="contacts" >Login</a>-->
+             <!--   <a href="#tabstrip-location" data-icon="search">Location</a>-->
+             <!--   <a href="#tabstrip-weather" data-icon="globe">Weather</a>-->
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,1413 @@
+/*icons*/
+
+.km-newcard-e:after,
+    .km-newcard-e:before
+    {
+        content: "\e0c8";
+    }
+
+
+
+.km-trans-a-e:after,
+    .km-trans-a-e:before
+    {
+        content: "\e0b2";
+    }
+
+.km-trans-d-e:after,
+    .km-trans-d-e:before
+    {
+        content: "\e30a";
+    }
+
+
+
+.km-periodic-e:after,
+    .km-periodic-e:before
+    {
+        content: "\e0f6";
+    }
+
+
+
+.km-home-e:after,
+    .km-home-e:before
+    {
+        content: "\e0dd";
+    }
+
+
+.km-favorites-e:after,
+    .km-favorites-e:before
+    {
+        content: "\e0d7";
+    }
+
+
+.km-balance-e:after,
+    .km-balance-e:before
+    {
+        content: "\e050";
+    }
+
+
+.km-transfer-e:after,
+    .km-transfer-e:before
+    {
+        content: "\e30e";
+    }
+
+
+.km-bill-e:after,
+    .km-bill-e:before
+    {
+        content: "\e086";
+    }
+
+
+.km-account-e:after,
+    .km-account-e:before
+    {
+        content: "\e319";
+    }
+
+
+
+
+.km-more-e:after,
+    .km-more-e:before
+    {
+        content: "\e0e0";
+    }
+
+
+.km-exit-e:after,
+    .km-exit-e:before
+    {
+        content: "\e075";
+    }
+
+.km-settings-e:after,
+    .km-settings-e:before
+    {
+        content: "\e0a4";
+    }
+
+
+
+.km-request-e:after,
+    .km-request-e:before
+    {
+        content: "\e07e";
+    }
+
+.km-cards-e:after,
+    .km-cards-e:before
+    {
+        content: "\e095";
+    }
+
+.km-account-e:after,
+    .km-account-e:before
+    {
+        content: "\e304";
+        
+    }
+.km-check-e:after,
+    .km-check-e:before
+    {
+        content: "\e30a";
+        
+    }
+
+.km-friend-e:after,
+    .km-friend-e:before
+    {
+        content: "\e319";
+        
+    }
+
+.km-topup-e:after,
+    .km-topup-e:before
+    {
+        content: "\e101";
+        
+    }
+.km-activate-e:after,
+    .km-activate-e:before
+    {
+        content: "\e030";
+        
+    }
+.km-stop-e:after,
+    .km-stop-e:before
+    {
+        content: "\e031";
+      
+    }
+.km-inquiry-e:after,
+    .km-inquiry-e:before
+    {
+        content: "\e31e";
+        
+    }
+.km-wasata-e:after,
+    .km-wasata-e:before
+    {
+        content: "\e050";
+        
+    }
+
+.km-feedback-e:after,
+    .km-feedback-e:before
+    {
+        content: "\e091";
+        
+    }
+.km-mgmt-e:after,
+    .km-mgmt-e:before
+    {
+        content: "\e0c9";
+        
+    }
+
+.km-donation-e:after,
+    .km-donation-e:before
+    {
+        content: "\e088";
+        
+    }
+
+
+.modalview-button{
+    margin-top:15px;
+   
+    
+}
+
+.center-con{
+    text-align:center;
+    
+}
+.left-con{
+    text-align:left;
+    
+}
+
+
+/* dash board syles start */
+#dash-board-container{
+    position:absolute;
+   /* background-color:pink;*/
+    height:100%;
+    width:100%;
+   
+}
+
+#dash-board-relative-container{
+    width:100%;
+    height:100%;
+  /*  background-color:gray;*/
+    position:absolute;
+    
+   
+}
+
+
+#dash-board-notification-area{
+ bottom: 0px;
+position: absolute;
+width: 100%;
+height: 50%;
+
+}
+
+#dash-board-messages-icon{
+    border:0px;
+    float:left;
+    margin-left:30px;
+    height:71.5px;
+    width:100px;
+    background-image:url(../styles/images/message-icon.png);
+    background-size: 100% 100%;
+}
+
+#dash-board-offers-icon{
+    margin-top:0px;
+    border:0px;
+    float:right;
+    margin-left:30px;
+    margin-right:30px;
+    height:80px;
+    width:70px;
+    background-image:url(../styles/images/offers-icon.png);
+    background-size: 100% 100%;
+}
+
+#dashBoardView km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
+color:#7b227e;
+}
+
+  
+
+/* dash board syles end */
+/**/
+
+/*
+
+*/
+
+
+
+
+/**navigation bar styles  start /*/
+
+ .km-widget.km-navbar{
+    height:41px!important;
+    border: none;
+}
+/**navigation bar styles  end /
+*/
+
+
+.special-list li{
+    font-weight:bold;
+}
+
+.special-list .km-icon{
+    color:#63106c;
+}
+
+/**requestETopUpStatusView start*/
+/*#requestETopUpStatusView li{
+    background-color:#e7e3cf    ;
+border-radius: 25px;
+font-weight: bold;
+    margin-bottom:10px;
+    color:black;
+  
+}
+*/
+/**requestETopUpStatusView end*
+
+/* defineETopUPPayee styyles start**/
+
+#defineETopUPPayee .km-icon{
+    color:#63106c;
+}
+#defineETopUPPayee li{ font-weight:bold;
+}
+
+/**defineETopUPPayee styles end */
+
+
+/*e top up payment history styles*/
+/*#eTopUpPaymentHistory  li{
+background-color:#e7e3cf    ;
+border-radius: 25px;
+font-weight: bold;
+    margin-bottom:10px;
+    color:black;
+  
+  } */
+/* topup payment history styles*/
+
+
+
+/* e Top Up view styles start*/
+#eTopUpView .km-icon{
+    color:#63106c;
+}
+
+#eTopUpView li{
+    font-weight:bold;
+}
+
+/* e Top Up sccount view styles start*/
+#topUpAccountsView .km-icon{
+    color:#63106c;
+}
+
+#topUpAccountsView li{
+    font-weight:bold;
+}
+
+
+/* etopup view accounts styles end */
+
+
+
+/*request Vendor status styles start*/
+/*#requestVendorStatusView li{
+background-color:#e7e3cf    ;
+border-radius: 25px;
+font-weight: bold;
+    margin-bottom:10px;
+    color:black;
+  
+  } */
+
+/*request Vendor status styles end*/
+
+
+
+
+
+
+/* payment history View styles Start */
+#paymentHistoryView .km-icon{
+    color:#63106c;
+}
+
+#paymentHistoryView li{
+    font-weight:bold;
+}
+
+/*#paltelPayedBillsView li {
+background-color:#e7e3cf    ;
+border-radius: 25px;
+font-weight: bold;
+    margin-bottom:10px;
+    color:black;
+  
+   
+}*/
+
+/* payment history View styles End*/
+
+
+/* define a payee view styles start*/
+#defineAPayee .km-icon{
+    color:#d00078;
+   font-weight:bold;
+    /*background:#000000;*/
+}
+
+#defineAPayee li{
+    font-weight:bold;
+}
+
+
+/* define a payee view styles end*/
+
+/*paltel bills view start */
+/*#paltelBillsView li {
+background-color:#e7e3cf    ;
+border-radius: 25px;
+font-weight: bold;
+    margin-bottom:10px;
+    color:black;
+  
+   
+}*/
+/*paltel bills view end */
+
+
+/*payments view styles start */
+#paymentsView .km-icon{
+    color:#63106c;
+}
+
+#paymentsView li{
+    font-weight:bold;
+}
+
+/*payments view styles end*/
+
+
+/*pay a bill  view styles start */
+#payABillView .km-icon{
+    color:#63106c;
+}
+
+#payABillView li{
+    font-weight:bold;
+}
+
+/*pay a bill view styles end*/
+
+
+/*transfers view start*/
+.main-text{
+    color: #d00078;
+    color:gray;
+margin-left: 1em;
+font-weight: bold;}
+
+.main-text-black{
+
+    color:black;
+margin-left: 1em;
+font-weight: bold;}
+
+
+
+/*transfers view end*/
+
+
+
+
+
+
+
+
+
+
+.page-name{
+    color:#63106c;
+display: block;
+font-size: 1.25em;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start:16px;
+-webkit-margin-end: 0px;
+font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+#bi-view ol.km-pages li {color: white;}
+
+#bi-view li.km-current-page{
+color: #63106c!important;
+}
+
+
+
+/*Balance inquiry View styles start**/
+#bi-view #scrollview-container{
+    padding-top: 0px;
+background-color: gray;
+    text-align:center;
+}
+
+#bi-view div h4{
+    color:white;
+}
+
+
+#request-full-statement{margin-top: 0px;}
+
+/*Balance inquiry View styles end  **/
+
+
+@media only screen and (min-device-width : 719px) and (max-device-width : 721px) and (-webkit-min-device-pixel-ratio : 2) and (orientation : portrait) { 
+
+} 
+
+
+
+ #landing-page-view ol.km-pages{
+           margin-left: 9em;
+     margin-left: 150px;
+             margin-top:-5em;
+            position:fixed;
+        color:white;
+    
+        }
+
+
+
+ .km-ios7 .km-pages li {
+background: white;
+}
+
+#landing-page-view ol.km-pages .km-current-page {
+    color:#d00f79;
+    
+}
+
+.km-pages {
+text-align: center!important;
+}  
+
+/*.km-ios7 .km-pages {
+padding-top: 0.5em;}
+        */
+        #photo1
+        {
+           /* background-image: url(http://ppcdn.500px.org/64565733/32ab32af5dd9477930aff62403ef6ee17e340688/3.jpg);*/
+            background-image: url(styles/images/ad-01);
+            position: absolute;
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            
+           
+        }
+        
+        
+        
+
+
+
+.page-num-one
+        {
+           /* background-image: url(http://ppcdn.500px.org/64565733/32ab32af5dd9477930aff62403ef6ee17e340688/3.jpg);*/
+           background-image: url(../styles/ads/ad-01.jpg);
+            height: 32em;
+            background-color: red;
+            width: 320px;
+             background-size: 100% 100%;
+        }
+
+
+.page-num-two
+        {
+           /* background-image: url(http://ppcdn.500px.org/64565733/32ab32af5dd9477930aff62403ef6ee17e340688/3.jpg);*/
+           background-image: url(../styles/ads/ad-02.jpg);
+            height: 32em;
+            /*background-color: red;*/
+            width: 320px;
+            background-size: 100% 100%;
+        }
+
+.page-num-three
+        {
+           /* background-image: url(http://ppcdn.500px.org/64565733/32ab32af5dd9477930aff62403ef6ee17e340688/3.jpg);*/
+           background-image: url(../styles/ads/ad-03.jpg);
+            height: 32em;
+            /*background-color: red;*/
+            width: 320px;
+            background-size: 100% 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+/*accounts-view-styles -start*/
+.account-upper-div{
+             height:60%;
+                width:100%;
+                /*background:red;*/
+            }
+            .account-lower-div
+{           position:relative;
+             height:40% ;  
+             width:100%;
+               
+            }
+            .main-account-name
+            {
+                display: -webkit-inline-box;
+                font-size: 0.83em;
+                -webkit-margin-before: 1.67em;
+                -webkit-margin-after: 1.67em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-weight: bold;
+                margin-left:0.8em;
+                /*color:#d22c7d;*/
+                color:#d94591;
+            }
+            .available-balance-text-holder
+            {
+               color:#9b9b9b;
+                display: -webkit-inline-box;
+                font-size: 0.67em;
+                -webkit-margin-before: 1.33em;
+                -webkit-margin-after: 2.33em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-weight: bold;
+                margin-left: 1em;
+                margin-bottom:4em;
+            }
+            
+            .available-balance-holder
+            {
+                /*float: right;
+                
+                display: block;
+                font-size: 1.17em;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                font-weight: bold;*/
+                
+                font-weight: bold; 
+                position: absolute;
+                right: 1em;
+                top: auto;
+                bottom: 1em;
+                top: 1em;
+            }
+
+
+/*accounts-view-styles -end*/
+
+/* scroll view start */
+
+
+/* scroll view end*/
+
+
+/*Log in Styles Start */
+/*------------------------------------------------------------*/
+.km-ios7 .km-view .km-content
+{
+    background-color: #f5f5f5;
+}
+
+.km-android .km-view .km-content
+{
+    background-color: #f5f5f5;
+}
+
+
+
+
+.log-in-text-area {
+     text-align:center!important;
+   
+margin-bottom: 13px;
+border-radius: 5px!important;
+width: 90%;
+height: 45px;
+/*margin-left: 13px;*/
+margin-right: auto;
+position: relative;
+font-size: 20px;
+
+    
+border: none;
+background-color: White;
+    
+}
+
+.log-in-text-area-higlighted{
+    
+border-left-color: red;
+border-left-style: solid;
+border-left-width: 3px;
+border-bottom-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+#log-in-text
+{
+    
+font-family: initial;
+font-weight: 100;
+    color: #c50677; 
+}
+
+#log-in-logoContainer
+{
+    background-size: 100%;
+    background-image: url(../styles/images/bop_logo_small.png);
+    background-repeat: no-repeat;
+    text-align: center;
+
+    width: 160px;
+    height: 96px;
+    margin: 0px auto;
+}
+
+
+.log-in-button {
+    
+margin-top: 5px;
+margin-bottom: 5px;
+    text-align:center;
+font-family: inherit;
+font-size: 16px!important;
+font-weight: 100;
+border: none;
+/*background-color: #d00078;*/
+background-color: #560f5b!important;
+background-color: #a12764!important;
+color: white!important;
+width: 90%;
+height: 45px;
+border-radius: 7px!important;
+}
+/*------------------------------------------------------------*/
+/*Log in Styles End */
+
+
+/*Back button Start*/
+/*.km-ios7 .k-list, .km-ios7 .k-slider, .km-ios7 .km-widget {
+color: #a8a8a8!important;
+}*/
+
+.km-ios7 .km-back:before {
+    -webkit-box-shadow: inset 0.25rem -0.25rem 0 #a8a8a8;}
+
+
+
+#log-in-backbutton-header{
+ color:green!important;  
+    width:100px!important;
+   
+}
+
+/*Back button End*/
+
+
+
+/*Drawer Styles Start */
+/*------------------------------------------------------------*/
+
+
+.drawer-group-name
+{
+    color: #cd0077;
+    
+   /* margin-left:-8px;*/
+}
+
+#my-drawer .km-listview-wrapper{
+   /* background-color: lightgray;*/
+}
+
+
+#my-drawer li
+{
+  /*  background-color: lightgray;*/
+    margin-left: 6px; 
+}
+
+
+#my-drawer .km-group-container{
+    border-right-style: groove;
+}
+
+/* .km-ios7.km-listview-link:after{
+  visibility: hidden;
+     color: #f5f5f5;
+     color:red!important;
+}*/
+ #my-drawer a.drawer-sub-menu.km-listview-link:after{
+    visibility: hidden!important;
+}
+
+#my-drawer .km-icon
+{
+    font-size: 1.4em;
+    color:#63106c;
+    margin-left: -5px; 
+    margin-right: 20px;
+}
+
+
+.drawer-sub-menu.km-listview-link{
+   /* color:#63106c!important;*/
+    margin-left:-20px!important;
+    margin-top: -10px;
+   margin-bottom: -10px;
+    
+    
+}
+
+
+
+
+#landing-drawer li
+{
+    
+    margin-left: 12px; 
+}
+
+#landing-drawer .km-icon
+{
+    color:#63106c;
+   
+}
+
+
+.drawer-sub-menu{
+   /* color:#63106c!important;*/
+    
+    
+}
+
+
+
+/*------------------------------------------------------------*/
+/*Drawer Styles End */
+
+
+
+
+
+
+/*
+
+*/
+
+km-on-ios km-ios7 #landing-page-image-container
+{
+    width: 100%;
+    height: 100%;
+  
+    position: relative;
+    background-size: 100% 100%;
+ /* background-color: pink;
+    background-image: url(../styles/images/lp-background.jpg);*/
+    /* background-repeat: no-repeat;*/
+}
+
+km-on-ios km-ios7 .landing-page-tabstrip-container
+{
+    position: absolute;
+bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: #58115d; 
+    opacity: 0.9;
+}
+
+km-on-ios km-ios7 .landing-page-tabstrip
+{
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*landing page styles start*/
+#landing-page-image-container
+{
+    width: 100%;
+    height: 100%;
+  
+    position: absolute;
+    background-size: 100% 100%;
+ /* background-color: pink;
+    background-image: url(../styles/images/lp-background.jpg);*/
+    /* background-repeat: no-repeat;*/
+}
+
+.landing-page-tabstrip-container
+{
+    width: 100%;
+    height: 20%;
+    background-color: #58115d; 
+    opacity: 0.9;
+}
+
+.landing-page-tabstrip
+{
+    height: 100%;
+}
+
+.km-android .km-view .km-tabstrip .km-button .km-icon
+{
+    color: rgb(255, 255, 255);
+}
+
+.km-android .km-view .km-tabstrip .km-button
+{
+    /*opacity: 0.4;*/
+
+    background-color: #58115d;
+}
+
+/*.km-icon km-globe
+{
+color:white!important;
+}*/
+
+#landing-page-place-holder
+{
+    
+   
+    width: 100%;
+    height: 80%;
+}
+
+#left-tab
+{
+    position: relative;
+    float: left;
+    width: 33%;
+    /*background-color:red;*/
+    height: 100%
+}
+#middle-tab
+{
+    position: relative;
+    float: left;
+    /*  background-color:yellow;*/
+    width: 33%;
+    height: 100%
+}
+#right-tab
+{
+    position: relative;
+    float: right;
+    /*  background-color:blue;*/
+    width: 33%;
+    height: 100%
+}
+
+#left-tab:hover
+{
+    background-color: #d4027f !important;
+}
+#middle-tab:hover
+{
+    background-color: #d4027f !important;
+}
+#right-tab:hover
+{
+    background-color: #d4027f !important;
+}
+
+.lp-tabstrip-icon-container
+{
+    opacity: 1;
+    width: 65px;
+    height: 67px;
+    background-image: url(../styles/images/sprite-lp-icons.png);
+    background-repeat: no-repeat;
+    float: right;
+    position: relative;
+    top: 15px;
+    left: -21px;
+}
+.lp-tabstrip-icon-container:clicked { background-color: #fff; }
+
+.lp-tabstrip-icon-container.info
+{
+    background-position: 0px 0px;
+}
+
+.lp-tabstrip-icon-container.about-us
+{
+    background-position: 0px -64px;
+}
+
+.weather-icon.partly-cloudy
+{
+    background-position: 0px -128px;
+}
+
+.lp-tabstrip-icon-name
+{
+    /* position:relative;
+    background-color:pink;
+    height:30%;
+    width:100%;
+    */
+    
+    
+    
+}
+
+#header-logo-container
+{
+    
+   /* float:left;
+    margin-right: 190px;
+    width: 100px;
+    height: 20px;
+    position: relative;
+    background-image: url(../styles/images/bop_logo_small.png);
+    margin-top: 10px;
+    margin-left: 38px;
+    background-size: 100% 100%;
+    color: rgb(224, 224, 224)*/
+}
+
+
+#header-logo-container
+{
+
+
+float: left;
+width: 43px;
+height: 32px;
+position: relative;
+background-image: url(../styles/images/bop-logo-square.png);
+margin-top: 5px;
+margin-left: 25px;
+background-size: 100% 100%;
+color: rgba(224, 224, 224, 0);
+}
+
+/*#header-logo-container:hover
+{
+    background-color: gray !important;
+}*/
+
+/*#header-logo-container{
+width:100px;
+height: 20px;
+position:relative;
+background-image: url(../styles/images/bop_logo_small.png);
+margin-top: 10px;
+margin-left: 38px;
+background-size: 100% 100%;
+}*/
+
+#drawer-button
+{
+    width:100px;
+    float: right;
+    position: relative;
+}
+
+/*landing page styles end*/
+
+/* flip footer and header in android*/
+.km-android .km-view
+{
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column-normal;
+    -ms-flex-direction: column-normal;
+    flex-direction: column-normal;
+}
+/*        */
+
+/*
+drawer start
+*/
+
+.km-ios #my-drawer .km-content, .km-android #my-drawer .km-content, .km-blackberry #my-drawer .km-content,
+.km-ios #my-drawer .km-list > li, .km-android #my-drawer .km-list > li, .km-blackberry #my-drawer .km-list > li,
+.km-ios #my-drawer .km-listview-link > .km-icon, .km-android #my-drawer .km-listview-link > .km-icon, .km-blackberry #my-drawer .km-listview-link > .km-icon,
+.km-ios #my-drawer .km-list li > .km-icon, .km-android #my-drawer .km-list li > .km-icon, .km-blackberry #my-drawer .km-list li > .km-icon
+{
+    background-color: #4e4e4e;
+    color: #fff;
+}
+
+.km-ios #my-drawer .km-group-title,
+.km-blackberry #my-drawer .km-group-title
+{
+    background-color: #6e6e6e;
+    color: #fff;
+}
+
+.km-drawer-button:before, .km-drawer-button:after { content: "\E077"; }
+.km-inbox:before, .km-inbox:after { content: "\E0B0"; }
+.km-sent:before, .km-sent:after { content: "\E0C6"; }
+.km-trash:before, .km-trash:after { content: "\E0C3"; }
+.km-spam:before, .km-spam:after { content: "\E0C5"; }
+.km-star:before, .km-star:after { content: "\E0D7"; }
+.km-settings:before, .km-settings:after { content: "\E0DA"; }
+.km-off:before, .km-off:after { content: "\E0B9"; }
+
+.inboxList
+{
+    font-size: .8em;
+}
+
+.inboxList p,
+.inboxList h2,
+.inboxList h3
+{
+    margin: 5px 2px;
+}
+
+.inboxList p,
+.inboxList h3
+{
+    color: #777;
+}
+
+.inboxList h3.time
+{
+    color: #369;
+    float: left;
+    margin-right: 10px;
+}/* drawer start*/
+
+.confirmation-button
+{
+    margin-right: auto; 
+    margin-left: auto;
+    text-align: center;
+    display: block;
+    width: 300px;
+    margin-top: 20px;
+}
+
+/*account view*/
+.account-container
+{
+    margin-top: 10px; ;
+    background-color: #00a8df;
+    height: 100px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border: 1px;
+    border-color: black;
+    border-style: double;
+}
+
+.account-name
+{
+    position: relative;
+    vertical-align: middle;
+    background-color: gray;
+    height: 30px;
+    width: 100%;
+    margin-left: auto; ;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.text-container
+{
+    top: 0px;
+    position: relative;
+    left: 5px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #000;
+}
+
+/*Drop Down menus styles**/
+
+
+
+select
+{
+    
+/*margin-left: 20px;*/
+width: 80%;
+height: 30px;
+border-color: #560f5b;
+border-width: 2px;
+font-weight: bolder;
+/*margin-bottom: 20px;*/
+/*margin-top: 20px;*/
+    }
+    
+/*    background-color:red;
+
+    -webkit-background-clip: content-box!important;
+background-clip: content-box!important;
+   
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
+    
+-moz-box-sizing: border-box!important;
+-webkit-box-sizing: border-box!important;;
+box-sizing: border-box!important;;
+-moz-background-clip: content-box!important;;
+-webkit-background-clip: content-box!important;;
+background-clip: content-box!important;;
+    
+   position: relative!important;
+    width: 90%!important;
+    margin: 40px  auto!important;
+
+    padding: 10px!important;
+    background: #fff!important;
+    border-radius: 7px!important;
+    border: 1px solid rgba(0, 0, 0, 0.15)!important;
+    box-shadow: 0 1px 1px rgba(50, 50, 50, 0.1)!important;
+    cursor: pointer!important;
+    outline: none!important;
+    font-weight: bold!important;
+    color: #8AA8BD!important;
+    
+    
+    
+margin: 0em!important;
+font: -webkit-small-control!important;
+color: initial!important;
+letter-spacing: normal!important;
+word-spacing: normal!important;
+text-transform: none!important;
+text-indent: 0px!important;
+text-shadow: none!important;
+display: inline-block!important;
+text-align: start!important;
+    
+    */
+
+
+/*show text under android tab-strip 
+.km-android .km-tabstrip a
+{
+color: #a8a8a8;
+}
+.km-android .km-tabstrip .km-text
+{
+text-indent: 0;
+height: 3.7rem;
+margin-top: -2.5rem;
+padding-top: 1.8rem;
+text-indent: 0;
+} 
+
+
+
+
+
+
+#bank-logo
+{
+  
+    width: 200px;
+    height: 50px;
+  
+    float: right;
+}
+
+/* Balance Inquiry Styles Start */
+#bi-view .km-scroll-container
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#bi-view .bi-container
+{
+    height: 100%;
+    position: relative;
+}
+
+#bi-upper-div
+{
+    /* background-color:red;*/
+    height: 50%;
+    position: relative;
+}
+
+
+#bi-upper-div li{
+font-weight: bold;
+color: #560f5b;}
+
+
+#bi-lower-div
+{
+    /*  background-color:yellow;*/
+    height: 34%;
+}
+/* Balance Inquiry Styles End */
+
+
+/*Activation View Styles Start*/
+#activation-view .km-scroll-container
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#activation-upper-div
+{
+    
+    height: 40%;
+}
+
+#activation-view #smsbuttonArea
+{
+    text-align: center;
+}
+#activation-lower-div
+{
+   
+    height: 60%;
+}
+/*Activation View Styles End */
+
+
+#upper-inner-div
+{
+    /*  background-color:green;*/
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+#test-view .km-scroll-container
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#test-view .v-container
+{
+    height: 100%;
+    position: relative;
+}
+
+#upper-div
+{
+    /* background-color:red;*/
+    height: 65%;
+    position: relative;
+}
+#upper-inner-div
+{
+    /*  background-color:green;*/
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+#lower-div
+{
+    /*  background-color:yellow;*/
+    height: 35%;
+}
+
+#accounts-list-drop-down
+{
+  /*  color: black; 
+    
+    margin: 1%;*/
+}
+
+
+
+#balanceInquiryView :nth-child(2) :nth-child(2)
+{
+   background-color:red;
+    
+}
+
+#accounts-scrollview
+{
+  
+}
+
+#scrollview-container 
+{ 
+    
+   
+    
+    /* margin: 60px 0 1em 0; */
+    margin: 0px 0 0em 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background: rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-width: 1px 0;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, .3);
+}

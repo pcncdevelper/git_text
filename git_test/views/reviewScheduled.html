@@ -1,0 +1,23 @@
+<div data-role="view" id="autoamaticPaymentsView"  data-layout="goback-layout" >
+    <div class="page-name">Scheduled Transfer</div>
+    <div class="center-con">
+        <!--<a data-role="button" data-icon="add" value="Add New" href="views/addAutomaticPaymentView.html" style="text-align:center;float:left">Add New</a>-->
+
+    </div>
+
+    <ul data-role="listview" data-source="aPayments" data-template="automatic-payment" class="inboxList"></ul>
+</div>
+
+<script type="script/x-kendo-template" id="automatic-payment">
+    <div id="#:ID#">
+
+        <h2>#: Description#</h2>
+        <p style="font-weight:bold">
+            Pay From :<span style="color:#:dateColor#; <!-- background-color: rgb(219, 226, 228);-->"> #: PayFrom# </span>Till <span style="color:#:dateColor#;<!-- background-color: rgb(219, 226, 228);-->">#: PayUntil#</span>
+        </p>
+        <h3 style="color:#:statusColor#">
+            Status : #: Status# &nbsp&nbsp&nbsp
+            <a style="float:right" data-role="button" >Remove</a>
+        </h3>
+    </div>
+</script>

@@ -1,0 +1,296 @@
+<div data-role="view" id="requringPaymentsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
+    <div class="page-name">Add requiring Payments</div>
+
+    <ul data-role="listview" id="transfer-list" data-style="inset">
+		 <li>
+                        <label  class="from-act"style="margin-left:0px"> 
+                            Title
+                                <input type="text" data-icon="search" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Transfer Title" />
+                        </label>
+                    </li>
+        <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
+            <a style="line-height: initial;">
+                <div class="from-act">From</div>
+                <div id="balance-from-account-div" class="balance-from-acct">
+                    Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                    <span data-bind="source:fromcurrency"></span>
+                </div>
+                <div class="select-holder">
+                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="myFunction()"  >
+
+                    </select>
+                </div>
+            </a>
+        </li>
+
+        <div class="seperator" style="background-color:#eee;"></div>
+
+        <li id="to-account-li" class="from-list-item" >
+            <a style="line-height: initial;">
+                <div class="from-act">To</div>
+                <div id="balance-to-account-div" class="balance-to-acct">
+                    <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:currentToAccountBalance"></span>
+                    <span data-bind="source:tocurrency"></span>
+                </div>
+                <div class="select-holder">
+                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:accounts" onchange="changeToAccount()" >
+
+                    </select>
+                </div>
+            </a>
+        </li>
+        <div class="seperator"></div>
+
+        
+        <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee;">
+
+            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Amount</span>
+            <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" >
+        </li>
+
+       
+        <div class="seperator"></div>
+
+        <li class="from-list-item" >
+            <table class="trans-info-table" >
+
+                <tr >
+                    <td style="width:80%" >Transfer Rate</td>
+                    <td >
+                        :&nbsp<span  data-bind="source:rate"></span>
+                    </td>
+                </tr>
+                <tr >
+                    <td style="width:80%">Transfer Amount</td>
+                    <td >
+                        :&nbsp<span  data-bind="source:amountToExchange"></span>
+                    </td>
+                </tr>
+            </table>
+
+        </li>
+
+        <div class="seperator"></div>
+
+        
+        <li class="from-list-item">
+            <div class="main-text"><div style="float:left">Start at Date </div><input style="float: right; margin-right: 30px;" type="date" name="fromDate"></div>
+        </li>
+        <li class="from-list-item" style="background-color:#eee;">
+           <div class="from-act">Every</div>
+               <div class="select-holder">
+                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:everylist" onchange="changeToAccount()" >
+
+                    </select>
+                </div>
+        </li> <li class="from-list-item" style="background-color:#eee;">
+           <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Repeat #</span>
+            <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" > 
+        </li>
+        <li class="from-list-item" style="background-color:#eee;" >
+
+            <div style="width:100%"> Description </div>
+            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="Describe here"  />
+
+        </li>
+
+    </ul>
+    <div class="center-con">
+        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Add Requiring Payment" />
+    </div>
+    
+
+</div>
+<style>
+            
+            #new-input{
+                
+            }
+            
+            .trans-info-table{
+                 margin-bottom: 8px!important;
+                 margin-top: 8px!important;
+                margin-left:auto;
+                margin-right:auto;
+                width:60%;
+                font-size:0.9em;
+                font-weight:bold;
+            }
+            
+            #from-text{
+               font-weight: bold;
+            }
+            #my-a{
+                padding-top: 1px;
+
+             /* padding: 0px;  */
+            }
+            
+            #my-li
+            { /*background:pink;*/
+                padding-bottom: 0px;
+                
+                border-top-width: 1px;
+                border-top-color: #f9f9f9;
+                border-top-style: solid;
+                
+                border-bottom-width: 1px;
+                border-bottom-color: #f9f9f9;
+                border-bottom-style: solid;
+                margin-bottom: 10px;
+            }
+            
+            #selection2{
+               /* background:red;*/
+                width: 200%!important;
+                color:#8a8a8a;
+                font-weight: lighter;
+                width:100%;
+                font-weight:100;
+                position:relative;
+             /*left:0px;
+             font-weight:100;*/
+            }
+
+    #trans-info-table{
+       
+        width:100%
+       
+    }
+    
+    .from-list-item{
+        margin-top:5px;
+    }
+    
+    #from-account-li{
+        border-width:0px;
+        border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+      /*  background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;*/
+        background-size: auto 100%!important;
+    }
+    #to-account-li{
+        border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+       /* background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;*/
+        background-size: auto 100%!important;
+    }
+    
+    #balance-from-account-div{
+        visibility:hidden;
+        color:black;
+    }
+    #balance-to-account-div{
+        visibility:hidden;
+        color:black;
+        font-weight:100;
+    }
+    
+    #rate-holder{
+       visibility:hidden; 
+    }
+    
+    #money-exchange-input{
+        height: 85%;
+        border:groove; background-color:white;left: 92px;font-size:1.0em;font-weight:bold;color:#63106c;
+       /* height:98%;*/
+       /* border: groove;
+        background-color:white;*/
+        /*border:none;*/
+               /* font-weight:bold;
+                width:3em;*/
+       /* background-color: #eeeeee;
+       font-size: 0.90em;
+       color:#560f5b;
+      /* background: lightgray;
+       width: 64%;
+        width:47%;
+       right: 0;
+       border-radius:5px;*/
+    }
+   
+    .seperator
+    {
+        height: 4px;
+        width: 100%;
+    }
+    
+    .balance-from-acct{
+        font-weight: 100;
+        margin-top: 4px;
+        visibility: visible;
+        
+        display: block;
+        font-size: 0.67em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+     /*   font-weight: bold;*/
+    }
+    
+    .balance-to-acct{
+        display: block;
+         font-weight: 100;
+        font-size: 0.67em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    
+    .rate-acct{
+        color:gray;
+        display: block;
+        font-size: 0.67em;
+       -webkit-margin-before: 2.33em;
+        /*-webkit-margin-after: 2.33em;*/
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;
+    }
+    
+    .from-act
+    {
+        display: block;
+        font-size: 1.2em;
+       /*-webkit-margin-before: 2.33em;*/
+        /*-webkit-margin-after: 2.33em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        font-weight: bold;*/
+    }
+    
+    .from-dd
+    { 
+        left: 81px;
+       /* left:112px;*/
+        font-weight:100;
+        color: #d7007f;
+        color:gray;
+        right: 01px!important;
+        bottom: 1px; 
+        top: 0!important;
+        font-size: 1.0em!important;
+        height: 135%!important;
+        width: 73%!important;
+        /*background: aqua!important;
+        */
+        /*border-bottom-color: rgba(127, 127, 127, 0.5)!important;
+        background: 100% 100% no-repeat url("styles/images/dd-arrow3.png") transparent!important;
+        background-size: auto 100%!important;*/
+    }
+   
+    #transfer-list li
+    {
+      /*  width:93%!important;*/
+        width:100%!important;
+       /* border-width: 2px!important;*/
+        /* background: pink!important;*/
+       /* width: 93%!important;*/
+        margin-left: auto!important;
+        margin-right: auto!important;
+        border-image: -webkit-linear-gradient(left, rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0.5) 1em, rgba(180, 180, 180, 0.5) 100%) 1 stretch; ;
+    }
+    
+</style>
+
