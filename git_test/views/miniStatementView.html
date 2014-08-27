@@ -1,9 +1,9 @@
-<div data-role="view" id="mini-Statement-multi-View" data-layout="main-layout" data-model="app.transactionsService.viewModel" data-model="app.dropDownService.viewModel" >
+<div data-role="view" id="mini-Statement-multi-View" data-layout="main-layout" data-model="app.transactionsService.viewModel"  >
     <div class="page-name">Mini Statement </div>
 
     <p>
         Select Account
-        <select id="accounts-list-drop-down" data-bind="source:accountsList" onchange="app.transactionsService.viewModel.changed(value)" >
+        <select id="accounts-list-drop-down" data-bind="source:accounts" onchange="app.transactionsService.viewModel.changed(value)" style="font-weight: 100;font-size: 12px;" >
 
         </select>
     </p>

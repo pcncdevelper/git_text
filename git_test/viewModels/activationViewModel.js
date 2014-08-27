@@ -41,7 +41,7 @@
             
              $.ajax({
                 type:"POST",
-                url:"http://mail.pcnc2000.com:8081/mb-server/api/api/checkActivationCode",
+                url:"http://192.168.0.22/mb-server/api/api/checkActivationCode",
                 dataType:"json",
                 data:{activationCode:enteredActivationCode},
                 success:function(data){
@@ -75,7 +75,7 @@
             
              $.ajax({
                 type:"GET",
-                url:"http://mail.pcnc2000.com:8081/mb-server/api/api/activation",
+                url:"http://192.168.0.22/mb-server/api/api/activation",
                 dataType:"json",
                
                 success:function(data){

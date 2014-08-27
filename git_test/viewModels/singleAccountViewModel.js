@@ -31,7 +31,7 @@
             dataSource = new kendo.data.DataSource({
                 transport: {
                     read: {
-                        url: "http://mail.pcnc2000.com:8081/mb-server/accounts",
+                        url: "http://192.168.0.22/mb-server/accounts",
                         dataType: "json"
                     }
                 }
