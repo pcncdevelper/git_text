@@ -1038,13 +1038,13 @@ color:white!important;
 {
 
 
-float: left;
+float: right;
 width: 43px;
 height: 32px;
 position: relative;
 background-image: url(../styles/images/bop-logo-square.png);
 margin-top: 5px;
-margin-left: 25px;
+margin-right: 25px;
 background-size: 100% 100%;
 color: rgba(224, 224, 224, 0);
 }
@@ -1066,7 +1066,7 @@ background-size: 100% 100%;
 
 #drawer-button
 {
-    width:100px;
+    /*width:100px;*/
     float: right;
     position: relative;
 }
