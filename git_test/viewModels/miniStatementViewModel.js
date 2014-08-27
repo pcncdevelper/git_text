@@ -4,7 +4,7 @@
 
     TransactionsViewModel = kendo.data.ObservableObject.extend({
 
-          
+       accounts:["Select account","My loan account US$","My Current Account US$","My Current account JOD ","My Current account ILS","My Cash Card US$"],   
         transactionsTableHtml:[],               //contains the HTML of the table
         transactionsData:[],                    //contains the data of the transactions of all accounts 
         currentAccountTransactions:[],          //contains the data of the transactions of the selected account
@@ -25,7 +25,7 @@
                 transport: {
                     read: {
                        
-                        url: "http://mail.pcnc2000.com:8081//mb-server/transactions",
+                        url: "http://192.168.0.22//mb-server/transactions",
                        // url: "localhost//mb-server/transactions",
                         dataType: "json"
                     }

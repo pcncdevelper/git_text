@@ -50,7 +50,7 @@
             if(username !=="" && password !==""){
             $.ajax({
                 type:"POST",
-                url:"http://mail.pcnc2000.com:8081/mb-server/api/api/auth",
+                url:"http://192.168.0.22/mb-server/api/api/auth",
                 dataType:"json",
                 data:{username:username,password:password,token:tok},
                 success:function(data){
@@ -172,7 +172,7 @@
           /*  $.ajax({
 		           type: "POST",
 		           url: "http://localhost/mb-server1/index.php/test/authenticate",
-		          // url: "http://mail.pcnc2000.com:8081/mb-server/auth/login",
+		          // url: "http://192.168.0.22/mb-server/auth/login",
                     dataType:"json",
 			        data: {username:username},
 		           
