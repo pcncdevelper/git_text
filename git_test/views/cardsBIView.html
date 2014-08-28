@@ -6,25 +6,25 @@
      data-layout="goback-layout"
     >
     
-    <div class="page-name">
+    <div class="page-name" style= "text-align: right; padding-right: 20px;" >
       <!--  <div data-bind="source:selectedAccount.type" ></div>-->
-        Card Details
+تفاصيل البطاقة
     </div>
     
     
-    <ul data-role="listview">
-        <li><div class="f-left">Card Name</div><div class="f-right" data-bind="source:selectedAccount.type"></div></li>
-        <li><div class="f-left">Card Number</div><div class="f-right" data-bind="source:selectedAccount.accountNumber"></div></li>
+    <ul data-role="listview" class="k-rtl" >
+        <li class="k-rtl"><div class="f-left">اسم البطاقة</div><div class="f-right" data-bind="source:selectedAccount.type"></div></li>
+        <li class="k-rtl"><div class="f-left">رقم البطاقة </div><div class="f-right" data-bind="source:selectedAccount.accountNumber"></div></li>
         <li><div class="f-left">IBAN/BBAN</div><div class="f-right" data-bind="source:selectedAccount.IBAN_BBAN"></div></li>
-        <li><div class="f-left">Available Balance</div><div class="f-right" data-bind="source:selectedAccount.availableBalance"></div></li>
-        <li><div class="f-left">Current Balance</div><div class="f-right" data-bind="source:selectedAccount.currentBalance"></div></li>
+        <li><div class="f-left">الرصيد المتوفر</div><div class="f-right" data-bind="source:selectedAccount.availableBalance"></div></li>
+        <li><div class="f-left">الرصيد الحالي</div><div class="f-right" data-bind="source:selectedAccount.currentBalance"></div></li>
        
     </ul>
     <div class="cards-view-seperator"></div>
      <div class="buttonArea">
-                    <input type="submit" id="request-full-statement" data-bind="click:requestFullStatement" data-role="button"  class="log-in-button" value="Full Statement" />
-                    <input type="submit" id="request-full-statement" data-bind="click:requestMiniStatement" data-role="button"  class="log-in-button" value="Mini Statement" />
-                    <input type="submit" id="request-full-statement" data-bind="click:addBalanceToCard" data-role="button"  class="log-in-button" value="Add Balance" />
+                    <input type="submit" id="request-full-statement" data-bind="click:requestFullStatement" data-role="button"  class="log-in-button" value="طلب كشف حساب" />
+                    <input type="submit" id="request-full-statement" data-bind="click:requestMiniStatement" data-role="button"  class="log-in-button" value="طلب كشف حساب مختصر" />
+                    <input type="submit" id="request-full-statement" data-bind="click:addBalanceToCard" data-role="button"  class="log-in-button" value="اضافة رصيد" />
                    
        </div>
     
@@ -55,7 +55,7 @@
     
     .f-left{
         width:30.5%;
-      float:left;  
+       
      font-size: 0.7em;
     }
 
