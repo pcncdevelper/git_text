@@ -64,7 +64,8 @@
   border: 1px solid #ccc; 
   text-align: left; 
      color:black;
-    font-weight:bold;
+    font-weight:100;
+   
 }
 
 #mini-Statement-multi-View td{
