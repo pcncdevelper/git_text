@@ -12,6 +12,8 @@
    <!-- <link href="kendo/styles/kendo.mobile.all.css" rel="stylesheet" />-->
     <link href="kendo/styles/kendo.mobile.all.css" rel="stylesheet" />
     <link href="styles/main.css" rel="stylesheet" />
+ 
+    <link href="kendo/styles/kendo.rtl.min.css" rel="stylesheet" />
  <!--   <link href="styles/theme1.css" rel="stylesheet" />-->
    <!-- <link href="styles/theme2.css" rel="stylesheet" />-->
     
@@ -60,7 +62,7 @@
     
     
 </head>
-<body>
+<body  >
  
 
     
@@ -127,7 +129,7 @@
             <div data-role="header" style="background-color:gray;border:none">
                 <div data-role="navbar" style="height:35px">
 
-                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#landing-drawer" data-icon="drawer-button" data-align="left" style="color:#c1c1c1"></a>
+                    <a  id="drawer-button" data-role="button" data-rel="drawer" href="#landing-drawer" data-icon="drawer-button" data-align="right" style="color:#c1c1c1"></a>
 
                     <div data-role="button" id="header-logo-container" data-rel="drawer" href="#landing-drawer"></div>
                     <!--<span data-role="view-title" id="viewTitle" >&nbsp;</span>-->
@@ -139,7 +141,7 @@
             <div data-role="footer" style="background-color:#e3e3e3; height: 40px;">
                 <ul data-role="listview">
                     <li>
-                        <a data-icon="contacts" href="views/loginView.html" >Log In</a>
+                        <a data-icon="contacts" href="views/loginView.html" >تسجيل الدخول</a>
                     </li>
 
                 </ul>
@@ -358,7 +360,7 @@
     
     <!--Drawer Start-->
     <!--data-views="['drawer-home', 'drawer-starred', 'drawer-deleted', 'drawer-spam', 'drawer-drafts', 'drawer-sent', '/kendo-ui/mobile/m/drawer/index.html']"-->
-        <div data-role="drawer" id="my-drawer" style="width: 270px" data-model="app.loginService.viewModel"
+        <div data-role="drawer" id="my-drawer" style="width: 270px" data-model="app.loginService.viewModel"  data-position="right"
             data-views="['views/accountsView.html','views/accountsBIView.html','views/cardsBIView.html',
             'views/cardsView.html','views/transfersView.html','views/paymentsView.html',
             'views/eTopUpView.html','views/chequesView.html','views/infoView.html',
@@ -498,7 +500,7 @@
         </div>
     <!--Drawer End-->
     <!-- landing Page drawer Start -->
-    <div data-role="drawer" id="landing-drawer" style="width: 270px"
+    <div data-role="drawer" id="landing-drawer" style="width: 270px"  data-position="right"
             data-views="['landing-page-view','views/drawer-infoView.html','views/drawer-locationsView.html','views/drawer-aboutUsView.html']"
             
             >
@@ -506,35 +508,35 @@
                 <li>
                     
                     
-                    <div class="drawer-group-name"><h3>Services</h3></div>
+                    <div class="drawer-group-name"><h3>خدمات</h3></div>
                     <ul>
                         
                         
                          <li>
-                            <a class="drawer-sub-menu"  data-icon="home" href="#landing-page-view">Home</a>
+                            <a class="drawer-sub-menu"  data-icon="home" href="#landing-page-view"><span style="margin-right:10px"> صفحة البداية </span></a>
                         </li>
                         
                         
                          <li>
-                            <a class="drawer-sub-menu"  data-icon="info" href="views/drawer-infoView.html">Info</a>
+                            <a class="drawer-sub-menu"  data-icon="info" href="views/drawer-infoView.html">معلومات</a>
                         </li>
                          <li>
-                            <a class="drawer-sub-menu"  data-icon="globe" href="views/drawer-locationsView.html">Locate Us</a>
+                            <a class="drawer-sub-menu"  data-icon="globe" href="views/drawer-locationsView.html">موقع البنك</a>
                             
                         </li>
                         <li>
-                            <a class="drawer-sub-menu"  data-icon="toprated" href="views/drawer-aboutUsView.html">About Us</a> 
+                            <a class="drawer-sub-menu"  data-icon="toprated" href="views/drawer-aboutUsView.html">عن البنك</a> 
                         </li>
                     </ul>
                     
-                    <div class="drawer-group-name"><h3>Your Account</h3></div>
+                    <div class="drawer-group-name"><h3>حساب المستخدم</h3></div>
                     <ul>
                         
                          <li>
-                            <a class="drawer-sub-menu"  data-icon="contacts" href="views/loginView.html">Log in </a>
+                            <a class="drawer-sub-menu"  data-icon="contacts" href="views/loginView.html">تسجيل الدخول</a>
                         </li>
                         <li>
-                            <a class="drawer-sub-menu"  data-icon="more" href="views/loginView.html">More services</a>
+                            <a class="drawer-sub-menu"  data-icon="more" href="views/loginView.html">خدمات أخرى</a>
                         </li>
                         
                     </ul>
