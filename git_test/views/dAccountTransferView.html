@@ -1,11 +1,11 @@
 <div data-role="view" id="transfersView"  data-layout="transfers-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
 
-      <div class="page-name">Transfer to Others</div>
+      <div class="page-name" style="text-align:right; margin-right:20px;">التحويل للأخرين</div>
      <ul data-role="listview" id="transfer-list" data-style="inset">
        
         
          <li id="from-account-li" class="from-list-item" style="background-color:#eee" >
-            <a style="line-height: initial;"><div class="from-act">From</div>
+            <a style="line-height: initial;"><div class="from-act">من</div>
             <div id="balance-from-daccount-div" class="balance-from-acct">
                 Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                 <span data-bind="source:fromcurrency"></span>
@@ -22,7 +22,7 @@
         
         <li id="to-account-li" class="from-list-item" >
             <a style="line-height: initial;">
-            <div class="from-act">To</div>
+            <div class="from-act">الى</div>
             <div id="balance-to-account-div" class="balance-to-acct">
                 <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:currentToAccountBalance"></span>
                 <span data-bind="source:tocurrency"></span>
@@ -393,8 +393,8 @@
     <footer data-role="footer">
         <div data-role="tabstrip">
             <a data-icon="trans-a-e" href="views/transfersView.html">Money Exchange</a>
-            <a data-icon="trans-d-e" href="views/dAccountTransferView.html">Transfer To others </a>
-            <a data-icon="periodic-e" href="views/automaticPaymentsView.html">Periodic Payments</a>
+            <a data-icon="trans-d-e" href="views/dAccountTransferView.html">التحويل للآخرين </a>
+            <a data-icon="periodic-e" href="views/automaticPaymentsView.html">الدفعات الدورية</a>
 
         </div>
     </footer>
@@ -405,7 +405,7 @@
     
     <!-- old view -->
     <div data-role="view" id="transfersView"  data-layout="transfers-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
-    <div class="page-name">Transfer to Others</div>
+    <div class="page-name"> التحويل للآخرين</div>
 
     <div class='main-text'>Transfer From</div>
     <p>
