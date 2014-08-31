@@ -30,7 +30,7 @@
         
         loansTypes:["Car Loans","University Loans","Residence Loans"],
         
-        TransfersRecievers:["Select Recipient","Fadi Bataha USD account","Alaa Hawash ILS account","Mohammad Breighith JD","Saousan Hasan"],
+        TransfersRecievers:["اختار المستقبل","Fadi Bataha USD account","Alaa Hawash ILS account","Mohammad Breighith JD","Saousan Hasan"],
          
         usdAccounts:["My loan account US$","My Current Account US$"],
         
