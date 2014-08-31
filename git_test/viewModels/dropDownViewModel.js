@@ -39,7 +39,9 @@
         
         connectionType:["Telephone","Ethernet","GPRS"],
         
-        donationAccount:["Select account","Gaza" , "Al Yarmok Camp" ," Gaza 2" , "WFP "],
+       // donationAccount:["Select account","Gaza" , "Al Yarmok Camp" ," Gaza 2" , "WFP "],
+        
+         donationAccount:["اختر الحساب","Gaza" , "Al Yarmok Camp" ," Gaza 2" , "WFP "],
         everylist:["Week","Month" , "Year" ],
         
         pCharge:"5$",

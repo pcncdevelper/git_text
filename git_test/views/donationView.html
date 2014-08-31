@@ -1,5 +1,5 @@
-<div data-role="view" id="donationView"   data-layout="level-one-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
-    <div class="page-name">Donation View</div>
+<div data-role="view" id="donationView"   data-layout="level-one-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel" dir="rtl">
+    <div class="page-name">التبرعات</div>
 
     <ul data-role="listview" id="transfer-list" data-style="inset">
 
@@ -7,7 +7,7 @@
             <a style="line-height: initial;">
                 <div class="from-act">من</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
-                    الرصيد&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                    Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
@@ -24,12 +24,11 @@
             <a style="line-height: initial;">
                 <div class="from-act">الى</div>
                 <div id="balance-to-account-div" class="balance-to-acct">
-                    <span>الرصيد&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:donationAccount"></span>
+                    <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:donationAccount"></span>
                     <span data-bind="source:tocurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:donationAccount" onchange="changeToAccount()" style="
-   				 margin-left: 73px;" >
+                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:donationAccount" onchange="changeToAccount()" >
 
                     </select>
                 </div>
@@ -38,7 +37,7 @@
         <div class="seperator"></div>
 
         
-        <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee; text-align:right;">
+        <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee;">
 
             <span style="font-size:0.85em; color:#63106c;font-weight:bold;">المبلغ</span>
             <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" >
@@ -51,13 +50,13 @@
             <table class="trans-info-table" >
 
                 <tr >
-                    <td style="width:80%" >Transfer Rate</td>
+                    <td style="width:80%" >سعر التحويل</td>
                     <td >
                         :&nbsp<span  data-bind="source:rate"></span>
                     </td>
                 </tr>
                 <tr >
-                    <td style="width:80%">Transfer Amount</td>
+                    <td style="width:80%">مبلغ التحويل </td>
                     <td >
                         :&nbsp<span  data-bind="source:amountToExchange"></span>
                     </td>
@@ -68,10 +67,10 @@
 
         <div class="seperator"></div>
 
-        <li class="from-list-item" style="background-color:#eee; text-align:right; ">
+        <li class="from-list-item" style="background-color:#eee;" >
 
             <div style="width:100%"> الوصف </div>
-            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="أدخل الوصف هنا"  />
+            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="اكتب الوصف هنا"  />
 
         </li>
 

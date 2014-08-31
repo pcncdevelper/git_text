@@ -1,9 +1,9 @@
-<div data-role="view" id="locationsView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
-<div class="page-name">Location Services</div>
+<div data-role="view" id="locationsView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" dir="rtl">
+<div class="page-name">تحديد المواقع</div>
     
    
     <p>
-       <div class="main-text">Please Select target</div><br>
+       <div class="main-text">الرجاء اختيار الخدمة</div><br>
        <div class="center-con">
         <select id="accounts-list-drop-down" data-bind="source:locationChoices"  >
 
@@ -11,7 +11,7 @@
     </p>
 
     <p>
-       <div class="main-text"> City: </div><br>
+        <div class="main-text"> المدينة: </div><br>
          <div class="center-con">
         <select id="accounts-list-drop-down" data-bind="source:locationCities" >
 
@@ -22,7 +22,7 @@
     
     <br><br>
     <div class="buttonArea">
-        <input  type="submit" data-rel="modalview" id="login" class="log-in-button" href="#modalview-get-address"  c  value="Get Address" />
+        <input  type="submit" data-rel="modalview" id="login" class="log-in-button" href="#modalview-get-address"  c  value="تحديد الموقع" />
     </div>
     
 </div>
@@ -56,3 +56,10 @@
         $("#modalview-get-address").kendoMobileModalView("close");
     }
 </script>
+
+
+<style>
+    .main-text{
+        margin-right:10px;
+    }
+</style>
