@@ -5,9 +5,9 @@
 
         <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">From</div>
+                <div class="from-act">من</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
-                    Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                    الرصيد&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
@@ -22,13 +22,14 @@
 
         <li id="to-account-li" class="from-list-item" >
             <a style="line-height: initial;">
-                <div class="from-act">To</div>
+                <div class="from-act">الى</div>
                 <div id="balance-to-account-div" class="balance-to-acct">
-                    <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:donationAccount"></span>
+                    <span>الرصيد&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:donationAccount"></span>
                     <span data-bind="source:tocurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:donationAccount" onchange="changeToAccount()" >
+                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:donationAccount" onchange="changeToAccount()" style="
+   				 margin-left: 73px;" >
 
                     </select>
                 </div>
@@ -37,9 +38,9 @@
         <div class="seperator"></div>
 
         
-        <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee;">
+        <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee; text-align:right;">
 
-            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Amount</span>
+            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">المبلغ</span>
             <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" >
         </li>
 
@@ -67,16 +68,16 @@
 
         <div class="seperator"></div>
 
-        <li class="from-list-item" style="background-color:#eee;" >
+        <li class="from-list-item" style="background-color:#eee; text-align:right; ">
 
-            <div style="width:100%"> Description </div>
-            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="Describe here"  />
+            <div style="width:100%"> الوصف </div>
+            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="أدخل الوصف هنا"  />
 
         </li>
 
     </ul>
     <div class="center-con">
-        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Donate" />
+        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="تبرع" />
     </div>
 
 </div>
