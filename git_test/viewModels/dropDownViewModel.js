@@ -22,9 +22,9 @@
        // chequeBooksType:["Select Type of Cheque-Book","Personal cheques 10 pages","Personal cheques 20 pages","Cheque Book with slip"],
        chequeBooksType:["اختار نوع االشيك","شيكات شخصية 10 صفحات","شيكات شخصية 20 صفحة ","Cheque Book with slip"],
 
-        locationChoices:["ATM","Branch","Point of Sale"],
+        locationChoices:["صراف الي" , "فرع" , "جهاز تفويض الكتروني "],
         
-        locationCities:["Ramallah","Gaza","Hebron","Bethlehem"],
+        locationCities:["رام الله" , "غزة" , "الخليل"  , "بيت لحم"],
         
         currencies:["US Dollar","Israeli new shekel","Jordanian Dinar"],
         
