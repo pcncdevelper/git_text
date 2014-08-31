@@ -411,6 +411,18 @@ font-weight: bold;
 /*payments view styles start */
 #paymentsView .km-icon{
     color:#63106c;
+    float:left;
+    margin-left:5px;
+}
+#CardsMenuView .km-icon{
+     color:#63106c;
+    float:left;
+    margin-left:5px;
+}
+#VisaElectronView .km-icon{
+     color:#63106c;
+    float:left;
+    margin-left:5px;
 }
 
 #paymentsView li{
