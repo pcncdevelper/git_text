@@ -1,10 +1,10 @@
 <div data-role="view" id="requestChequeBooksView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" >
-<div class="page-name ">طلب دفتر شيكات</div>
+<div class="page-name">طلب دفتر شيكات</div>
     
- <ul data-role="listview" id="chequeBook-transfer-list" data-style="inset">
+ <ul  data-role="listview" id="chequeBook-transfer-list" data-style="inset">
         <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">For</div>
+                <div class="from-act">الحساب  </div>
                 <div id="balance-from-account-div" class="balance-from-acct">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
@@ -19,7 +19,7 @@
      
      <li id="from-account-li" class="from-list-item"  >
             <a style="line-height: initial;">
-                <div class="from-act">Type</div>
+                <div class="from-act">النوع</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;"></span>
                     <span data-bind="source:fromcurrency"></span>
@@ -34,7 +34,7 @@
      
      <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">Number</div>
+                <div class="from-act">عدد الدفاتر</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;"></span>
                     <span data-bind="source:fromcurrency"></span>
@@ -56,9 +56,9 @@
      
  </ul>
     
-     <div class="main-text" style="color:gray">Description</div>
+     <div class="main-text" style="color:gray;text-align: right;margin-right:5px;margin-top:16px;">وصف الطلب</div>
          <div class="center-con" style="padding-top:5px;">
-          <textarea style="width:90%; height:60px ;padding-top:5px;" placeholder="describe this transaction here"></textarea>
+          <textarea style="width:90%; height:60px ;padding-top:5px; text-align: right;" placeholder="اضف وصف للطلب هنا "></textarea>
   
           </div>  
     
@@ -173,6 +173,8 @@
     
     .from-act
     {
+        
+        margin-left: 218px;
         display: block;
         font-size: 1.2em;
        /*-webkit-margin-before: 2.33em;*/
@@ -184,7 +186,7 @@
     
     .from-dd
     { 
-        left: 81px;
+        left:4px;
        /* left:112px;*/
         font-weight:100;
         color: #d7007f;

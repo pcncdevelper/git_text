@@ -5,7 +5,8 @@
     DropDownViewModel = kendo.data.ObservableObject.extend({
 
       // accounts:["Select account","Overdue Normal Loans USD","Current Account Residence USD","Current Account Residence ILS","Cash Card USD"],
-       accounts:["Select account","My loan account US$","My Current Account US$","My Current account JOD ","My Current account ILS","My Cash Card US$"],
+     //  accounts:["Select account","My loan account US$","My Current Account US$","My Current account JOD ","My Current account ILS","My Cash Card US$"],
+         accounts:["اختار الحساب","حساب الديون دولار","حساب جاري دينار","حساب جاري دولار"],
         
       reasonOfStoppage:["Select Reason","Card was stolen","Card was Lost","Other"],
         cards:["My Credit Card  (MasterCard) US$","My Credit Card (Visa) US$","Master Card Gold USD","My Easy Life ILS"],
@@ -18,7 +19,8 @@
       
        chequeAccounts:["My loan account US$","My Current Account US$","My Current account ILS"],
  
-        chequeBooksType:["Select Type of Cheque-Book","Personal cheques 10 pages","Personal cheques 20 pages","Cheque Book with slip"],
+       // chequeBooksType:["Select Type of Cheque-Book","Personal cheques 10 pages","Personal cheques 20 pages","Cheque Book with slip"],
+       chequeBooksType:["اختار نوع االشيك","شيكات شخصية 10 صفحات","شيكات شخصية 20 صفحة ","Cheque Book with slip"],
 
         locationChoices:["ATM","Branch","Point of Sale"],
         

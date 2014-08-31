@@ -1,5 +1,10 @@
 /*icons*/
 
+.km-listview-link::after
+{
+    display: none;
+}
+
 .km-newcard-e:after,
     .km-newcard-e:before
     {
@@ -1379,6 +1384,7 @@ color: #560f5b;}
 
 #accounts-list-drop-down
 {
+    text-align: -webkit-center;
   /*  color: black; 
     
     margin: 1%;*/
