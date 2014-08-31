@@ -22,19 +22,19 @@
 
 
 <div data-role="view" id="locationsView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
-<div class="page-name">Location Services</div>
+<div class="page-name" style= "text-align: right; padding-right: 20px;">المواقع والفروع</div>
     
     <!--<h3>Location Services</h3>-->
 
-    <p>
-       Please Select target<br>
+    <p class="k-rtl">
+       الرجاء اختيار الخدمة المراد تحديد موقعها<br>
         <select id="accounts-list-drop-down" data-bind="source:locationChoices"  >
 
         </select>
     </p>
 
-    <p>
-        City: <br>
+    <p class="k-rtl">
+         المدينة<br>
         <select id="accounts-list-drop-down" data-bind="source:locationCities" >
 
         </select>
@@ -44,7 +44,7 @@
     
     <br><br>
     <div class="buttonArea">
-        <input data-role="button" data-rel="modalview" id="login" class="log-in-button" href="#modalview-get-address"    value="Get Address" />
+        <input data-role="button" data-rel="modalview" id="login" class="log-in-button" href="#modalview-get-address"    value="الحصول على العنوان " />
     </div>
     <!-- class="log-in-button"-->
 </div>
