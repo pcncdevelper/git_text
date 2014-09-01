@@ -1,8 +1,8 @@
-<div data-role="view" id="requestLoanView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
-    <div class="page-name">Request a Loan View</div>
+<div data-role="view" id="requestLoanView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" dir="rtl">
+    <div class="page-name">طلب قرض</div>
     
     
-     <div class='main-text'>Loan Type</div>
+     <div class='main-text'>نوع القرض</div>
      <p>
 
         <select id="accounts-list-drop-down" data-bind="source:loansTypes"  >
@@ -11,14 +11,14 @@
     </p>
     
    <p>
-                <div class='main-text'> Amount</div>
+                <div class='main-text'> المبلغ</div>
                
-       <h3><input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+       <h3><input type="number" autocorrect="off" autocapitalize="off"  placeholder="ادخل المبلغ هنا" />
            </h3>
     </p>
     
     
-     <div class='main-text'>Currency</div>
+     <div class='main-text'>العمولة</div>
     <p>
 
         <select id="accounts-list-drop-down" data-bind="source:currencies"  >
@@ -27,7 +27,7 @@
     </p>
     
     <div class="buttonArea">
-            <input type="submit"  data-role="button" data-rel="modalview" href="#modalview-requestLoan"   class="log-in-button" value="Request a Loan" />
+            <input type="submit"  data-role="button" data-rel="modalview" href="#modalview-requestLoan"   class="log-in-button" value="اطلب قرض" />
     </div>
     
     
@@ -38,15 +38,15 @@
            
             <div data-role="header">
                 <div data-role="navbar">
-                    <span>Request Loan </span>
-                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                    <span>طلب قرض </span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">الغاء</a>
                 </div>
             </div>
-          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+          <h2>ادخل الرمز &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
            
           <!--  <div data-bind="source:accounts"></div>-->
             
-          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >اكمال الطلب</a></div>
          <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
           <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
 -->

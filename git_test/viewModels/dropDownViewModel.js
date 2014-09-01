@@ -26,9 +26,9 @@
         
         locationCities:["رام الله" , "غزة" , "الخليل"  , "بيت لحم"],
         
-        currencies:["US Dollar","Israeli new shekel","Jordanian Dinar"],
+        currencies:["دولار امريكي","شاقل اسرائيلي","دينار اردني"],
         
-        loansTypes:["Car Loans","University Loans","Residence Loans"],
+        loansTypes:["قرض سيارة","قرض جامعة","قرض اقامة"],
         
         TransfersRecievers:["اختار المستقبل","Fadi Bataha USD account","Alaa Hawash ILS account","Mohammad Breighith JD","Saousan Hasan"],
          
