@@ -1,16 +1,16 @@
-<div data-role="view" id="requringPaymentsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
-    <div class="page-name">Add requiring Payments</div>
+<div data-role="view" id="requringPaymentsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel" dir="rtl">
+    <div class="page-name">اضافة دفعات متطلبة</div>
 
     <ul data-role="listview" id="transfer-list" data-style="inset">
 		 <li>
                         <label  class="from-act"style="margin-left:0px"> 
-                            Title
-                                <input type="text" data-icon="search" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="Transfer Title" />
+                            العنوان
+                            <input type="text" data-icon="search" autocorrect="off" autocapitalize="off" data-bind="value: username" placeholder="عنوان التحويل" style="margin-right:100px;" />
                         </label>
                     </li>
         <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">From</div>
+                <div class="from-act">من</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
@@ -27,13 +27,13 @@
 
         <li id="to-account-li" class="from-list-item" >
             <a style="line-height: initial;">
-                <div class="from-act">To</div>
+                <div class="from-act">الى</div>
                 <div id="balance-to-account-div" class="balance-to-acct">
                     <span>Balance&nbsp</span><span style="color:gray;margin-left: 3em;" data-bind="source:currentToAccountBalance"></span>
                     <span data-bind="source:tocurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:accounts" onchange="changeToAccount()" >
+                    <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:accounts" onchange="changeToAccount()" style="float:left;" >
 
                     </select>
                 </div>
@@ -44,7 +44,7 @@
         
         <li class="from-list-item" style="margin-top:0px;margin-bottom: 0px;background-color:#eee;">
 
-            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Amount</span>
+            <span style="font-size:0.85em; color:#63106c;font-weight:bold;">المبلغ</span>
             <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" >
         </li>
 
@@ -55,13 +55,13 @@
             <table class="trans-info-table" >
 
                 <tr >
-                    <td style="width:80%" >Transfer Rate</td>
+                    <td style="width:80%" >معدل التحويل</td>
                     <td >
                         :&nbsp<span  data-bind="source:rate"></span>
                     </td>
                 </tr>
                 <tr >
-                    <td style="width:80%">Transfer Amount</td>
+                    <td style="width:80%">مبلغ التحويل</td>
                     <td >
                         :&nbsp<span  data-bind="source:amountToExchange"></span>
                     </td>
@@ -74,29 +74,29 @@
 
         
         <li class="from-list-item">
-            <div class="main-text"><div style="float:left">Start at Date </div><input style="float: right; margin-right: 30px;" type="date" name="fromDate"></div>
+            <div class="main-text"><div style="float:right">بداية من تاريخ </div><input style="float:left; margin-right: 30px;" type="date" name="fromDate"></div>
         </li>
         <li class="from-list-item" style="background-color:#eee;">
-           <div class="from-act">Every</div>
+           <div class="from-act">كل</div>
                <div class="select-holder">
                     <select id="accounts-list-drop-down-to" class="from-dd" data-bind="source:everylist" onchange="changeToAccount()" >
 
                     </select>
                 </div>
         </li> <li class="from-list-item" style="background-color:#eee;">
-           <span style="font-size:0.85em; color:#63106c;font-weight:bold;">Repeat #</span>
+           <span style="font-size:0.85em; color:#63106c;font-weight:bold;">اعادة #</span>
             <input id="money-exchange-input" onchange="transferAmountChanged()" type="number" > 
         </li>
         <li class="from-list-item" style="background-color:#eee;" >
 
-            <div style="width:100%"> Description </div>
-            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="Describe here"  />
+            <div style="width:100%"> الوصف </div>
+            <input   style="position:relative; margin-left:5px;" type="text" autocorrect="off" autocapitalize="off"  placeholder="اكتب الوصف هنا"  />
 
         </li>
 
     </ul>
     <div class="center-con">
-        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Add Requiring Payment" />
+        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="اضافة دفعة متطلبة" />
     </div>
     
 
@@ -291,6 +291,12 @@
         margin-right: auto!important;
         border-image: -webkit-linear-gradient(left, rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0.5) 1em, rgba(180, 180, 180, 0.5) 100%) 1 stretch; ;
     }
-    
+    #accounts-list-drop-down{
+        margin-right:100px;
+    }
+    #accounts-list-drop-down-to{
+         margin-right:100px;
+    }
+  
 </style>
 
