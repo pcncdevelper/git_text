@@ -1,19 +1,19 @@
-<div data-role="view" id="paltelBillsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel">
-<div class="page-name">Pay - My Home Phone: 022967757</div>
+<div data-role="view" id="paltelBillsView"  data-layout="goback-layout" data-show="app.transferCodeService.viewModel.generateRandomInt" data-model="app.dropDownService.viewModel" dir="rtl">
+<div class="page-name">دفع - هاتف المنزل: 022967757</div>
 
     
  
     
    
     
-<div class="page-name">  2 upaid bills </div>
+    <div class="page-name"> الفواتير غير المسددة:٢ </div>
         
         <ul  data-role="listview" data-style="inset" class="bills-list">
 			<li id="from-account-li" class="from-list-item" style="background-color:#eee" >
-            <a style="line-height: initial;"><div class="from-act">From</div>
-            <div id="balance-from-daccount-div" class="balance-from-acct">
+            <a style="line-height: initial;"><div class="from-act">الى</div>
+            <div id="balance-from-daccount-div" class="balance-from-acct"  >
                 <br/>
-                Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                الرصيد&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance "></span>
                 <span data-bind="source:fromcurrency"></span>
             </div>
             <div class="select-holder">
@@ -26,9 +26,9 @@
             <li style="background-color:rgb(206, 193, 193);">
                 <a  data-rel="modalview" href="#modalview2">
 
-                    <div class="bill-detail"><span class="detail-name"> Due Date :</span> 01/03/2014 </div>
-                    <div class="bill-detail"><span class="detail-name"> Reference #:</span> mb-123456<span style="float:right;margin-right:20px;color:gray">Click to pay</span></div> 
-                    <div class="bill-detail"><span class="detail-name"> Amount :</span> 195.50 ILS</div>
+                    <div class="bill-detail"><span class="detail-name"> حتى :</span> 01/03/2014 </div>
+                    <div class="bill-detail"><span class="detail-name"> رقم المرجع:</span> mb-123456<span style="float:left;margin-right:20px;color:gray">اضغط للدفع</span></div> 
+                    <div class="bill-detail"><span class="detail-name"> المبلغ :</span> 195.50 ILS</div>
                   
                    
 
@@ -36,10 +36,10 @@
             </li>
             <li style="background-color:#eee">
                 <a data-rel="modalview" href="#modalview2">
-                    <div class="bill-detail"><span class="detail-name"> Billing  :</span> 01/04/2014</div>
-                    <div class="bill-detail"><span class="detail-name"> Due Date :</span> 01/04/2014</div>
-                    <div class="bill-detail"><span class="detail-name"> Reference #:</span>mb-123457<span style="float:right;margin-right:20px;color:gray">Click to pay</span></div>
-                    <div class="bill-detail"><span class="detail-name"> Amount :</span>190.00 ILS</div>
+                    <div class="bill-detail"><span class="detail-name">الفواتير :</span> 01/04/2014</div>
+                    <div class="bill-detail"><span class="detail-name"> حتى </span> 01/04/2014</div>
+                    <div class="bill-detail"><span class="detail-name">رقم المرجع</span>mb-123457<span style="float:left;margin-right:20px;color:gray">اضغط للدفع</span></div>
+                    <div class="bill-detail"><span class="detail-name">المبلغ:</span>190.00 ILS</div>
                 </a>
             </li>
          
@@ -54,17 +54,17 @@
             <div data-role="header">
                 <div data-role="navbar">
                       <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
-                    <span>Payment Confirmation</span>
+                    <span>تأكيد الدفع</span>
                    
                 </div>
             </div>
-          <h4>Are you sure you want to pay this Bill ?</h4>
+          <h4>هل أنت متأكد أنك تريد أن تدفع هذه الفاتورة؟</h4>
     
             <br>
             
       
-       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
-       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >No</a></div>
+       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >نعم</a></div>
+       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >لا</a></div>
 
 </div>
 

@@ -1,6 +1,6 @@
-<div data-role="view" id="payPartial"  data-layout="goback-layout">
-    <div class="page-name" > GEDCO Partial Payment</div>
-    <div class="page-name" > My Home Bill : 2433565</div>
+<div data-role="view" id="payPartial"  data-layout="goback-layout" dir="rtl">
+    <div class="page-name" > GEDCO الدفع الجزئي</div>
+    <div class="page-name" >فاتورة المنزل: 2433565</div>
     
     <script>
         function showBills() {
@@ -19,11 +19,11 @@
         <ul  data-role="listview" data-style="inset" class="bills-list">
 
             
-            <li>Total Value : <span>1050 NIS</span></li>
-            <li>Min payments :<span> 300 NIS</span></li>
+            <li>إجمالي القيمة : <span>1050 NIS</span></li>
+            <li>الحد الأدنى للدفع :<span> 300 NIS</span></li>
             
-            <li>Amount to pay : <input ></li>
-            <li><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="Proceed to Pay" /></div> </li>
+            <li>المبلغ الواجب دفعه:<input ></li>
+            <li><input type="submit" id="clear" data-role="button" data-rel="modalview" href="#modalview-definePayee" data-bind="click: clearStorage, invisible: isLoggedIn" class="log-in-button" value="انتقل إلى الدفع" /></div> </li>
               </ul>
 </div>    
 </div>
@@ -33,17 +33,17 @@
             <div data-role="header">
                 <div data-role="navbar">
                       <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
-                    <span>Payment Confirmation</span>
+                    <span>تأكيد الدفع</span>
                    
                 </div>
             </div>
-          <h4>Are you sure you want to pay this Bill ?</h4>
+          <h4>هل أنت متأكد أنك تريد أن تدفع هذه الفاتورة؟</h4>
     
             <br>
             
       
-       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
-       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >No</a></div>
+       <div class="confirmation-button">  <a  style="width:100%" data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >نعم</a></div>
+       <div class="confirmation-button">  <a style="width:100%"  data-click="closeModalViewLogin" id="modalview-login-button" type="button" data-role="button" >لا</a></div>
 
 </div>
 
