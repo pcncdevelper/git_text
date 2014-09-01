@@ -32,12 +32,13 @@
         
         TransfersRecievers:["اختار المستقبل","Fadi Bataha USD account","Alaa Hawash ILS account","Mohammad Breighith JD","Saousan Hasan"],
          
-        usdAccounts:["My loan account US$","My Current Account US$"],
+        //usdAccounts:["My loan account US$","My Current Account US$"],
+        usdAccounts:[" حساب الديون دولار","حساب جاري دولار"],
         
         cashCardsAmount:[100, 200,300,500 , 1000],
          countries:["Jordan", "Israel" , "UAE" , "USA" ,"UK", "Germany"]  ,
         
-        connectionType:["Telephone","Ethernet","GPRS"],
+        connectionType:["هاتف","اثرنت","جي بي ار"],
         
        // donationAccount:["Select account","Gaza" , "Al Yarmok Camp" ," Gaza 2" , "WFP "],
         
