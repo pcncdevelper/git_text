@@ -1,17 +1,17 @@
-<div data-role="view" id="requestCashCardView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
-    <div class="page-name">Request Cash Card</div>
+<div data-role="view" id="requestCashCardView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" dir="rtl">
+    <div class="page-name">اطلب بطاقة كاش كارد</div>
    
    <ul data-role="listview">
        
        <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">Link to</div>
-                <div id="balance-from-account-div" class="balance-from-acct" style="visibility:hidden">
+                <div class="from-act">اربطها بالحساب</div>
+                <div id="balance-from-account-div" class="balance-from-acct" style="visibility:hidden;">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:usdAccounts" >
+                    <select id="accounts-list-drop-down" style="margin-right:60px;" class="from-dd" data-bind="source:usdAccounts" >
 
                     </select>
                 </div>
@@ -20,7 +20,7 @@
        
        <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
-                <div class="from-act">Amount</div>
+                <div class="from-act">القيمة</div>
                 <div id="balance-from-account-div" class="balance-from-acct" style="visibility:hidden">
                     Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
@@ -34,9 +34,9 @@
         </li> </ul> 
     
        
-        <div class="main-text-black" style="color:gray;padding-top:5px;">Description</div>
+        <div class="main-text-black" style="color:gray;padding-top:5px; padding-right:10px;">الوصف</div>
          <div class="center-con" style="padding-top:5px;">
-          <textarea style="width:90%; height:60px ;padding-top:5px;" placeholder="describe this transaction here"></textarea>
+          <textarea style="width:90%; height:60px ;padding-top:5px;" placeholder="اكتب وصف الحركة"></textarea>
   
           </div>  
        
@@ -45,7 +45,7 @@
                <form data-bind="events: { keyup: checkEnter }">
 
             <div class="buttonArea">
-                <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestCashCard"  class="log-in-button" value="Request a Card" />
+                <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestCashCard"  class="log-in-button" value="اطلب البطاقة" />
             </div>
         </form>
 
