@@ -1,7 +1,7 @@
-<div data-role="view" id="addBalanceToCardView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel">
-      <div class="page-name">Add Balance to Cards </div>
+<div data-role="view" id="addBalanceToCardView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" dir="rtl">
+      <div class="page-name">اضافة رصيد للبطاقات </div>
     
-    <div class='main-text'>Transfer From</div>
+    <div class='main-text' style="margin-right:10px;">تحويل من</div>
     <p>
 
         <select id="accounts-list-drop-down" data-bind="source:accounts"  >
@@ -9,7 +9,7 @@
         </select>
     </p>
 
-    <div class='main-text'>Transfer To</div>
+    <div class='main-text' style="margin-right:10px;">تحويل الى</div>
     <p>
 
        <select id="accounts-list-drop-down" data-bind="source:cards"  >
@@ -21,8 +21,8 @@
         <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
             <li>
                 <label>
-                   <div class='main-text'> Amount</div>
-                    <input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+                   <div class='main-text'> القيمة</div>
+                    <input type="number" autocorrect="off" autocapitalize="off"  placeholder="ادخل القيمة هنا" style="margin-right:75px;" />
                 </label>
             </li>
 
@@ -30,7 +30,7 @@
 
         <div class="buttonArea">
            <!-- <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-login"  class="log-in-button" value="Transfer" />-->
-          <input type="submit" data-rel="modalview" id="login" data-role="button"  class="log-in-button" value="Add Balance" />
+          <input type="submit" data-rel="modalview" id="login" data-role="button"  class="log-in-button" value="اضافة الرصيد" />
         </div>
     </form>
     
