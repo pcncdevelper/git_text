@@ -1,34 +1,34 @@
-<div data-role="view" id="requestPosView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt">
-<div class="page-name">Request POS</div>
+<div data-role="view" id="requestPosView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" dir="rtl">
+<div class="page-name">طلب نقاط بيع </div>
     <p>
-        <div class="main-text">Link to account:</div> 
+        <div class="main-text">ربط بحساب:</div> 
        
         <div class="center-con"><select id="accounts-list-drop-down" data-bind="source:usdAccounts"  >
 
         </select></div>
         
         <br>
-        <div class="main-text">  Connection Type:</div>
+        <div class="main-text"> نوع الاتصال</div>
            <div class="center-con"><select id="connetion-type" data-bind="source:connectionType"  onchange="ConnectionTypeChanged()"  >
 
         </select></div>
         <br>
         
         <p>
-         <input type="checkbox"  />I agree to Pay a fee of <span style="font-weight:bold" id="POS-charge" data-bind="source:pCharge"></span>
+            <input type="checkbox"  />انا اوافق على دفع مبلغ: <span style="font-weight:bold" id="POS-charge" data-bind="source:pCharge"></span>
         
         </p>
         
         
         
-        <div class="main-text" style="color:gray">Notes</div>
+        <div class="main-text" style="color:gray">ملاحظات</div>
          <div class="center-con">
-          <textarea style="width:90%; height:60px " placeholder="additional notes"></textarea>
+          <textarea style="width:90%; height:60px " placeholder="ملاحظات اضافية"></textarea>
   
           </div>   
           <form data-bind="events: { keyup: checkEnter }">
         <div class="buttonArea">
-            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestPos"  class="log-in-button" value="Request POS" />
+            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestPos"  class="log-in-button" value="اطلب نقاط البيع" />
         </div>
     </form>
         </p>
@@ -39,15 +39,15 @@
            
             <div data-role="header">
                 <div data-role="navbar">
-                    <span>Request POS </span>
-                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+                    <span>طلب نقاط بيع </span>
+                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">الغاء</a>
                 </div>
             </div>
-          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
+          <h2>ادخل الرمز &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
            
           <!--  <div data-bind="source:accounts"></div>-->
             
-          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
+          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >اتمام الطلب</a></div>
          <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
           <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
 -->
@@ -82,6 +82,10 @@
         margin-bottom: 10px;
         height: 45px;
         width: 112px;
+    }
+    .main-text{
+        margin-right:20px;
+        
     }
 
    
