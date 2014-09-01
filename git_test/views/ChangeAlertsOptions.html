@@ -1,19 +1,19 @@
-<div data-role="view" id="AlertsSettingsView"  data-layout="goback-layout" >
-    <div class="page-name">Change Alerts Options</div>
+<div data-role="view" id="AlertsSettingsView"  data-layout="goback-layout" dir="rtl">
+    <div class="page-name">تغيير خيارات التنبيهات</div>
     
     
     <ul data-role="listview" data-style="inset" data-type="group">
         
 
-        <li>Alerts
+        <li>التنبيهات
             <ul>
-                <li>Recieve alerts<input data-role="switch" id="email-switch" checked="checked" /></li>
+                <li> <input data-role="switch" id="email-switch" checked="checked;" /><span class="space_1"> تلقي تنبيهات</span></li>
                
             </ul>
         </li>
-        <li>Ads
+        <li>إعلانات
             <ul>
-                <li>Recieve Bank ads<input data-role="switch" id="email-switch" checked="checked" /></li>
+                <li><input data-role="switch" id="email-switch" checked="checked" /><span class="space_1">تلقي إعلانات البنك</span></li>
                
             </ul>
         </li>
@@ -68,5 +68,10 @@
     border: 1px solid rgba(0,0,0,.2);
     -webkit-border-radius: 4em;
     border-radius: 4em;
+        
 }
+    
+    .space_1{
+          margin-right:150px; 
+    }
 </style>
