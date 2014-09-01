@@ -1,49 +1,49 @@
-<div data-role="view" id="interestRateView"  data-layout="goback-layout" >
-    <div class="page-name">Interest Rate View</div>
+<div data-role="view" id="interestRateView"  data-layout="goback-layout" dir="rtl">
+    <div class="page-name">اسعار الفائدة </div>
     
     <table>
-    <caption><h5>Interest Rates</h5></caption>
+    <caption><h5>اسعار الفائدة</h5></caption>
     <tr>
-        <td>Deposit Accounts&nbsp;</td>
-        <td>ILS</td>
-        <td>JOD</td>
-        <td>USD</td>
-        <td>EUR</td>
+        <td class="accounts">حساب الايداع&nbsp;</td>
+        <td class="accounts">شاقل اسرائيلي</td>
+        <td class="accounts">دينار اردني</td>
+        <td class="accounts">دولار امريكي</td>
+        <td class="accounts">يورو</td>
     </tr>
     <tr>
-        <td>Less than One Month</td>
-        <td>0.50%</td>
-        <td>0.45%</td>
-        <td>0.05%</td>
-        <td>0.20%</td>
+        <td class="due">اقل من شهر</td>
+        <td>٪٠.٥٠</td>
+        <td>٪٠.٤٥</td>
+        <td>٪٠.٠٥</td>
+        <td>٪٠.٢٠</td>
     </tr>
     <tr>
-        <td>Due Over 1 Months till 3 Months</td>
-        <td>0.55%</td>
-        <td>0.52%</td>
-        <td>0.08%</td>
-        <td>0.32%</td>
+        <td class="due">من شهر الى ٣ شهور</td>
+        <td>٪٠.٥٥</td>
+        <td>٪٠.٥٢</td>
+        <td>٪٠.٠٨</td>
+        <td>٪٠.٣٢</td>
     </tr>
     <tr>
-        <td>Due Over&nbsp;3 Months till&nbsp;6 Months</td>
-        <td>0.60%</td>
-        <td>0.60%</td>
-        <td>0.010%</td>
-        <td>0.45%</td>
+        <td class="due">من&nbsp;٣&nbsp; الى ٦ شهور</td>
+        <td>٪٠.٦٠</td>
+        <td>٪٠.٦٠</td>
+        <td>٪٠.١٠</td>
+        <td>٪٠.٤٥</td>
     </tr>
     <tr>
-        <td>Due Over&nbsp;6 Months till&nbsp;9 Months</td>
-        <td>0.60%</td>
-        <td>0.65%</td>
-        <td>0.20%</td>
-        <td>0.55%</td>
+        <td class="due">من&nbsp; ٦ &nbsp;الى ٩ شهور </td>
+        <td>٪٠.٦٠</td>
+        <td>٪٠.٦٥</td>
+        <td>٪٠.٢٠</td>
+        <td>٪٠.٥٥</td>
     </tr>
     <tr>
-        <td>Due Over&nbsp;9 Months till&nbsp;12 Months</td>
-        <td>0.60%</td>
-        <td>0.75%</td>
-        <td>0.55%</td>
-        <td>0.60%</td>
+        <td class="due">من&nbsp;٩&nbsp;١٢ شهر</td>
+        <td>٪٠.٦٠</td>
+        <td>٪٠.٧٥</td>
+        <td>٪٠.٥٥</td>
+        <td>٪٠.٦٠</td>
     </tr>
 </table>
     
@@ -65,7 +65,12 @@
         width:30%;
       /* background:red;*/
     }
-    
+    .accounts{
+        padding:10px;
+    } 
+    .due{
+        padding-right:5px;
+    }
     
     
     
