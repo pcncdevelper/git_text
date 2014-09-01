@@ -10,104 +10,116 @@
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down" style="margin-right:90px;" class="from-dd" data-bind="source:usdAccounts" >
+                    <select id="accounts-list-drop-down" style="margin-right:75px;" class="from-dd" data-bind="source:usdAccounts" >
 
                     </select>
                 </div>
             </a>
         </li>
-         <li style="padding-top:20px;padding-bottom:20px">
-               
-                   <div class='main-text-black'>الحد الأدنى للبطاقة  <input id="card-limit-VisaCr" type="number" autocorrect="off" autocapitalize="off"  placeholder="الحد الأدنى للبطاقة" /></div>
-                   
-                
-            </li>
-    
-         
-    <li> <div class="main-text-black"><div style="float:right">من تاريخ </div><input style="float: right; margin-right: 50px;" type="date" name="fromDate" placeholder="01/05/1990" data-bind="value:mydate"></div></li>
-    <li><div class="main-text-black"><div style="float:right">الى تاريخ</div><input style="float: right; margin-right: 50px;" type="date" name="ToDate" data-bind="value:mydate2"></div></li>
+        <li style="padding-top:20px;padding-bottom:20px">
+
+            <div class='main-text-black'>
+                الحد الأدنى للبطاقة
+                <input id="card-limit-VisaCr" type="number" autocorrect="off" autocapitalize="off" placeholder="الحد الأدنى للبطاقة" style="margin-right:100px;" />
+            </div>
+
+        </li>
+
+        <li>
+            <div class="main-text-black">
+                <div style="float:right">من تاريخ </div>
+                <input style="float: right; margin-right: 85px;" type="date" name="fromDate" placeholder="01/05/1990" data-bind="value:mydate">
+            </div>
+        </li>
+        <li>
+            <div class="main-text-black">
+                <div style="float:right">الى تاريخ</div>
+                <input style="float: right; margin-right: 85px;" type="date" name="ToDate" data-bind="value:mydate2">
+            </div>
+        </li>
     </ul>
-        
-   
-     <div class="main-text" style="color:gray;padding-top:10px; padding-right:10px;">الوصف</div>
-         <div class="center-con" style="padding-top:5px;">
-          <textarea style="width:90%; height:60px ;padding-top:5px;" placeholder="اكتب وصف الحركة"></textarea>
-  
-          </div>  
-  <div style="width:100%;height:70px;"></div>  
+
+    <div class="main-text" style="color:gray;padding-top:10px; padding-right:10px;">الوصف</div>
+    <div class="center-con" style="padding-top:5px;">
+        <textarea style="width:90%; height:60px ;padding-top:5px;" placeholder="اكتب وصف الحركة"></textarea>
+
+    </div>
+    <div style="width:100%;height:70px;"></div>
     <div class="buttonArea">
-            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestVisaCredit"  class="log-in-button" value="اطلب بطاقة جديدة" />
-        </div>
-    
+        <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestVisaCredit"  class="log-in-button" value="اطلب بطاقة جديدة" />
+    </div>
 
     <!--<p>
-        <div class="main-text">  From Account:</div> 
-        <div class="center-con">
-        <select id="accounts-list-drop-down" data-bind="source:usdAccounts"  >
+    <div class="main-text">  From Account:</div> 
+    <div class="center-con">
+    <select id="accounts-list-drop-down" data-bind="source:usdAccounts"  >
 
-        </select>
-</div>
-        <br>
-       <form data-bind="events: { keyup: checkEnter }">
-        <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
-            <li>
-                <label>
-                   <div class='main-text'> Card Limit</div>
-                    <input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
-                </label>
-            </li>
+    </select>
+    </div>
+    <br>
+    <form data-bind="events: { keyup: checkEnter }">
+    <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+    <li>
+    <label>
+    <div class='main-text'> Card Limit</div>
+    <input type="number" autocorrect="off" autocapitalize="off"  placeholder="Enter amount here" />
+    </label>
+    </li>
             
 
             
-        </ul>
+    </ul>
             
         
         
         
-        <div class="buttonArea">
-            <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestVisaCredit"  class="log-in-button" value="Request a Card" />
-        </div>
+    <div class="buttonArea">
+    <input type="submit" data-rel="modalview" id="login" data-role="button"  href="#modalview-requestVisaCredit"  class="log-in-button" value="Request a Card" />
+    </div>
     </form>
 
     </p>-->
 </div>
 
-
 <div data-role="modalview" id="modalview-requestVisaCredit"  data-model="app.transferCodeService.viewModel">
-           
-            <div data-role="header">
-                <div data-role="navbar">
-                    <span>Request </span>
-                    <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
-                </div>
-            </div>
-          <h2>Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span> <input type="number" data-bind="value:enteredNumber" class="modalview-input-area"></h2>
-           
-          <!--  <div data-bind="source:accounts"></div>-->
-            
-          <div > <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a></div>
-         <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
-          <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
--->
-               
-                </div>
+
+    <div data-role="header">
+        <div data-role="navbar">
+            <span>Request </span>
+            <a data-click="closeModalViewLogin"  data-role="button" data-align="right">Cancel</a>
+        </div>
+    </div>
+    <h2>
+        Enter PIN Number &nbsp<span style="color: #560f5b; " data-bind="source:num"></span>
+        <input type="number" data-bind="value:enteredNumber" class="modalview-input-area">
+    </h2>
+
+    <!--  <div data-bind="source:accounts"></div>-->
+
+    <div >
+        <a style="width:70%" data-click="app.transferCodeService.viewModel.checkTransferCode" class="app.modalview-button" id="modalview-login-button" type="button" data-role="button" >Complete Request</a>
+    </div>
+    <!-- <div > <a style="width:70%" data-click="" class="modalview-button" id="modalview-login-button" type="button" data-role="button" >Yes</a></div>
+    <div >  <a style="width:70%" data-click="closeModalViewLogin" class="modalview-button" id="modalview-reg-button" type="button" data-role="button">No </a></div>
+    -->
+
+</div>
 
 <style>
     .from-act
     {
         display: block;
         font-size: 1.2em;
-       
     }
     
     .from-dd
     { 
-        
-         left: 81px;
-       /* left:112px;*/
-        font-weight:100;
+    
+        left: 81px;
+        /* left:112px;*/
+        font-weight: 100;
         color: #d7007f;
-        color:gray;
+        color: gray;
         right: 01px!important;
         bottom: 1px; 
         top: 0!important;
@@ -116,21 +128,22 @@
         width: 73%!important;
     }
     
+    div.km-modalview-wrapper
+    {
+        text-align: center; 
+        border-radius: 5px;
     
-     div.km-modalview-wrapper{
-    text-align: center; 
-        border-radius:5px;
-      
-       background:#1fa3cf;
-         background:#560f5b;;
+        background: #1fa3cf;
+        background: #560f5b; ;
     }
-    #modalview-requestVisaCredit{
+    #modalview-requestVisaCredit
+    {
        
-        background-color:#560f5b!important;
-       vertical-align: middle;
-       width: 95%;
-        height:220px ;
-      }
+        background-color: #560f5b!important;
+        vertical-align: middle;
+        width: 95%;
+        height: 220px;
+    }
     
     .modalview-input-area
     {
@@ -146,17 +159,13 @@
         width: 112px;
     }
     
-    #card-limit-VisaCr{
-      border:groove;
+    #card-limit-VisaCr
+    {
+        border: groove;
     }
-
-   
-</style>
-<script>
-     function closeModalViewLogin() {
-        
+    </style>
+    <script>
+    function closeModalViewLogin() {
         $("#modalview-requestVisaCredit").kendoMobileModalView("close");
     }
-    
-
 </script>
