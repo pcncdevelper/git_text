@@ -1,16 +1,16 @@
-<div data-role="view" id="requestChequeBooksView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" >
-<div class="page-name">طلب دفتر شيكات</div>
+<div data-role="view" id="requestChequeBooksView"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" dir="rel">
+<div class="page-name" style="text-align:right; margin-right:20px;">طلب دفتر شيكات</div>
     
  <ul  data-role="listview" id="chequeBook-transfer-list" data-style="inset">
         <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
                 <div class="from-act">الحساب  </div>
-                <div id="balance-from-account-div" class="balance-from-acct">
-                    Balance&nbsp<span style="color:gray;margin-left: 3em;" data-bind="source:currentFromAccountBalance"></span>
+                <div id="balance-from-account-div" class="balance-from-acct"  style=" margin-left:73px; ">
+ 		الرصيد&nbsp<span style="color:gray;margin-right: 3em; text-align:right;" data-bind="source:currentFromAccountBalance"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="myFunction()"  >
+                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:accounts" onchange="myFunction()">
 
                     </select>
                 </div>
@@ -21,11 +21,11 @@
             <a style="line-height: initial;">
                 <div class="from-act">النوع</div>
                 <div id="balance-from-account-div" class="balance-from-acct">
-                    Balance&nbsp<span style="color:gray;margin-left: 3em;"></span>
+                    الرصيد&nbsp<span style="color:gray;margin-left: 3em;"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:chequeBooksType" onchange="myFunction()"  >
+                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:chequeBooksType" onchange="myFunction()" style=" text-align:right; margin-left:73px; "  >
 
                     </select>
                 </div>
@@ -35,12 +35,12 @@
      <li id="from-account-li" class="from-list-item"  style="background-color:#eee;">
             <a style="line-height: initial;">
                 <div class="from-act">عدد الدفاتر</div>
-                <div id="balance-from-account-div" class="balance-from-acct">
-                    Balance&nbsp<span style="color:gray;margin-left: 3em;"></span>
+                <div id="balance-from-account-div" class="balance-from-acct" style="text-align:right; margin-right:60px;">
+                    الرصيد&nbsp<span style="color:gray;margin-left: 3em;"></span>
                     <span data-bind="source:fromcurrency"></span>
                 </div>
                 <div class="select-holder">
-                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:numberOfChequeBooks" onchange="myFunction()"  style="text-indent: 78px;">
+                    <select id="accounts-list-drop-down" class="from-dd" data-bind="source:numberOfChequeBooks" onchange="myFunction()"  style=" text-align:right; margin-left:73px; ">
 
                     </select>
                 </div>
@@ -64,7 +64,7 @@
     
     <div id="space"></div>
      <div class="buttonArea">
-        <input type="submit" id="login" data-role="button" data-rel="modalview" href="#modalview-requestCheque" class="log-in-button" value="Complete Request" />
+        <input type="submit" id="login" data-role="button" data-rel="modalview" href="#modalview-requestCheque" class="log-in-button" value="ارسل الطلب" />
     </div>
     
 </div>
