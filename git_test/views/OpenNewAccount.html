@@ -1,7 +1,7 @@
 <div data-role="view" id="OpenNewaccount"  data-layout="goback-layout" data-model="app.dropDownService.viewModel" data-show="app.transferCodeService.viewModel.generateRandomInt" dir="rtl">
 <div class="page-name">فتح حساب جديد</div>
     <p>
-        <div class="main-text">:ربط بحساب</div> 
+        <div class="main-text">ربط بحساب:</div> 
        
         <div class="center-con"><select id="accounts-list-drop-down" data-bind="source:usdAccounts"  >
 
@@ -13,7 +13,7 @@
         
         <div class="main-text" style="color:gray">ملاحظات</div>
          <div class="center-con">
-          <textarea style="width:90%; height:60px " placeholder="additional notes"></textarea>
+          <textarea style="width:90%; height:60px " placeholder="ملاحظات اضافية"></textarea>
   
           </div>   
           <form data-bind="events: { keyup: checkEnter }">
@@ -73,7 +73,9 @@
         height: 45px;
         width: 112px;
     }
-
+    .main-text{
+        margin-right:10px;
+    }
    
 </style>
 <script>
